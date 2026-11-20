@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Demo Portal &amp; Lead Roster</title>
+  <style>
+    :root { --bg: #0b0e14; --surface: #131823; --border: rgba(255,255,255,0.1); --text: #f8fafc; --muted: #94a3b8; --accent: #f59e0b; --green: #10b981; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    .gate { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .gate-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 36px; width: min(390px, 100%); text-align: center; box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+    .gate-card h1 { font-size: 1.4rem; margin-bottom: 8px; }
+    .gate-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 22px; }
+    .pin-input { width: 100%; padding: 14px; font-size: 1.5rem; letter-spacing: 0.45em; text-align: center; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: var(--text); margin-bottom: 14px; }
+    .btn { background: var(--accent); color: #0b0e14; border: none; padding: 12px 18px; border-radius: 9px; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; font-size: 0.9rem; }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .err { color: #fb7185; font-size: 0.85rem; margin-top: 10px; min-height: 20px; }
+    .app { display: none; max-width: 1200px; margin: 0 auto; padding: 28px 5% 64px; }
+    header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+    .pill-ready { background: rgba(16,185,129,0.16); color: var(--green); border: 1px solid rgba(16,185,129,0.35); }
+    .pill-review { background: rgba(245,158,11,0.16); color: var(--accent); border: 1px solid rgba(245,158,11,0.35); }
+    .toolbar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
+    .toolbar input, .toolbar select { padding: 10px 14px; border-radius: 9px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 0.92rem; }
+    .toolbar input { flex: 1; min-width: 220px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 15px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; }
+    .card h3 { font-size: 1.15rem; margin: 8px 0 4px; }
+    .meta { color: var(--muted); font-size: 0.86rem; }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div class="gate" id="gateView">
+    <div class="gate-card">
+      <div style="color:var(--accent);font-weight:800;font-size:0.78rem;letter-spacing:0.14em;margin-bottom:8px;">RESTRICTED ACCESS</div>
+      <h1>Sales Demo Portal</h1>
+      <p>Enter your 4-digit team PIN to view live prospect sites and pitch links.</p>
+      <form onsubmit="event.preventDefault(); unlock();">
+        <input id="pinBox" class="pin-input" type="password" inputmode="numeric" maxlength="4" placeholder="â€¢â€¢â€¢â€¢" autofocus required />
+        <button class="btn" type="submit" style="width:100%;">Unlock Portal</button>
+      </form>
+      <div class="err" id="errMsg"></div>
+    </div>
+  </div>
+
+  <div class="app" id="appView">
+    <header>
+      <div>
+        <div style="font-size:0.76rem;color:var(--accent);font-weight:700;letter-spacing:0.12em;">LIVE PITCH ROSTER</div>
+        <h2 id="welcomeTitle">Welcome</h2>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <span id="countBadge" class="meta"></span>
+        <button class="btn btn-ghost" type="button" onclick="logout()">Lock</button>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <input id="searchBox" type="search" placeholder="Search business, town, or trade..." oninput="renderCards()" />
+      <select id="townFilter" onchange="renderCards()"><option value="">All Towns</option></select>
+    </div>
+
+    <div class="grid" id="cardsGrid"></div>
+  </div>
+
+  <script>
+    const STAFF = {"2408": {"name": "Ross", "email": "", "role": "admin"}, "7842": {"name": "Josh", "email": "", "role": "rep"}, "3910": {"name": "Scott", "email": "", "role": "rep"}, "5286": {"name": "Leanne", "email": "", "role": "rep"}};
+    const LEADS = [{"id": "shearman-s-barbers-colchester", "business_name": "Shearman's Barbers", "town": "Colchester", "category": "Traditional & Modern Barber Shop", "phone": "07783 610555", "email": "", "status": "ready", "claimed_by": "", "notes": "", "site_rel": "./sites/shearman-s-barbers-colchester/index.html"}, {"id": "chopping-block-barbers-colchester", "business_name": "Chopping Block Barbers", "town": "Colchester", "category": "Independent Barber Shop", "phone": "07817 366529", "email": "", "status": "ready", "claimed_by": "", "notes": "", "site_rel": "./sites/chopping-block-barbers-colchester/index.html"}];
+    let currentUser = null;
+
+    function unlock() {
+      const pin = document.getElementById("pinBox").value.trim();
+      const user = STAFF[pin];
+      if (!user) {
+        document.getElementById("errMsg").textContent = "Invalid PIN. Check with Ross.";
+        return;
+      }
+      sessionStorage.setItem("portal_pin", pin);
+      showPortal(user);
+    }
+
+    function logout() {
+      sessionStorage.removeItem("portal_pin");
+      location.reload();
+    }
+
+    function showPortal(user) {
+      currentUser = user;
+      document.getElementById("gateView").style.display = "none";
+      document.getElementById("appView").style.display = "block";
+      document.getElementById("welcomeTitle").textContent = user.name + " (" + user.role.toUpperCase() + ")";
+
+      const towns = [...new Set(LEADS.map(l => l.town).filter(Boolean))].sort();
+      const sel = document.getElementById("townFilter");
+      towns.forEach(t => {
+        const opt = document.createElement("option");
+        opt.value = t; opt.textContent = t;
+        sel.appendChild(opt);
+      });
+      renderCards();
+    }
+
+    function copyPitchLink(relPath, bizName) {
+      const fullUrl = new URL(relPath, window.location.href).href;
+      navigator.clipboard.writeText(fullUrl);
+      alert("Copied live demo link for " + bizName + ":\n" + fullUrl);
+    }
+
+    function renderCards() {
+      const q = document.getElementById("searchBox").value.toLowerCase();
+      const town = document.getElementById("townFilter").value;
+      const visible = LEADS.filter(l => {
+        if (currentUser.role !== "admin" && l.status !== "ready") return false;
+        if (town && l.town !== town) return false;
+        if (q && !(l.business_name + " " + l.town + " " + l.category).toLowerCase().includes(q)) return false;
+        return true;
+      });
+      document.getElementById("countBadge").textContent = visible.length + " sites available";
+      const grid = document.getElementById("cardsGrid");
+      grid.innerHTML = visible.map(l => `
+        <div class="card">
+          <div>
+            <span class="pill ${l.status === 'ready' ? 'pill-ready' : 'pill-review'}">${l.status}</span>
+            <h3>${l.business_name}</h3>
+            <div class="meta">${l.category} &bull; ${l.town}</div>
+            ${l.phone ? `<div class="meta" style="margin-top:6px;">Tel: <a href="tel:${l.phone.replace(/[^0-9+]/g,'')}" style="color:var(--text);">${l.phone}</a></div>` : ""}
+          </div>
+          <div class="actions">
+            <a class="btn" href="${l.site_rel}" target="_blank" rel="noopener">Open Demo &nearr;</a>
+            <button class="btn btn-ghost" type="button" onclick="copyPitchLink('${l.site_rel}', '${l.business_name.replace(/'/g, "\'")}')">Copy Link</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    const saved = sessionStorage.getItem("portal_pin");
+    if (saved && STAFF[saved]) showPortal(STAFF[saved]);
+  </script>
+</body>
+</html>
