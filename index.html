@@ -67,7 +67,7 @@
 
   <script>
     const STAFF = {"2408": {"name": "Ross", "email": "", "role": "admin"}, "7842": {"name": "Josh", "email": "", "role": "rep"}, "3910": {"name": "Scott", "email": "", "role": "rep"}, "5286": {"name": "Leanne", "email": "", "role": "rep"}};
-    const LEADS = [{"id": "shearman-s-barbers-colchester", "business_name": "Shearman's Barbers", "town": "Colchester", "category": "Traditional & Modern Barber Shop", "phone": "07783 610555", "email": "", "status": "ready", "claimed_by": "", "notes": "", "site_rel": "./sites/shearman-s-barbers-colchester/index.html"}, {"id": "chopping-block-barbers-colchester", "business_name": "Chopping Block Barbers", "town": "Colchester", "category": "Independent Barber Shop", "phone": "07817 366529", "email": "", "status": "ready", "claimed_by": "", "notes": "", "site_rel": "./sites/chopping-block-barbers-colchester/index.html"}];
+    const LEADS = [{"id": "chopping-block-barbers-colchester", "business_name": "Chopping Block Barbers", "town": "Colchester", "category": "Independent Barber Shop", "phone": "07817 366529", "email": "", "status": "ready", "claimed_by": "", "notes": "No dedicated website owned (relying on only basic map listings). | Missing out on high-intent 'independent barber shop in Colchester' Google & AI search traffic. | Demo site ready with full LocalBusiness + FAQ schema to capture direct bookings without third-party platform fees.", "site_rel": "./sites/chopping-block-barbers-colchester/index.html"}, {"id": "shearman-s-barbers-colchester", "business_name": "Shearman's Barbers", "town": "Colchester", "category": "Traditional & Modern Barber Shop", "phone": "07783 610555", "email": "", "status": "ready", "claimed_by": "", "notes": "No dedicated website owned (relying on only basic map listings). | Missing out on high-intent 'traditional & modern barber shop in Colchester' Google & AI search traffic. | Demo site ready with full LocalBusiness + FAQ schema to capture direct bookings without third-party platform fees.", "site_rel": "./sites/shearman-s-barbers-colchester/index.html"}];
     let currentUser = null;
 
     function unlock() {
@@ -126,6 +126,7 @@
             <h3>${l.business_name}</h3>
             <div class="meta">${l.category} &bull; ${l.town}</div>
             ${l.phone ? `<div class="meta" style="margin-top:6px;">Tel: <a href="tel:${l.phone.replace(/[^0-9+]/g,'')}" style="color:var(--text);">${l.phone}</a></div>` : ""}
+            ${l.notes ? `<div style="margin-top:10px;padding:10px 12px;border-radius:9px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);font-size:0.81rem;color:#cbd5e1;line-height:1.45;"><strong style="color:var(--accent);display:block;margin-bottom:4px;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;">IRIS Competitive Teardown &amp; Sales Pitch</strong>${l.notes.split(" | ").map(n => `&bull; ${n}`).join("<br/>")}</div>` : ""}
           </div>
           <div class="actions">
             <a class="btn" href="${l.site_rel}" target="_blank" rel="noopener">Open Demo &nearr;</a>
