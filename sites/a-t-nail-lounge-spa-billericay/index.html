@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A&T Nail Lounge & Spa | 142 High St, Billericay</title>
+<meta name="description" content="A&T Nail Lounge & Spa on Billericay High Street. Gel manicures, luxury pedicures, nail art, lash & brow treatments. Book your appointment today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "A&T Nail Lounge & Spa",
+  "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80",
+  "url": "https://www.a-t-nail-lounge-spa.co.uk",
+  "telephone": "07928 256789",
+  "email": "hello@a-t-nail-lounge-spa.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "142 High Street",
+    "addressLocality": "Billericay",
+    "addressRegion": "Essex",
+    "postalCode": "CM12 9DF",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.6273,
+    "longitude": 0.4188
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"18:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"17:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"15:00"}
+  ],
+  "priceRange": "££"
+}
+</script>
+<style>
+:root {
+  --sand: #f5ede0;
+  --sand-light: #faf5ee;
+  --espresso: #3b2314;
+  --espresso-mid: #6b3d2a;
+  --blush: #e8c9b0;
+  --blush-dark: #d4a882;
+  --warm-white: #fdfaf6;
+  --text: #2c1a0e;
+  --text-light: #7a5c48;
+  --accent: #c4866a;
+  --ff-serif: 'Playfair Display', Georgia, serif;
+  --ff-sans: 'DM Sans', system-ui, sans-serif;
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(59,35,20,0.12);
+  --shadow-sm: 0 2px 12px rgba(59,35,20,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-sans); background: var(--warm-white); color: var(--text); font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,250,246,0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--blush); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.nav-logo { font-family: var(--ff-serif); font-size: 1.15rem; font-weight: 700; color: var(--espresso); letter-spacing: 0.02em; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; font-size: 0.88rem; font-weight: 500; color: var(--text-light); }
+.nav-links a:hover { color: var(--espresso); }
+.nav-cta { background: var(--espresso); color: var(--sand-light); padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s; }
+.nav-cta:hover { background: var(--espresso-mid); color: #fff; }
+
+/* HERO */
+.hero { min-height: 100vh; padding-top: 64px; display: grid; grid-template-columns: 1fr 1fr; background: var(--sand); overflow: hidden; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; padding: 6rem 5vw 5rem 7vw; }
+.hero-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; }
+.hero-title { font-family: var(--ff-serif); font-size: clamp(2.4rem, 4vw, 3.8rem); line-height: 1.12; color: var(--espresso); margin-bottom: 0.6rem; }
+.hero-title em { font-style: italic; color: var(--espresso-mid); }
+.hero-sub { font-family: var(--ff-serif); font-style: italic; font-size: 1.25rem; color: var(--accent); margin-bottom: 1.5rem; font-weight: 400; }
+.hero-body { font-size: 1rem; color: var(--text-light); max-width: 380px; margin-bottom: 2.2rem; font-weight: 300; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--espresso); color: var(--sand-light); padding: 0.85rem 2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--espresso-mid); transform: translateY(-1px); }
+.btn-outline { border: 2px solid var(--espresso); color: var(--espresso); padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; background: transparent; cursor: pointer; }
+.btn-outline:hover { background: var(--espresso); color: var(--sand-light); }
+
+.hero-collage { position: relative; overflow: hidden; }
+.collage-main { position: absolute; inset: 0; }
+.collage-main img { width: 100%; height: 100%; object-fit: cover; }
+.collage-main::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(59,35,20,0.18) 0%, transparent 60%); }
+.collage-card { position: absolute; bottom: 2.5rem; left: -2.5rem; width: 220px; background: var(--warm-white); border-radius: var(--radius); padding: 1.1rem; box-shadow: var(--shadow); }
+.collage-card img { border-radius: 8px; height: 120px; object-fit: cover; margin-bottom: 0.7rem; }
+.collage-card-label { font-size: 0.75rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em; }
+.collage-card-title { font-family: var(--ff-serif); font-size: 0.95rem; color: var(--espresso); }
+.collage-badge { position: absolute; top: 2.5rem; right: 2rem; background: var(--espresso); color: var(--sand-light); width: 90px; height: 90px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 0.7rem; font-weight: 600; line-height: 1.3; letter-spacing: 0.05em; }
+.collage-badge strong { font-size: 1.1rem; display: block; }
+
+/* STRIP */
+.strip { background: var(--espresso); color: var(--blush); display: flex; justify-content: center; gap: 3rem; padding: 1rem 5vw; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; flex-wrap: wrap; }
+.strip span { display: flex; align-items: center; gap: 0.4rem; }
+
+/* SECTIONS */
+section { padding: 6rem 7vw; }
+.section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; }
+.section-title { font-family: var(--ff-serif); font-size: clamp(1.9rem, 3vw, 2.8rem); color: var(--espresso); line-height: 1.2; margin-bottom: 1.2rem; }
+.section-title em { font-style: italic; }
+.section-intro { color: var(--text-light); max-width: 560px; font-weight: 300; font-size: 1.02rem; }
+
+/* SERVICES */
+#services { background: var(--sand-light); }
+.services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card { background: var(--warm-white); border-radius: var(--radius); padding: 2rem 1.6rem; box-shadow: var(--shadow-sm); border: 1px solid var(--blush); transition: transform 0.25s, box-shadow 0.25s; }
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.service-card:nth-child(2) { background: var(--espresso); color: var(--sand-light); border-color: var(--espresso); }
+.service-card:nth-child(2) .service-name, .service-card:nth-child(2) .service-desc { color: var(--blush); }
+.service-card:nth-child(2) .service-price { color: var(--blush-dark); }
+.service-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+.service-name { font-family: var(--ff-serif); font-size: 1.2rem; color: var(--espresso); margin-bottom: 0.4rem; }
+.service-desc { font-size: 0.88rem; color: var(--text-light); margin-bottom: 1.2rem; line-height: 1.5; font-weight: 300; }
+.service-items { list-style: none; font-size: 0.85rem; }
+.service-items li { display: flex; justify-content: space-between; padding: 0.45rem 0; border-bottom: 1px solid rgba(196,134,106,0.2); color: var(--text); }
+.service-card:nth-child(2) .service-items li { color: var(--blush); border-color: rgba(232,201,176,0.2); }
+.service-price { font-weight: 600; color: var(--accent); }
+
+/* ABOUT */
+#about { background: var(--warm-white); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-img-wrap { position: relative; }
+.about-img-wrap img { border-radius: var(--radius); height: 520px; object-fit: cover; box-shadow: var(--shadow); }
+.about-img-tag { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--sand); border-radius: var(--radius); padding: 1.2rem 1.5rem; box-shadow: var(--shadow); font-family: var(--ff-serif); font-style: italic; font-size: 1.05rem; color: var(--espresso); border: 1px solid var(--blush); max-width: 200px; line-height: 1.4; }
+.about-text .section-title { margin-bottom: 1.4rem; }
+.about-text p { color: var(--text-light); font-weight: 300; margin-bottom: 1rem; font-size: 0.98rem; }
+.about-stats { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+.stat { }
+.stat-num { font-family: var(--ff-serif); font-size: 2.2rem; color: var(--espresso); font-weight: 700; line-height: 1; }
+.stat-label { font-size: 0.78rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+
+/* BOOKING FORM */
+#book { background: var(--sand); }
+.book-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+.book-info .section-title { margin-bottom: 1.2rem; }
+.book-info p { color: var(--text-light); font-weight: 300; margin-bottom: 1.5rem; }
+.contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+.contact-list li { display: flex; align-items: center; gap: 0.8rem; font-size: 0.92rem; color: var(--text); }
+.contact-icon { width: 36px; height: 36px; background: var(--espresso); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sand-light); font-size: 0.85rem; flex-shrink: 0; }
+.hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; }
+.hours-grid span { color: var(--text-light); font-weight: 300; }
+.hours-grid strong { color: var(--espresso); font-weight: 600; }
+
+.enquiry-form { background: var(--warm-white); border-radius: var(--radius); padding: 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--blush); }
+.form-title { font-family: var(--ff-serif); font-size: 1.5rem; color: var(--espresso); margin-bottom: 0.4rem; }
+.form-sub { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.8rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.form-group label { font-size: 0.8rem; font-weight: 600; color: var(--espresso); letter-spacing: 0.05em; text-transform: uppercase; }
+.form-group input, .form-group select, .form-group textarea { border: 1.5px solid var(--blush); border-radius: 8px; padding: 0.7rem 0.9rem; font-family: var(--ff-sans); font-size: 0.92rem; color: var(--text); background: var(--sand-light); transition: border-color 0.2s; outline: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); background: #fff; }
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-submit { width: 100%; background: var(--espresso); color: var(--sand-light); border: none; border-radius: 50px; padding: 0.95rem; font-family: var(--ff-sans); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; margin-top: 0.5rem; }
+.form-submit:hover { background: var(--espresso-mid); }
+.form-success { display: none; text-align: center; padding: 2rem; }
+.form-success .tick { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.form-success h3 { font-family: var(--ff-serif); color: var(--espresso); margin-bottom: 0.5rem; }
+.form-success p { font-size: 0.9rem; color: var(--text-light); }
+
+/* FOOTER */
+footer { background: var(--espresso); color: var(--blush); padding: 3rem 7vw 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+.footer-brand .nav-logo { font-size: 1.3rem; margin-bottom: 0.8rem; display: block; color: var(--sand-light); }
+.footer-brand p { font-size: 0.85rem; color: var(--blush-dark); font-weight: 300; max-width: 280px; line-height: 1.6; }
+footer h4 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--blush-dark); margin-bottom: 1rem; }
+footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; }
+footer ul li a:hover { color: #fff; }
+.footer-bottom { grid-column: 1/-1; border-top: 1px solid rgba(232,201,176,0.2); padding-top: 1.5rem; font-size: 0.78rem; color: var(--blush-dark); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+
+/* MOBILE */
+@media (max-width: 820px) {
+  nav { padding: 0 4vw; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-content { padding: 5rem 6vw 3rem; }
+  .hero-collage { height: 55vw; min-height: 280px; position: relative; }
+  .collage-card { left: 1rem; bottom: 1rem; width: 160px; }
+  .collage-badge { top: 1rem; right: 1rem; width: 72px; height: 72px; font-size: 0.62rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  #about { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 6vw; }
+  .about-img-tag { right: 0; bottom: -1rem; }
+  .book-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  section { padding: 4rem 6vw; }
+  #services { padding: 4rem 6vw; }
+  footer { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 6vw 1.5rem; }
+  .footer-bottom { grid-column: 1; }
+  .form-row { grid-template-columns: 1fr; }
+  .strip { gap: 1.2rem; padding: 0.8rem 4vw; font-size: 0.75rem; }
+  .services-header { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">A<span>&</span>T Nail Lounge</a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#book">Book</a>
+    <a href="tel:07928256789">07928 256789</a>
+  </div>
+  <button class="btn-primary nav-cta" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})">Book Now</button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-eyebrow">142 High Street, Billericay CM12 9DF</p>
+    <h1 class="hero-title">Your nails,<br><em>properly done.</em></h1>
+    <p class="hero-sub">Billericay's favourite nail lounge &amp; spa</p>
+    <p class="hero-body">From a quick gel top-up to a full pampering afternoon, A&amp;T is the spot on the High Street where you can actually sit back, breathe, and leave looking brilliant.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})">Reserve a Time</button>
+      <a href="tel:07928256789" class="btn-outline">Call Us</a>
+    </div>
+  </div>
+  <div class="hero-collage">
+    <div class="collage-main">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="Nail treatment at A&T Nail Lounge Billericay">
+    </div>
+    <div class="collage-badge"><strong>5★</strong>Google<br>Reviews</div>
+    <div class="collage-card">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" alt="Spa treatment detail">
+      <p class="collage-card-label">Featured</p>
+      <p class="collage-card-title">Luxury Spa Pedicure</p>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <span>&#10003; Walk-ins Welcome</span>
+  <span>&#10003; Mon&ndash;Sat from 9am</span>
+  <span>&#10003; Sun 10am&ndash;3pm</span>
+  <span>&#10003; Shellac &amp; BIAB Specialists</span>
+  <span>&#10003; 142 High St, Billericay</span>
+</div>
+
+<section id="services">
+  <div class="services-header">
+    <div>
+      <p class="section-label">What We Do</p>
+      <h2 class="section-title">Treatments &amp; <em>Prices</em></h2>
+    </div>
+    <p class="section-intro" style="max-width:340px">All treatments use professional-grade products. No rushing, no shortcuts &mdash; just genuinely good work at fair prices.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">&#128145;</div>
+      <p class="service-name">Manicures</p>
+      <p class="service-desc">Classic, gel, BIAB, and nail art &mdash; hands that look after themselves deserve a little help.</p>
+      <ul class="service-items">
+        <li><span>Classic Manicure</span><span class="service-price">&pound;20</span></li>
+        <li><span>Gel Polish Manicure</span><span class="service-price">&pound;28</span></li>
+        <li><span>BIAB (Builder Gel)</span><span class="service-price">&pound;38</span></li>
+        <li><span>Acrylic Full Set</span><span class="service-price">&pound;45</span></li>
+        <li><span>Acrylic Infill</span><span class="service-price">&pound;32</span></li>
+        <li><span>Nail Art (per nail)</span><span class="service-price">from &pound;3</span></li>
+        <li><span>Gel Removal</span><span class="service-price">&pound;10</span></li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">&#127774;</div>
+      <p class="service-name">Pedicures</p>
+      <p class="service-desc">Proper foot care from a basic tidy-up to a full spa afternoon &mdash; your feet will thank you.</p>
+      <ul class="service-items">
+        <li><span>Classic Pedicure</span><span class="service-price">&pound;28</span></li>
+        <li><span>Gel Pedicure</span><span class="service-price">&pound;38</span></li>
+        <li><span>Luxury Spa Pedicure</span><span class="service-price">&pound;50</span></li>
+        <li><span>Fish Spa Pedicure</span><span class="service-price">&pound;35</span></li>
+        <li><span>Callus Peel Add-on</span><span class="service-price">&pound;12</span></li>
+        <li><span>Paraffin Wax Add-on</span><span class="service-price">&pound;10</span></li>
+        <li><span>Polish Change (toes)</span><span class="service-price">&pound;12</span></li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">&#10024;</div>
+      <p class="service-name">Lashes &amp; Brows</p>
+      <p class="service-desc">Frames for your face &mdash; tinting, waxing, and lash treatments done by steady hands.</p>
+      <ul class="service-items">
+        <li><span>Brow Shape &amp; Wax</span><span class="service-price">&pound;12</span></li>
+        <li><span>Brow Tint</span><span class="service-price">&pound;10</span></li>
+        <li><span>Brow Tint &amp; Wax Combo</span><span class="service-price">&pound;18</span></li>
+        <li><span>Lash Tint</span><span class="service-price">&pound;14</span></li>
+        <li><span>Lash Lift &amp; Tint</span><span class="service-price">&pound;42</span></li>
+        <li><span>Classic Lash Extensions</span><span class="service-price">from &pound;55</span></li>
+        <li><span>Lash Infill (2&ndash;3 wks)</span><span class="service-price">&pound;35</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-img-wrap">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="A&T Nail Lounge interior, Billericay High Street">
+    <div class="about-img-tag">"A proper little gem on the High Street" &mdash; regular client, 2024</div>
+  </div>
+  <div class="about-text">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">Right in the heart of <em>Billericay</em></h2>
+    <p>A&amp;T Nail Lounge &amp; Spa has been part of 142 High Street for years, quietly building a loyal following of Billericay regulars who know a good thing when they find it.</p>
+    <p>We keep things simple: skilled technicians, quality products, a calm and welcoming atmosphere, and no double-booking nonsense. Whether you're popping in on your lunch break or settling in for a proper afternoon treat, we make the time worth it.</p>
+    <p>Our team is trained in the latest gel and BIAB techniques and we only use brands we genuinely trust &mdash; your nails aren't an experiment.</p>
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5&#9733;</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">Years on High St</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="book-grid">
+    <div class="book-info">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Book your <em>visit</em></h2>
+      <p>Drop us a message below and we'll come back to you to confirm your slot, usually within a few hours. Prefer to speak to someone? Give us a ring.</p>
+      <ul class="contact-list">
+        <li>
+          <div class="contact-icon">&#128222;</div>
+          <div><strong>Phone</strong><br><a href="tel:07928256789" style="color:var(--accent);font-weight:600">07928 256789</a></div>
+        </li>
+        <li>
+          <div class="contact-icon">&#9993;</div>
+          <div><strong>Email</strong><br><a href="mailto:hello@a-t-nail-lounge-spa.co.uk" style="color:var(--accent)">hello@a-t-nail-lounge-spa.co.uk</a></div>
+        </li>
+        <li>
+          <div class="contact-icon">&#128205;</div>
+          <div><strong>Find Us</strong><br>142 High Street, Billericay CM12 9DF</div>
+        </li>
+      </ul>
+      <div class="hours-grid" style="margin-top:2rem">
+        <strong>Mon&ndash;Fri</strong><span>9:30am &ndash; 6:30pm</span>
+        <strong>Saturday</strong><span>9:00am &ndash; 5:30pm</span>
+        <strong>Sunday</strong><span>10:00am &ndash; 3:00pm</span>
+        <strong>Walk-ins</strong><span>Always welcome</span>
+      </div>
+    </div>
+
+    <div class="enquiry-form">
+      <div id="formWrap">
+        <h3 class="form-title">Quick Enquiry</h3>
+        <p class="form-sub">Tell us what you're after and we'll get back to you shortly.</p>
+        <form id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Sarah" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Jones" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="07700 900000">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Treatment</label>
+            <select id="service" name="service" required>
+              <option value="">Select a treatment...</option>
+              <optgroup label="Manicures">
+                <option>Classic Manicure &mdash; &pound;20</option>
+                <option>Gel Polish Manicure &mdash; &pound;28</option>
+                <option>BIAB Builder Gel &mdash; &pound;38</option>
+                <option>Acrylic Full Set &mdash; &pound;45</option>
+                <option>Acrylic Infill &mdash; &pound;32</option>
+              </optgroup>
+              <optgroup label="Pedicures">
+                <option>Classic Pedicure &mdash; &pound;28</option>
+                <option>Gel Pedicure &mdash; &pound;38</option>
+                <option>Luxury Spa Pedicure &mdash; &pound;50</option>
+              </optgroup>
+              <optgroup label="Lashes &amp; Brows">
+                <option>Brow Shape &amp; Wax &mdash; &pound;12</option>
+                <option>Lash Lift &amp; Tint &mdash; &pound;42</option>
+                <option>Classic Lash Extensions &mdash; from &pound;55</option>
+              </optgroup>
+              <option value="other">Something else / not sure yet</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+              <label for="time">Preferred Time</label>
+              <select id="time" name="time">
+                <option value="">Any time</option>
+                <option>Morning (before noon)</option>
+                <option>Lunchtime (12&ndash;2pm)</option>
+                <option>Afternoon (2&ndash;5pm)</option>
+                <option>Late afternoon (5&ndash;6:30pm)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notes">Anything else?</label>
+            <textarea id="notes" name="notes" placeholder="Allergies, special occasion, specific nail art ideas..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Enquiry &#8594;</button>
+        </form>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="tick">&#10003;</div>
+        <h3>Brilliant, we've got your message!</h3>
+        <p>Thanks for getting in touch. One of the team at A&amp;T will confirm your appointment within a few hours. If it's urgent, give us a ring on <a href="tel:07928256789" style="color:var(--accent);font-weight:600">07928 256789</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <span class="nav-logo">A<span style="color:var(--blush-dark)">&</span>T Nail Lounge</span>
+    <p>142 High Street, Billericay CM12 9DF. Your neighbourhood nail lounge and spa right in the middle of town.</p>
+  </div>
+  <div>
+    <h4>Treatments</h4>
+    <ul>
+      <li><a href="#services">Manicures</a></li>
+      <li><a href="#services">Pedicures</a></li>
+      <li><a href="#services">Lash Lift &amp; Tint</a></li>
+      <li><a href="#services">Lash Extensions</a></li>
+      <li><a href="#services">Brow Shaping</a></li>
+      <li><a href="#services">Nail Art</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Visit Us</h4>
+    <ul>
+      <li>142 High Street</li>
+      <li>Billericay CM12 9DF</li>
+      <li style="margin-top:0.5rem"><a href="tel:07928256789">07928 256789</a></li>
+      <li><a href="mailto:hello@a-t-nail-lounge-spa.co.uk">hello@a-t-nail-lounge-spa.co.uk</a></li>
+    </ul>
+    <h4 style="margin-top:1.4rem">Opening Hours</h4>
+    <ul>
+      <li>Mon&ndash;Fri: 9:30 &ndash; 18:30</li>
+      <li>Saturday: 9:00 &ndash; 17:30</li>
+      <li>Sunday: 10:00 &ndash; 15:00</li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 A&amp;T Nail Lounge &amp; Spa, Billericay. All rights reserved.</span>
+    <span>142 High St, Billericay CM12 9DF &nbsp;|&nbsp; <a href="tel:07928256789" style="color:var(--blush-dark)">07928 256789</a></span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var form = document.getElementById('bookingForm');
+    var wrap = document.getElementById('formWrap');
+    var success = document.getElementById('formSuccess');
+
+    var dateInput = document.getElementById('date');
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var mm = String(today.getMonth()+1).padStart(2,'0');
+    var dd = String(today.getDate()).padStart(2,'0');
+    dateInput.min = yyyy+'-'+mm+'-'+dd;
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var fname = document.getElementById('fname').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var service = document.getElementById('service').value;
+
+      if(!fname){
+        document.getElementById('fname').focus();
+        document.getElementById('fname').style.borderColor='#c0392b';
+        return;
+      }
+      if(!email || !email.includes('@')){
+        document.getElementById('email').focus();
+        document.getElementById('email').style.borderColor='#c0392b';
+        return;
+      }
+      if(!service){
+        document.getElementById('service').focus();
+        document.getElementById('service').style.borderColor='#c0392b';
+        return;
+      }
+
+      form.querySelector('.form-submit').textContent = 'Sending...';
+      form.querySelector('.form-submit').disabled = true;
+
+      setTimeout(function(){
+        wrap.style.display = 'none';
+        success.style.display = 'block';
+      }, 900);
+    });
+
+    var inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(function(el){
+      el.addEventListener('input', function(){
+        el.style.borderColor = '';
+      });
+    });
+  })();
+</script>
+</body>
+</html>

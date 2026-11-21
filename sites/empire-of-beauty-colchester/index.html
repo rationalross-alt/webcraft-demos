@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empire of Beauty | Colchester's Riverside Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Empire of Beauty","address":{"@type":"PostalAddress","streetAddress":"26 Hythe Quay","addressLocality":"Colchester","addressRegion":"Essex","postalCode":"CO2 8JB","addressCountry":"GB"},"email":"hello@empire-of-beauty.co.uk","url":"https://empire-of-beauty.co.uk","description":"Beauty salon at Hythe Quay, Colchester offering facials, lash treatments, nails, waxing and more."}
+</script>
+<style>
+:root{--cream:#f5f0e8;--espresso:#1c1008;--mocha:#3d2b1f;--gold:#b8965a;--warm:#e8ddd0;--txt:#2a1a10;--serif:'Playfair Display',serif;--sans:'DM Sans',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--txt);font-family:var(--sans);font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4vw;mix-blend-mode:normal;background:transparent;transition:background .3s}
+nav.scrolled{background:rgba(245,240,232,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(28,16,8,.08)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:700;letter-spacing:.04em;color:var(--espresso)}
+.nav-links{display:flex;gap:2.4rem;list-style:none}
+.nav-links a{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mocha);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--espresso);color:var(--cream)!important;padding:.55rem 1.4rem;border-radius:2px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;transition:background .2s}
+.nav-cta:hover{background:var(--mocha)}
+
+/* HERO SPLIT */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;padding-top:0}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:12vh 4vw 8vh 7vw;background:var(--cream);position:relative;z-index:2}
+.hero-eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
+.hero-eyebrow::before{content:'';display:block;width:2.4rem;height:1px;background:var(--gold)}
+.hero-headline{font-family:var(--serif);font-size:clamp(3rem,5.5vw,5.2rem);line-height:1.05;font-weight:900;color:var(--espresso);margin-bottom:1.6rem}
+.hero-headline em{font-style:italic;color:var(--mocha)}
+.hero-sub{font-size:1rem;line-height:1.75;color:var(--mocha);max-width:38ch;margin-bottom:2.8rem;font-weight:300}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--espresso);color:var(--cream);padding:.9rem 2.2rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s,transform .15s}
+.btn-primary:hover{background:var(--mocha);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--mocha);color:var(--mocha);padding:.9rem 2rem;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;background:none;cursor:pointer;transition:all .2s}
+.btn-ghost:hover{background:var(--mocha);color:var(--cream)}
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--cream) 0%,transparent 18%)}
+.hero-badge{position:absolute;bottom:2.4rem;left:-1.8rem;background:var(--gold);color:var(--cream);padding:1rem 1.4rem;font-family:var(--serif);font-size:.85rem;font-style:italic;z-index:3;box-shadow:4px 4px 20px rgba(28,16,8,.2)}
+
+/* INTRO BAND */
+.intro-band{background:var(--espresso);color:var(--cream);padding:1.4rem 7vw;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.intro-band p{font-size:.82rem;letter-spacing:.08em;opacity:.85}
+.intro-band strong{font-weight:500;opacity:1}
+
+/* ABOUT OFFSET */
+.about{display:grid;grid-template-columns:5fr 4fr;gap:0;min-height:70vh;align-items:stretch}
+.about-img{position:relative;overflow:hidden;min-height:480px}
+.about-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+.about-img::before{content:'';position:absolute;top:2rem;left:2rem;right:-2rem;bottom:-2rem;border:1px solid var(--gold);z-index:0}
+.about-img img{position:relative;z-index:1}
+.about-text{padding:6rem 5vw 5rem 4vw;display:flex;flex-direction:column;justify-content:center;background:var(--warm)}
+.section-label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.about-text h2{font-family:var(--serif);font-size:clamp(2rem,3.2vw,3rem);line-height:1.15;color:var(--espresso);margin-bottom:1.4rem}
+.about-text p{font-size:.95rem;line-height:1.8;color:var(--mocha);margin-bottom:1rem;max-width:44ch}
+.about-detail{margin-top:1.8rem;display:flex;flex-direction:column;gap:.6rem}
+.about-detail span{font-size:.8rem;letter-spacing:.06em;color:var(--mocha);display:flex;align-items:center;gap:.6rem}
+.about-detail span::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* SERVICES */
+.services{padding:7rem 7vw;background:var(--cream)}
+.services-header{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:5rem;align-items:end}
+.services-header h2{font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.4rem);line-height:1.1;color:var(--espresso)}
+.services-header p{font-size:.95rem;line-height:1.75;color:var(--mocha);padding-bottom:.4rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(28,16,8,.12)}
+.service-item{padding:2.4rem 2rem 2rem;border-right:1px solid rgba(28,16,8,.12);border-bottom:1px solid rgba(28,16,8,.12);position:relative;transition:background .2s}
+.service-item:hover{background:var(--warm)}
+.service-item:nth-child(3n){border-right:none}
+.service-num{font-family:var(--serif);font-size:2.5rem;font-weight:900;color:rgba(28,16,8,.06);line-height:1;margin-bottom:.8rem}
+.service-item h3{font-family:var(--serif);font-size:1.15rem;color:var(--espresso);margin-bottom:.6rem}
+.service-item p{font-size:.82rem;line-height:1.7;color:var(--mocha);margin-bottom:1.2rem}
+.service-price{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500}
+
+/* PRICE LIST */
+.pricelist{padding:7rem 7vw;background:var(--espresso);color:var(--cream)}
+.pricelist-inner{display:grid;grid-template-columns:2fr 3fr;gap:6vw;align-items:start}
+.pricelist h2{font-family:var(--serif);font-size:clamp(2.2rem,3vw,3rem);line-height:1.1;margin-bottom:1rem}
+.pricelist .intro{font-size:.9rem;line-height:1.8;opacity:.75;margin-bottom:2rem}
+.price-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem 3rem}
+.price-group h4{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.85rem}
+.price-row span:last-child{font-weight:500;color:var(--gold);white-space:nowrap;padding-left:1rem}
+
+/* BOOKING */
+.booking{padding:7rem 7vw;background:var(--warm);display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}
+.booking-text h2{font-family:var(--serif);font-size:clamp(2rem,3vw,2.8rem);line-height:1.15;color:var(--espresso);margin-bottom:1rem}
+.booking-text p{font-size:.92rem;line-height:1.8;color:var(--mocha);margin-bottom:1.6rem}
+.booking-text .tel-link{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--serif);font-size:1.3rem;color:var(--espresso);font-style:italic}
+.form-wrap{background:var(--cream);padding:2.8rem;box-shadow:8px 8px 40px rgba(28,16,8,.1)}
+.form-wrap h3{font-family:var(--serif);font-size:1.4rem;color:var(--espresso);margin-bottom:1.8rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.form-field label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mocha)}
+.form-field input,.form-field select,.form-field textarea{background:var(--warm);border:1px solid rgba(28,16,8,.15);padding:.75rem 1rem;font-family:var(--sans);font-size:.88rem;color:var(--txt);outline:none;transition:border .2s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold)}
+.form-field textarea{resize:vertical;min-height:90px}
+.form-confirm{display:none;background:var(--espresso);color:var(--cream);padding:1.2rem 1.6rem;font-size:.88rem;line-height:1.6;margin-top:1rem}
+
+/* FOOTER */
+footer{background:var(--mocha);color:var(--cream);padding:4rem 7vw 2.4rem;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem}
+footer h5{font-family:var(--serif);font-size:1rem;margin-bottom:1rem;color:var(--gold)}
+footer p,footer a{font-size:.82rem;line-height:1.9;opacity:.75;display:block}
+footer a:hover{opacity:1;color:var(--gold)}
+.footer-bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:1.4rem;margin-top:.6rem;display:flex;justify-content:space-between;font-size:.72rem;opacity:.5}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,16,8,.6);z-index:200;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--cream);max-width:520px;width:90%;padding:3rem;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:1rem;right:1.2rem;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--mocha);line-height:1}
+
+@media(max-width:820px){
+  nav{padding:1rem 5vw}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:10vh 6vw 4vh}
+  .hero-right{height:55vw}
+  .hero-right::after{background:linear-gradient(to bottom,var(--cream) 0%,transparent 20%)}
+  .hero-badge{left:1rem;bottom:1rem}
+  .about{grid-template-columns:1fr}
+  .about-img{min-height:280px}
+  .about-img::before{display:none}
+  .about-text{padding:3rem 6vw}
+  .services-header{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .service-item:nth-child(2n){border-right:none}
+  .service-item:nth-child(3n){border-right:1px solid rgba(28,16,8,.12)}
+  .service-item:nth-child(6n){border-right:none}
+  .pricelist-inner{grid-template-columns:1fr}
+  .price-cols{grid-template-columns:1fr}
+  .booking{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr}
+  .intro-band{flex-direction:column;gap:.6rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-logo">Empire of Beauty</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Treatments</a></li>
+    <li><a href="#prices">Prices</a></li>
+    <li><a href="#booking" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Hythe Quay, Colchester</p>
+    <h1 class="hero-headline">Beauty<br>done<br><em>properly.</em></h1>
+    <p class="hero-sub">A riverside beauty salon on the Hythe, where treatments are carried out with care, skill, and no fuss. Lashes, nails, waxing, facials and more — all in one calm, unhurried space.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal()">Book a Treatment</button>
+      <a href="#services" class="btn-ghost" style="display:inline-block;line-height:1;padding:.9rem 2rem;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--mocha);color:var(--mocha);">See Treatments</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=80" alt="Beauty treatment at Empire of Beauty, Colchester">
+    <div class="hero-badge">Est. Hythe Quay &mdash; CO2 8JB</div>
+  </div>
+</section>
+
+<!-- INTRO BAND -->
+<div class="intro-band">
+  <p><strong>Walk-ins welcome</strong> &mdash; or get in touch to reserve your slot</p>
+  <p>26 Hythe Quay, Colchester CO2 8JB</p>
+  <p>Enquiries: <strong>hello@empire-of-beauty.co.uk</strong></p>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="Salon interior at Empire of Beauty">
+  </div>
+  <div class="about-text">
+    <p class="section-label">Our Story</p>
+    <h2>A proper salon on the riverside</h2>
+    <p>Empire of Beauty sits right on Hythe Quay, one of Colchester's most characterful spots. We're not a chain, not a franchise &mdash; just a skilled, friendly team who take real pride in the results they deliver.</p>
+    <p>Whether it's your first lash lift or a regular gel manicure, you'll always leave feeling genuinely looked after. No hard sell, no rushing through appointments, just honest beauty work done well.</p>
+    <div class="about-detail">
+      <span>Fully trained, insured therapists</span>
+      <span>Professional-grade products throughout</span>
+      <span>Relaxed, welcoming atmosphere</span>
+      <span>Walk-ins taken when available</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div>
+      <p class="section-label">What We Offer</p>
+      <h2>Treatments worth making time for</h2>
+    </div>
+    <p>From quick nail appointments to longer pampering sessions, everything at Empire of Beauty is carried out properly, with the right products and the time it deserves.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-num">01</div>
+      <h3>Lash Treatments</h3>
+      <p>Classic lash extensions, hybrid sets and Russian volume. We also do lash lifts and tints for a lower-maintenance look that opens up the eyes.</p>
+      <div class="service-price">From &pound;35</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">02</div>
+      <h3>Nails &amp; Manicures</h3>
+      <p>Gel manicures, shellac, nail extensions and nail art. Hands and feet both catered for, with a full pedicure menu available too.</p>
+      <div class="service-price">From &pound;22</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">03</div>
+      <h3>Brow Shaping</h3>
+      <p>Wax and thread shaping, HD brows, brow lamination and tinting. We'll work with your natural shape to give you something that suits your face, not a trend.</p>
+      <div class="service-price">From &pound;12</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">04</div>
+      <h3>Facials &amp; Skin</h3>
+      <p>Classic deep-cleanse facials, brightening treatments and skin consultations. Good for a one-off treat or as a regular part of your skincare routine.</p>
+      <div class="service-price">From &pound;40</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">05</div>
+      <h3>Waxing</h3>
+      <p>Full body waxing for women and men. Hot wax for sensitive areas, strip wax for larger areas. We keep it professional, thorough and as comfortable as possible.</p>
+      <div class="service-price">From &pound;8</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">06</div>
+      <h3>Spray Tanning</h3>
+      <p>Professional spray tans using high-quality solution. Natural-looking results in light, medium or deep shades. Pre-tan advice given on request.</p>
+      <div class="service-price">From &pound;25</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE LIST -->
+<section class="pricelist" id="prices">
+  <div class="pricelist-inner">
+    <div>
+      <p class="section-label" style="color:var(--gold)">Price List</p>
+      <h2>Straightforward pricing, no surprises</h2>
+      <p class="intro">All prices shown are our standard rates. Some treatments vary depending on length or complexity &mdash; we'll always confirm before we start.</p>
+      <button class="btn-primary" onclick="openModal()" style="margin-top:1rem">Book a Treatment</button>
+    </div>
+    <div class="price-cols">
+      <div class="price-group">
+        <h4>Lashes</h4>
+        <div class="price-row"><span>Lash Lift &amp; Tint</span><span>&pound;45</span></div>
+        <div class="price-row"><span>Classic Set</span><span>&pound;55</span></div>
+        <div class="price-row"><span>Hybrid Set</span><span>&pound;65</span></div>
+        <div class="price-row"><span>Russian Volume</span><span>&pound;75</span></div>
+        <div class="price-row"><span>Infills (2 wks)</span><span>&pound;35</span></div>
+        <div class="price-row"><span>Lash Tint Only</span><span>&pound;12</span></div>
+      </div>
+      <div class="price-group">
+        <h4>Nails</h4>
+        <div class="price-row"><span>Gel Manicure</span><span>&pound;28</span></div>
+        <div class="price-row"><span>Shellac Manicure</span><span>&pound;25</span></div>
+        <div class="price-row"><span>Gel Pedicure</span><span>&pound;35</span></div>
+        <div class="price-row"><span>Acrylic Extensions</span><span>&pound;40</span></div>
+        <div class="price-row"><span>Nail Art (per nail)</span><span>&pound;2</span></div>
+        <div class="price-row"><span>Soak Off</span><span>&pound;10</span></div>
+      </div>
+      <div class="price-group">
+        <h4>Brows &amp; Face</h4>
+        <div class="price-row"><span>Brow Wax</span><span>&pound;12</span></div>
+        <div class="price-row"><span>Brow Thread</span><span>&pound;10</span></div>
+        <div class="price-row"><span>Brow Lamination</span><span>&pound;38</span></div>
+        <div class="price-row"><span>HD Brows</span><span>&pound;35</span></div>
+        <div class="price-row"><span>Brow Tint</span><span>&pound;10</span></div>
+        <div class="price-row"><span>Classic Facial</span><span>&pound;45</span></div>
+      </div>
+      <div class="price-group">
+        <h4>Waxing &amp; Tanning</h4>
+        <div class="price-row"><span>Upper Lip</span><span>&pound;8</span></div>
+        <div class="price-row"><span>Full Leg</span><span>&pound;28</span></div>
+        <div class="price-row"><span>Bikini Line</span><span>&pound;16</span></div>
+        <div class="price-row"><span>Hollywood Wax</span><span>&pound;40</span></div>
+        <div class="price-row"><span>Underarm Wax</span><span>&pound;12</span></div>
+        <div class="price-row"><span>Spray Tan</span><span>&pound;25</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking" id="booking">
+  <div class="booking-text">
+    <p class="section-label">Get in Touch</p>
+    <h2>Ready to book?</h2>
+    <p>Fill in the form and we'll get back to you to confirm your appointment. Walk-ins are always welcome when we have availability &mdash; just pop in to 26 Hythe Quay.</p>
+    <p style="margin-bottom:.6rem;font-size:.82rem;color:var(--mocha);">Email us directly:</p>
+    <a href="mailto:hello@empire-of-beauty.co.uk" class="tel-link">hello@empire-of-beauty.co.uk</a>
+    <p style="margin-top:1.6rem;font-size:.8rem;line-height:1.7;color:var(--mocha);">26 Hythe Quay, Colchester CO2 8JB<br>Walk-ins welcome &mdash; appointments recommended for longer treatments</p>
+  </div>
+  <div class="form-wrap">
+    <h3>Send an Enquiry</h3>
+    <form id="enquiryForm" onsubmit="handleForm(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" required placeholder="Sarah">
+        </div>
+        <div class="form-field">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" required placeholder="Jones">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="sarah@example.com">
+      </div>
+      <div class="form-field">
+        <label for="treatment">Treatment Interested In</label>
+        <select id="treatment" name="treatment">
+          <option value="">Select a treatment...</option>
+          <option>Lash Extensions</option>
+          <option>Lash Lift &amp; Tint</option>
+          <option>Gel Manicure</option>
+          <option>Gel Pedicure</option>
+          <option>Brow Lamination</option>
+          <option>HD Brows</option>
+          <option>Classic Facial</option>
+          <option>Full Body Wax</option>
+          <option>Spray Tan</option>
+          <option>Something Else</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="preferred">Preferred Day / Time</label>
+        <input type="text" id="preferred" name="preferred" placeholder="e.g. Weekday mornings, Saturday afternoon">
+      </div>
+      <div class="form-field">
+        <label for="message">Anything Else?</label>
+        <textarea id="message" name="message" placeholder="Any questions, skin sensitivities, or details we should know..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Send Enquiry</button>
+      <div class="form-confirm" id="formConfirm">
+        <strong>Thank you &mdash; we've received your enquiry.</strong><br>
+        We'll be in touch within 24 hours to confirm your appointment. See you at the Hythe.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <h5>Empire of Beauty</h5>
+    <p>A beauty salon on Hythe Quay, Colchester &mdash; offering lashes, nails, brows, facials, waxing and spray tanning in a relaxed, friendly setting.</p>
+    <p style="margin-top:1rem"><a href="mailto:hello@empire-of-beauty.co.uk">hello@empire-of-beauty.co.uk</a></p>
+  </div>
+  <div>
+    <h5>Find Us</h5>
+    <p>26 Hythe Quay</p>
+    <p>Colchester</p>
+    <p>Essex, CO2 8JB</p>
+    <p style="margin-top:.8rem">Walk-ins welcome</p>
+  </div>
+  <div>
+    <h5>Treatments</h5>
+    <a href="#services">Lash Treatments</a>
+    <a href="#services">Nails &amp; Manicures</a>
+    <a href="#services">Brow Shaping</a>
+    <a href="#services">Facials</a>
+    <a href="#services">Waxing</a>
+    <a href="#services">Spray Tanning</a>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Empire of Beauty. All rights reserved.</span>
+    <span>26 Hythe Quay, Colchester CO2 8JB</span>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <p class="section-label">Quick Booking</p>
+    <h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--espresso);margin-bottom:1.4rem">Book a Treatment</h3>
+    <form id="modalForm" onsubmit="handleModalForm(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="mfname">First Name</label>
+          <input type="text" id="mfname" required placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label for="memail">Email</label>
+          <input type="email" id="memail" required placeholder="your@email.com">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="mtreatment">Treatment</label>
+        <select id="mtreatment">
+          <option value="">Choose a treatment...</option>
+          <option>Lash Extensions</option>
+          <option>Lash Lift &amp; Tint</option>
+          <option>Gel Manicure</option>
+          <option>Gel Pedicure</option>
+          <option>Brow Lamination</option>
+          <option>Classic Facial</option>
+          <option>Waxing</option>
+          <option>Spray Tan</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="mtime">Preferred Time</label>
+        <input type="text" id="mtime" placeholder="e.g. Thursday afternoon">
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%">Request Appointment</button>
+      <div class="form-confirm" id="modalConfirm">
+        <strong>Brilliant &mdash; request received!</strong><br>
+        We'll email you within 24 hours to confirm. Thank you for choosing Empire of Beauty.
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  function openModal() {
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  function handleForm(e) {
+    e.preventDefault();
+    const confirm = document.getElementById('formConfirm');
+    confirm.style.display = 'block';
+    e.target.querySelector('button[type=submit]').style.display = 'none';
+    confirm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function handleModalForm(e) {
+    e.preventDefault();
+    const confirm = document.getElementById('modalConfirm');
+    confirm.style.display = 'block';
+    e.target.querySelector('button[type=submit]').style.display = 'none';
+  }
+</script>
+</body>
+</html>

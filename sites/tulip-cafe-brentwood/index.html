@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tulip Cafe – Brentwood, Essex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Tulip Cafe","address":{"@type":"PostalAddress","streetAddress":"69 Ongar Rd","addressLocality":"Brentwood","addressRegion":"Essex","postalCode":"CM15 9AZ","addressCountry":"GB"},"telephone":"07386261927","email":"hello@tulip-cafe.co.uk","url":"https://tulip-cafe.co.uk","servesCuisine":"Cafe","priceRange":"£","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"08:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"13:00"}]}
+</script>
+<style>
+:root {
+  --sand: #f5ede0;
+  --sand-light: #fdf8f2;
+  --espresso: #2c1a0e;
+  --espresso-mid: #4a2f1a;
+  --caramel: #b5763a;
+  --cream: #ede0cc;
+  --text: #2c1a0e;
+  --muted: #7a6250;
+  --white: #fff;
+  --ff-serif: 'Playfair Display', serif;
+  --ff-sans: 'DM Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(44,26,14,.13);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-sans); background: var(--sand-light); color: var(--text); font-size: 16px; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,248,242,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--cream); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 62px; }
+.nav-logo { font-family: var(--ff-serif); font-size: 1.35rem; color: var(--espresso); letter-spacing: .01em; }
+.nav-logo span { color: var(--caramel); }
+.nav-links { display: flex; gap: 2rem; font-size: .9rem; font-weight: 500; color: var(--muted); }
+.nav-links a:hover { color: var(--caramel); }
+.nav-cta { background: var(--espresso); color: var(--white); padding: .45rem 1.1rem; border-radius: 50px; font-size: .85rem; font-weight: 500; transition: background .2s; }
+.nav-cta:hover { background: var(--caramel); }
+
+/* HERO */
+.hero { padding-top: 62px; min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; background: var(--sand); overflow: hidden; }
+.hero-content { display: flex; flex-direction: column; justify-content: center; padding: 6rem 5vw 4rem 7vw; }
+.hero-eyebrow { font-family: var(--ff-serif); font-style: italic; font-size: 1.05rem; color: var(--caramel); margin-bottom: .75rem; }
+.hero-h1 { font-family: var(--ff-serif); font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; color: var(--espresso); margin-bottom: 1.25rem; }
+.hero-h1 em { font-style: italic; color: var(--caramel); }
+.hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 400px; margin-bottom: 2rem; font-weight: 300; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--espresso); color: var(--white); padding: .7rem 1.6rem; border-radius: 50px; font-size: .95rem; font-weight: 500; transition: background .2s, transform .15s; border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--caramel); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--espresso); border: 1.5px solid var(--espresso); padding: .7rem 1.6rem; border-radius: 50px; font-size: .95rem; font-weight: 500; cursor: pointer; transition: all .2s; }
+.btn-outline:hover { background: var(--espresso); color: var(--white); }
+.hero-hours { margin-top: 2.5rem; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--cream); padding-top: 1.25rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.hero-hours strong { color: var(--espresso); font-weight: 500; }
+
+.hero-collage { position: relative; overflow: hidden; }
+.collage-main { position: absolute; inset: 0; }
+.collage-main img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.collage-main::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(44,26,14,.18) 0%, transparent 60%); }
+.collage-card { position: absolute; bottom: 2.5rem; left: -2rem; width: 200px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 4px solid var(--white); z-index: 2; }
+.collage-card img { height: 140px; object-fit: cover; }
+.collage-badge { position: absolute; top: 2rem; right: 2rem; background: var(--caramel); color: var(--white); border-radius: 50%; width: 90px; height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--ff-serif); font-size: .78rem; text-align: center; line-height: 1.3; box-shadow: 0 4px 16px rgba(181,118,58,.4); z-index: 3; }
+.collage-badge strong { font-size: 1.1rem; }
+
+/* STRIP */
+.strip { background: var(--espresso); color: var(--cream); padding: .9rem 5vw; display: flex; gap: 2.5rem; align-items: center; justify-content: center; flex-wrap: wrap; font-size: .88rem; font-weight: 300; letter-spacing: .02em; }
+.strip span { opacity: .55; }
+
+/* MENU SECTION */
+.section { padding: 5rem 5vw; }
+.section-label { font-family: var(--ff-serif); font-style: italic; color: var(--caramel); font-size: 1rem; margin-bottom: .4rem; }
+.section-h2 { font-family: var(--ff-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--espresso); margin-bottom: .5rem; }
+.section-sub { color: var(--muted); font-weight: 300; max-width: 520px; margin-bottom: 2.5rem; }
+
+.menu-tabs { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.tab-btn { background: var(--cream); border: none; padding: .5rem 1.2rem; border-radius: 50px; font-family: var(--ff-sans); font-size: .88rem; cursor: pointer; color: var(--muted); transition: all .2s; }
+.tab-btn.active, .tab-btn:hover { background: var(--espresso); color: var(--white); }
+
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+.menu-item { background: var(--white); border-radius: var(--radius); padding: 1.25rem 1.4rem; border: 1px solid var(--cream); transition: box-shadow .2s, transform .2s; }
+.menu-item:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.menu-item-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; margin-bottom: .3rem; }
+.menu-item-name { font-weight: 500; font-size: .97rem; color: var(--espresso); }
+.menu-item-price { font-family: var(--ff-serif); font-weight: 700; color: var(--caramel); white-space: nowrap; }
+.menu-item-desc { font-size: .83rem; color: var(--muted); font-weight: 300; }
+.menu-panel { display: none; }
+.menu-panel.active { display: block; }
+
+/* ABOUT */
+.about { background: var(--sand); }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-img { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/5; }
+.about-img img { width: 100%; height: 100%; object-fit: cover; }
+.about-text .section-h2 { margin-bottom: 1rem; }
+.about-text p { color: var(--muted); font-weight: 300; margin-bottom: 1rem; line-height: 1.75; }
+.about-text p:last-of-type { margin-bottom: 1.5rem; }
+.about-stats { display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat strong { font-family: var(--ff-serif); font-size: 2rem; color: var(--caramel); display: block; }
+.stat span { font-size: .8rem; color: var(--muted); }
+
+/* ENQUIRY */
+.enquiry { background: var(--espresso); }
+.enquiry .section-label, .enquiry .section-h2 { color: var(--cream); }
+.enquiry .section-h2 { color: var(--white); }
+.enquiry .section-sub { color: rgba(237,224,204,.65); }
+.enquiry-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.enquiry-info { color: var(--cream); }
+.enquiry-info h3 { font-family: var(--ff-serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--white); }
+.info-row { display: flex; align-items: flex-start; gap: .8rem; margin-bottom: 1rem; font-size: .92rem; color: rgba(237,224,204,.8); }
+.info-icon { color: var(--caramel); font-size: 1.1rem; margin-top: .05rem; flex-shrink: 0; }
+.enquiry-form { background: var(--sand-light); border-radius: 16px; padding: 2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; }
+.form-group label { font-size: .82rem; font-weight: 500; color: var(--espresso-mid); }
+.form-group input, .form-group textarea, .form-group select { border: 1.5px solid var(--cream); border-radius: 8px; padding: .6rem .85rem; font-family: var(--ff-sans); font-size: .9rem; background: var(--white); color: var(--text); transition: border-color .2s; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--caramel); }
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-success { display: none; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 1rem; text-align: center; color: #2e7d32; font-size: .9rem; margin-top: .5rem; }
+
+/* FOOTER */
+footer { background: #1a0d05; color: rgba(237,224,204,.7); padding: 3rem 5vw 1.5rem; }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2rem; }
+.footer-brand .nav-logo { font-size: 1.4rem; margin-bottom: .6rem; }
+.footer-brand p { font-size: .85rem; font-weight: 300; line-height: 1.7; max-width: 260px; }
+footer h4 { font-family: var(--ff-serif); color: var(--cream); margin-bottom: .75rem; font-size: 1rem; }
+footer ul { list-style: none; font-size: .85rem; }
+footer ul li { margin-bottom: .4rem; }
+footer ul li a:hover { color: var(--caramel); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.25rem; font-size: .78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+
+/* MOBILE */
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-content { padding: 5rem 5vw 2.5rem; }
+  .hero-collage { height: 340px; position: relative; }
+  .collage-card { left: 1rem; width: 150px; bottom: 1rem; }
+  .collage-card img { height: 100px; }
+  .about-inner, .enquiry-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .about-img { aspect-ratio: 16/9; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .nav-links { display: none; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Tulip <span>Cafe</span></div>
+  <div class="nav-links">
+    <a href="#menu">Menu</a>
+    <a href="#about">Our Story</a>
+    <a href="#enquiry">Get in Touch</a>
+  </div>
+  <a href="#enquiry" class="nav-cta btn-primary">Say Hello</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Neighbourhood cafe, Brentwood</p>
+    <h1 class="hero-h1">Your morning<br>starts with a<br><em>proper coffee</em></h1>
+    <p class="hero-sub">Freshly ground espresso, homemade bakes, and a friendly face on Ongar Road. Come as you are.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">See Our Menu</button>
+      <a href="tel:07386261927" class="btn-outline">Call Us</a>
+    </div>
+    <div class="hero-hours">
+      <div><strong>Mon–Fri</strong> 7:30am – 4pm</div>
+      <div><strong>Saturday</strong> 8am – 3pm</div>
+      <div><strong>Sunday</strong> 9am – 1pm</div>
+    </div>
+  </div>
+  <div class="hero-collage">
+    <div class="collage-main">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Coffee at Tulip Cafe Brentwood" loading="eager">
+    </div>
+    <div class="collage-card">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80" alt="Cafe interior Tulip Brentwood">
+    </div>
+    <div class="collage-badge">
+      <strong>Est.</strong>
+      Ongar Rd<br>Brentwood
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <span>&#9670;</span> Freshly ground daily &nbsp;<span>&#9670;</span>&nbsp; Homemade soups &amp; toasties &nbsp;<span>&#9670;</span>&nbsp; Free Wi-Fi &nbsp;<span>&#9670;</span>&nbsp; Dog friendly &nbsp;<span>&#9670;</span>&nbsp; 69 Ongar Rd, CM15 9AZ
+</div>
+
+<section class="section" id="menu">
+  <p class="section-label">What we serve</p>
+  <h2 class="section-h2">Honest food, done well</h2>
+  <p class="section-sub">Nothing fancy, nothing frozen. Our menu changes with the seasons and whatever arrives fresh that morning.</p>
+
+  <div class="menu-tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'drinks')">Hot Drinks</button>
+    <button class="tab-btn" onclick="switchTab(this,'cold')">Cold Drinks</button>
+    <button class="tab-btn" onclick="switchTab(this,'food')">Food</button>
+    <button class="tab-btn" onclick="switchTab(this,'bakes')">Bakes &amp; Sweet</button>
+  </div>
+
+  <div id="tab-drinks" class="menu-panel active">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Flat White</span><span class="menu-item-price">£3.20</span></div><p class="menu-item-desc">Double ristretto, steamed whole milk. Our most popular order, and for good reason.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Cappuccino</span><span class="menu-item-price">£3.10</span></div><p class="menu-item-desc">Equal thirds espresso, steamed milk, and a proper foam top. Not too dry, not too wet.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Americano</span><span class="menu-item-price">£2.80</span></div><p class="menu-item-desc">Long and strong. Single or double shot, your call.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Latte</span><span class="menu-item-price">£3.40</span></div><p class="menu-item-desc">Generous, milky, and warming. Oat or soy milk available for 30p extra.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Cortado</span><span class="menu-item-price">£3.00</span></div><p class="menu-item-desc">Equal parts espresso and warm milk. Small but mighty.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">English Breakfast Tea</span><span class="menu-item-price">£2.20</span></div><p class="menu-item-desc">Loose-leaf Yorkshire Gold, brewed in the pot. Milk on the side.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Hot Chocolate</span><span class="menu-item-price">£3.50</span></div><p class="menu-item-desc">Real Belgian chocolate powder, steamed milk, and a dusting of cocoa. Kids' size available.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Chai Latte</span><span class="menu-item-price">£3.40</span></div><p class="menu-item-desc">Spiced chai blend, steamed oat milk. Warm and a little bit cosy.</p></div>
+    </div>
+  </div>
+
+  <div id="tab-cold" class="menu-panel">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Iced Latte</span><span class="menu-item-price">£3.80</span></div><p class="menu-item-desc">Double espresso over ice with cold milk. Refreshing on a warm Essex afternoon.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Cold Brew</span><span class="menu-item-price">£3.60</span></div><p class="menu-item-desc">12-hour steeped, served straight or with a splash of milk. Smooth and low-acid.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Freshly Squeezed OJ</span><span class="menu-item-price">£3.20</span></div><p class="menu-item-desc">Pressed to order. No cartons, no corners cut.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Still / Sparkling Water</span><span class="menu-item-price">£1.50</span></div><p class="menu-item-desc">Harrogate spring water, 330ml.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Lemonade (homemade)</span><span class="menu-item-price">£2.80</span></div><p class="menu-item-desc">Made fresh daily with real lemons, a pinch of sugar, and fizzy water.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Fruit Smoothie</span><span class="menu-item-price">£4.20</span></div><p class="menu-item-desc">Ask at the counter for today's blend. Usually mango &amp; banana or berry &amp; apple.</p></div>
+    </div>
+  </div>
+
+  <div id="tab-food" class="menu-panel">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Bacon &amp; Egg Roll</span><span class="menu-item-price">£5.50</span></div><p class="menu-item-desc">Back bacon, fried egg, your choice of sauce in a soft white roll. The classic.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Cheese &amp; Ham Toastie</span><span class="menu-item-price">£5.80</span></div><p class="menu-item-desc">Thick-cut bloomer, mature cheddar, honey-roast ham. Pressed until golden.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Brie &amp; Cranberry Toastie</span><span class="menu-item-price">£6.20</span></div><p class="menu-item-desc">Creamy brie, cranberry relish, and a handful of rocket on granary bread.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Soup of the Day</span><span class="menu-item-price">£5.50</span></div><p class="menu-item-desc">Made fresh each morning. Ask at the counter. Served with a doorstep of crusty bread.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Avocado on Toast</span><span class="menu-item-price">£6.80</span></div><p class="menu-item-desc">Smashed avo, chilli flakes, lemon, on sourdough. Add a poached egg for £1.20.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Full Breakfast</span><span class="menu-item-price">£9.50</span></div><p class="menu-item-desc">Two rashers, two eggs (any style), sausage, beans, mushrooms, and toast. Proper job.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Porridge</span><span class="menu-item-price">£4.50</span></div><p class="menu-item-desc">Rolled oats, semi-skimmed milk, golden syrup or honey. Add banana for 60p.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Jacket Potato</span><span class="menu-item-price">£6.50</span></div><p class="menu-item-desc">Served from noon. Choice of cheese, beans, tuna mayo, or coleslaw.</p></div>
+    </div>
+  </div>
+
+  <div id="tab-bakes" class="menu-panel">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Almond Croissant</span><span class="menu-item-price">£3.20</span></div><p class="menu-item-desc">Flaky, buttery, and filled with almond frangipane. Arrives fresh each morning.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Banana &amp; Walnut Loaf</span><span class="menu-item-price">£2.80</span></div><p class="menu-item-desc">Thick slice, baked on-site. Gorgeous with a flat white.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Blueberry Muffin</span><span class="menu-item-price">£2.60</span></div><p class="menu-item-desc">Big, soft, and packed with fruit. Not the sad little ones from a packet.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Chocolate Brownie</span><span class="menu-item-price">£2.90</span></div><p class="menu-item-desc">Dense, fudgy, and a little bit reckless. Served warm on request.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Lemon Drizzle Slice</span><span class="menu-item-price">£2.70</span></div><p class="menu-item-desc">Sharp, sweet, and properly lemony. A Tulip staple since we opened.</p></div>
+      <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Cinnamon Swirl</span><span class="menu-item-price">£3.00</span></div><p class="menu-item-desc">Soft yeasted dough, brown sugar, cinnamon, and a cream cheese glaze.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="about-inner">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Inside Tulip Cafe Brentwood">
+    </div>
+    <div class="about-text">
+      <p class="section-label">Our story</p>
+      <h2 class="section-h2">A proper neighbourhood cafe on Ongar Road</h2>
+      <p>Tulip Cafe has been a fixture on Ongar Road for years, serving the people of Brentwood with fresh food, good coffee, and the kind of welcome that makes you want to linger a bit longer than you planned.</p>
+      <p>We keep things simple. Our coffee comes from a small-batch roaster, our food is made from scratch each morning, and our team actually knows your name by your second visit. We think that matters.</p>
+      <p>Whether you're grabbing a flat white before the 8:14 to Liverpool Street or settling in with a toastie and the paper on a Saturday morning, you're always welcome here.</p>
+      <a href="#enquiry" class="btn-primary">Get in touch</a>
+      <div class="about-stats">
+        <div class="stat"><strong>6am</strong><span>Kitchen starts</span></div>
+        <div class="stat"><strong>100%</strong><span>Fresh each day</span></div>
+        <div class="stat"><strong>CM15</strong><span>Proud locals</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section enquiry" id="enquiry">
+  <div class="enquiry-inner">
+    <div class="enquiry-info">
+      <p class="section-label">Get in touch</p>
+      <h2 class="section-h2">We'd love to hear from you</h2>
+      <p class="section-sub">Got a question about our menu, want to book for a group, or just want to say hello? Drop us a message below.</p>
+      <br>
+      <h3>Find us</h3>
+      <div class="info-row"><span class="info-icon">&#9679;</span><div>69 Ongar Rd, Brentwood<br>Essex, CM15 9AZ</div></div>
+      <div class="info-row"><span class="info-icon">&#9679;</span><div><a href="tel:07386261927" style="color:inherit">07386 261927</a><br><small>Click to call on mobile</small></div></div>
+      <div class="info-row"><span class="info-icon">&#9679;</span><div><a href="mailto:hello@tulip-cafe.co.uk" style="color:inherit">hello@tulip-cafe.co.uk</a></div></div>
+      <div class="info-row"><span class="info-icon">&#9679;</span><div><strong style="color:var(--cream)">Mon–Fri</strong> 7:30am – 4:00pm<br><strong style="color:var(--cream)">Saturday</strong> 8:00am – 3:00pm<br><strong style="color:var(--cream)">Sunday</strong> 9:00am – 1:00pm</div></div>
+    </div>
+    <div class="enquiry-form">
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" placeholder="Sarah" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" placeholder="Jones">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="sarah@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="07...">
+        </div>
+        <div class="form-group">
+          <label for="reason">What's it about?</label>
+          <select id="reason" name="reason">
+            <option value="">Pick one...</option>
+            <option>Group booking (6+ people)</option>
+            <option>Private hire enquiry</option>
+            <option>Menu or dietary question</option>
+            <option>Feedback or compliment</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+        <div class="form-success" id="formSuccess">
+          Thanks for getting in touch! We'll reply within one working day. See you at Tulip soon.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Tulip <span>Cafe</span></div>
+      <p>Your neighbourhood cafe on Ongar Road, Brentwood. Good coffee, fresh food, and a friendly welcome every single day.</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="#menu">Our Menu</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#enquiry">Get in Touch</a></li>
+        <li><a href="tel:07386261927">07386 261927</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Opening hours</h4>
+      <ul>
+        <li>Mon–Fri: 7:30am – 4pm</li>
+        <li>Saturday: 8am – 3pm</li>
+        <li>Sunday: 9am – 1pm</li>
+        <li style="margin-top:.6rem;font-size:.8rem;opacity:.6">Kitchen closes 30 mins before close</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Tulip Cafe, Brentwood. All rights reserved.</span>
+    <span>69 Ongar Rd, Brentwood, Essex CM15 9AZ</span>
+  </div>
+</footer>
+
+<script>
+function switchTab(btn, tabId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + tabId).classList.add('active');
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(() => {
+    form.querySelectorAll('input, textarea, select').forEach(el => el.value = '');
+    success.style.display = 'block';
+    btn.textContent = 'Message Sent';
+    btn.style.background = '#4caf50';
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.background = '';
+      btn.disabled = false;
+      success.style.display = 'none';
+    }, 6000);
+  }, 900);
+}
+
+// Subtle nav shadow on scroll
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow = window.scrollY > 10 ? '0 2px 16px rgba(44,26,14,.10)' : 'none';
+});
+</script>
+</body>
+</html>

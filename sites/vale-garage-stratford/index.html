@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-layout="bold-band-stack" data-palette="oxblood-cream">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vale Garage | Garage in Stratford</title>
+  <meta name="description" content="Located at Upper St, Stratford St Mary, Colchester CO7 6LW" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8f4ee;
+      --paper: #ffffff;
+      --ink: #271519;
+      --muted: #6b4c52;
+      --accent: #7f1d1d;
+      --accent-fg: #ffffff;
+      --rule: #e2d6d0;
+      --head-font: 'Archivo Black', Impact, sans-serif;
+      --body-font: 'IBM Plex Sans', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--body-font); background: var(--bg); color: var(--ink); line-height: 1.55; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 6% 44px; }
+    .top-strip { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 8px 6%; border-bottom: 1px solid var(--rule); font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+    .nav-bar { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+    .brand { font-family: var(--head-font); font-size: 1.55rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { color: inherit; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    .hero-block { padding: 38px 0 28px; border-bottom: 1px solid var(--rule); }
+    h1 { font-family: var(--head-font); font-size: clamp(2rem, 4.1vw, 3.25rem); line-height: 1.08; }
+    h2 { font-family: var(--head-font); font-size: clamp(1.4rem, 2.3vw, 1.9rem); line-height: 1.18; }
+    h3 { font-family: var(--head-font); font-size: 1.12rem; margin: 6px 0; }
+    .kicker { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: var(--accent); }
+    .muted { color: var(--muted); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn-solid { background: var(--accent); color: var(--accent-fg); padding: 11px 18px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; }
+    .btn-outline { border: 1px solid var(--rule); color: var(--ink); padding: 10px 18px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 20px; font-size: 0.84rem; font-weight: 600; color: var(--muted); }
+    .badge-col { display: flex; flex-direction: column; gap: 6px; margin-top: 22px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+    .sec-bar { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .ledger-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; background: var(--paper); border: 1px solid var(--rule); padding: 24px; }
+    .ledger-item { padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+    .l-line { display: flex; align-items: baseline; gap: 8px; }
+    .l-dots { flex: 1; border-bottom: 1px dotted var(--muted); opacity: 0.45; }
+    .l-price { color: var(--accent); font-weight: 700; white-space: nowrap; }
+    .l-meta { font-size: 0.85rem; color: var(--muted); margin-top: 3px; }
+    .tile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .tile-card { background: var(--paper); border: 1px solid var(--rule); padding: 20px; }
+    .tile-card p { font-size: 0.88rem; color: var(--muted); }
+    .tile-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .tile-tag { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
+    .row-list { background: var(--paper); border: 1px solid var(--rule); padding: 8px 22px; }
+    .row-item { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .row-item:last-child { border-bottom: none; }
+    .row-right { display: flex; align-items: center; gap: 14px; white-space: nowrap; }
+    .split-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
+    .box { background: var(--paper); border: 1px solid var(--rule); padding: 24px; }
+    .hr-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 0.92rem; }
+    .map-frame { border: 1px solid var(--rule); min-height: 270px; background: var(--paper); }
+    .map-frame iframe { width: 100%; height: 100%; min-height: 270px; border: 0; display: block; }
+    .q-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .q-form input:nth-child(3) { grid-column: 1 / -1; }
+    .q-form input { padding: 10px 12px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink); font-family: inherit; }
+    .q-form button { grid-column: 1 / -1; background: var(--accent); color: var(--accent-fg); border: none; padding: 12px; font-weight: 700; cursor: pointer; }
+    .sent { display: none; grid-column: 1 / -1; color: var(--accent); font-weight: 700; font-size: 0.9rem; }
+    .sticky-shell { max-width: 1220px; margin: 0 auto; padding: 32px 6%; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 32px; align-items: start; }
+    .sticky-rail { position: sticky; top: 24px; background: var(--paper); border: 1px solid var(--rule); padding: 26px; }
+    .sticky-main { display: flex; flex-direction: column; gap: 24px; }
+    .accent-band { background: var(--accent); color: var(--accent-fg); padding: 24px 0 32px; }
+    .poster-frame { background: var(--paper); border: 2px solid var(--rule); padding: 28px; }
+    footer { max-width: 1140px; margin: 0 auto; padding: 20px 6% 40px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.84rem; color: var(--muted); }
+    @media (max-width: 840px) {
+      .ledger-cols, .split-2, .sticky-shell, .q-form { grid-template-columns: 1fr; }
+      .sticky-rail { position: static; }
+    }
+  </style>
+</head>
+<body>
+  
+        <header class="accent-band">
+          <div class="wrap">
+            <div class="nav-bar"><a class="brand" style="color:var(--accent-fg);" href="#">Vale Garage</a><nav class="nav-links"><a href="#menu">Services</a><a href="#hours">Coverage &amp; Hours</a><a href="#action">Get Quote</a></nav></div>
+            <div style="padding:36px 0 12px;max-width:760px;">
+              <div style="font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.88;">Upper St, Stratford St Mary, Colchester CO7 6LW &bull; Stratford</div>
+              <h1 style="color:var(--accent-fg);margin-top:8px;">Trusted Stratford garage with clear upfront quotes.</h1>
+              <p style="color:var(--accent-fg);opacity:0.92;margin-top:12px;font-size:1.05rem;">Located at Upper St, Stratford St Mary, Colchester CO7 6LW</p>
+            </div>
+          </div>
+        </header>
+        <main class="wrap" style="padding-top:36px;">
+          <section id="menu">
+            <div class="sec-bar"><h2>Services &amp; Typical Rates</h2><span class="kicker">LOCAL GARAGE</span></div>
+            <div class="tile-grid"><article class="tile-card"><div class="tile-top"><span class="tile-tag">Same / Next Day</span><strong class="l-price">From ?60</strong></div><h3>Local Stratford Callout &amp; Inspection</h3><p>On-site fault diagnosis with clear pricing before work begins</p></article><article class="tile-card"><div class="tile-top"><span class="tile-tag">Scheduled</span><strong class="l-price">Fixed Quote</strong></div><h3>Full Garage Installation</h3><p>Complete supply, fitting and testing to UK standards</p></article><article class="tile-card"><div class="tile-top"><span class="tile-tag">Flexible</span><strong class="l-price">From ?70</strong></div><h3>Routine Servicing &amp; Maintenance</h3><p>Preventative checks and tidy repairs across local postcodes</p></article><article class="tile-card"><div class="tile-top"><span class="tile-tag">Priority</span><strong class="l-price">Call Direct</strong></div><h3>Urgent Repairs &amp; Breakdowns</h3><p>Fast local response when something stops working</p></article></div>
+          </section>
+          
+    <div class="split-2" id="hours">
+      <div class="box">
+        <div class="kicker">LOCATION &amp; HOURS</div>
+        <h2>Upper St, Stratford St Mary, Colchester CO7 6LW</h2>
+        <p class="muted" style="margin:6px 0 14px;">Stratford, United Kingdom</p>
+        <div class="hr-row"><span>Mon - Fri</span><strong>8:00am - 6:00pm</strong></div><div class="hr-row"><span>Saturday</span><strong>8:30am - 2:00pm</strong></div><div class="hr-row"><span>Urgent Jobs</span><strong>Call Direct</strong></div>
+        <p style="margin-top:14px;font-weight:700;">Tel: <a style="color:var(--accent);" href="tel:01206323103">01206 323103</a></p>
+      </div>
+      <div class="map-frame">
+        <iframe title="Map for Vale Garage" src="https://maps.google.com/maps?q=Vale+Garage%2C+Upper+St%2C+Stratford+St+Mary%2C+Colchester+CO7+6LW%2C+Stratford%2C+UK&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+          <div style="margin-top:28px;">
+    <div class="box" id="action">
+      <div class="kicker">DIRECT ENQUIRY</div>
+      <h2>Request a Callback or Quote</h2>
+      <p class="muted" style="margin:6px 0 14px;">Share your postcode and what you need done around Stratford.</p>
+      <form class="q-form" onsubmit="event.preventDefault(); this.querySelector('.sent').style.display='block';">
+        <input type="text" placeholder="Your name" required />
+        <input type="tel" placeholder="Phone number" required />
+        <input type="text" placeholder="e.g. Postcode CM1 - leak under kitchen sink / boiler service" required />
+        <button type="submit">Request Free Quote</button>
+        <div class="sent">Received by Vale Garage (Stratford).</div>
+      </form>
+    </div></div>
+        </main>
+  <footer>
+    <span><strong>Vale Garage</strong> &bull; Upper St, Stratford St Mary, Colchester CO7 6LW, Stratford</span>
+    <span>01206 323103</span>
+  </footer>
+</body>
+</html>

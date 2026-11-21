@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Amber Owl — Independent Café, Chelmsford</title>
+<meta name="description" content="The Amber Owl is an independent café on Moulsham Street, Chelmsford. Proper coffee, fresh pastries, and a place to actually sit down.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "The Amber Owl",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "34f Moulsham Street",
+    "addressLocality": "Chelmsford",
+    "addressRegion": "Essex",
+    "postalCode": "CM2 0HY",
+    "addressCountry": "GB"
+  },
+  "email": "hello@the-amber-owl.co.uk",
+  "url": "https://the-amber-owl.co.uk",
+  "servesCuisine": "Coffee, Pastries, Light Bites",
+  "priceRange": "£"
+}
+</script>
+<style>
+:root {
+  --cream: #f5f0e8;
+  --espresso: #1c0f08;
+  --amber: #c8722a;
+  --warm-mid: #7a4e2d;
+  --light-rule: #e0d8cc;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --shadow: 0 12px 48px rgba(28,15,8,.18);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--espresso); font-family: var(--sans); font-weight: 300; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(245,240,232,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--light-rule); }
+.nav-logo { font-family: var(--serif); font-size: 1.25rem; font-weight: 900; letter-spacing: .02em; color: var(--espresso); }
+.nav-logo span { color: var(--amber); }
+.nav-links { display: flex; gap: 2.2rem; list-style: none; }
+.nav-links a { font-size: .82rem; font-weight: 500; text-transform: uppercase; letter-spacing: .1em; color: var(--warm-mid); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--amber); }
+.nav-cta { background: var(--espresso); color: var(--cream) !important; padding: .45rem 1.2rem; border-radius: 2px; }
+
+/* HERO SPLIT */
+.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; padding-top: 64px; }
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 5rem 4rem 5rem 5rem; position: relative; }
+.hero-eyebrow { font-size: .75rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.8rem; }
+.hero-headline { font-family: var(--serif); font-size: clamp(3rem, 5.5vw, 5.2rem); font-weight: 900; line-height: 1.05; color: var(--espresso); margin-bottom: 2rem; }
+.hero-headline em { font-style: italic; color: var(--amber); }
+.hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--warm-mid); max-width: 38ch; margin-bottom: 2.8rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--espresso); color: var(--cream); padding: .85rem 2rem; font-family: var(--sans); font-size: .85rem; font-weight: 500; letter-spacing: .06em; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: background .2s; }
+.btn-primary:hover { background: var(--amber); }
+.btn-ghost { background: transparent; color: var(--espresso); padding: .85rem 2rem; font-family: var(--sans); font-size: .85rem; font-weight: 500; letter-spacing: .06em; border: 2px solid var(--espresso); cursor: pointer; text-decoration: none; display: inline-block; transition: all .2s; }
+.btn-ghost:hover { background: var(--espresso); color: var(--cream); }
+.hero-address { margin-top: 3.5rem; padding-top: 1.8rem; border-top: 1px solid var(--light-rule); font-size: .8rem; color: var(--warm-mid); letter-spacing: .05em; }
+
+.hero-right { position: relative; overflow: hidden; }
+.hero-img-frame { position: absolute; inset: 2rem 2rem 2rem 0; box-shadow: var(--shadow); }
+.hero-img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-img-frame::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(28,15,8,.08) 0%, rgba(200,114,42,.12) 100%); }
+.hero-badge { position: absolute; bottom: 3.5rem; left: -1.5rem; background: var(--amber); color: var(--cream); padding: 1rem 1.4rem; font-family: var(--serif); font-size: .95rem; font-style: italic; box-shadow: var(--shadow); z-index: 2; max-width: 180px; line-height: 1.4; }
+
+/* SECTION COMMON */
+section { padding: 6rem 5rem; }
+.section-rule { width: 48px; height: 2px; background: var(--amber); margin-bottom: 1.2rem; }
+.section-eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--amber); margin-bottom: .6rem; }
+.section-title { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--espresso); margin-bottom: 1.2rem; }
+
+/* ABOUT */
+.about { background: var(--espresso); color: var(--cream); display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: center; }
+.about .section-title { color: var(--cream); }
+.about p { font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,.75); margin-bottom: 1.2rem; }
+.about-img { position: relative; }
+.about-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+.about-img::before { content: ''; position: absolute; top: -1.5rem; right: -1.5rem; width: 60%; height: 60%; border: 2px solid var(--amber); z-index: 0; }
+.about-img img { position: relative; z-index: 1; }
+
+/* MENU */
+.menu-section { background: var(--cream); }
+.menu-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem; align-items: end; }
+.menu-intro p { font-size: .95rem; line-height: 1.8; color: var(--warm-mid); }
+.menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.menu-col { padding: 0 2.5rem 0 0; }
+.menu-col:last-child { padding: 0 0 0 2.5rem; border-left: 1px solid var(--light-rule); }
+.menu-category { font-size: .7rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); margin: 2.5rem 0 1.2rem; }
+.menu-item { display: flex; justify-content: space-between; align-items: baseline; padding: .85rem 0; border-bottom: 1px solid var(--light-rule); gap: 1rem; }
+.menu-item:last-child { border-bottom: none; }
+.item-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--espresso); }
+.item-desc { font-size: .78rem; color: var(--warm-mid); margin-top: .2rem; line-height: 1.5; }
+.item-price { font-size: .9rem; font-weight: 500; color: var(--amber); white-space: nowrap; }
+.menu-stagger { margin-top: 1.5rem; }
+
+/* VISIT */
+.visit { background: #f0e8dc; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.hours-list { list-style: none; margin-top: 1.5rem; }
+.hours-list li { display: flex; justify-content: space-between; padding: .75rem 0; border-bottom: 1px solid var(--light-rule); font-size: .9rem; }
+.hours-list li span:first-child { color: var(--warm-mid); }
+.hours-list li span:last-child { font-weight: 500; }
+.visit-right p { font-size: .95rem; line-height: 1.8; color: var(--warm-mid); margin-bottom: 1rem; }
+.map-placeholder { background: var(--espresso); height: 200px; display: flex; align-items: center; justify-content: center; margin-top: 1.5rem; font-family: var(--serif); font-style: italic; color: rgba(245,240,232,.5); font-size: 1rem; }
+
+/* ENQUIRE */
+.enquire { background: var(--espresso); text-align: center; }
+.enquire .section-title { color: var(--cream); margin-bottom: .8rem; }
+.enquire p { color: rgba(245,240,232,.65); max-width: 48ch; margin: 0 auto 2.5rem; font-size: .95rem; line-height: 1.75; }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(28,15,8,.75); z-index: 200; align-items: center; justify-content: center; padding: 1.5rem; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--cream); max-width: 520px; width: 100%; padding: 3rem; position: relative; box-shadow: var(--shadow); }
+.modal h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; margin-bottom: .5rem; }
+.modal p.sub { font-size: .85rem; color: var(--warm-mid); margin-bottom: 2rem; }
+.modal-close { position: absolute; top: 1.2rem; right: 1.5rem; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--warm-mid); }
+.form-row { margin-bottom: 1.2rem; }
+.form-row label { display: block; font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--warm-mid); margin-bottom: .4rem; }
+.form-row input, .form-row textarea, .form-row select { width: 100%; background: #fff; border: 1px solid var(--light-rule); padding: .75rem 1rem; font-family: var(--sans); font-size: .9rem; color: var(--espresso); outline: none; transition: border-color .2s; }
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus { border-color: var(--amber); }
+.form-row textarea { min-height: 100px; resize: vertical; }
+.form-success { display: none; text-align: center; padding: 2rem 0; }
+.form-success .tick { font-size: 2.5rem; margin-bottom: 1rem; }
+.form-success h4 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: .5rem; }
+.form-success p { color: var(--warm-mid); font-size: .9rem; }
+
+/* FOOTER */
+footer { background: #110a05; color: rgba(245,240,232,.55); padding: 3rem 5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; font-size: .8rem; }
+footer .footer-brand { font-family: var(--serif); font-size: 1.1rem; color: var(--cream); font-weight: 700; }
+footer a { color: var(--amber); text-decoration: none; }
+
+/* MOBILE */
+@media (max-width: 820px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 4rem 1.8rem 3rem; }
+  .hero-right { height: 60vw; }
+  .hero-img-frame { inset: 0; }
+  .hero-badge { left: 1rem; bottom: 1rem; }
+  .about, .visit { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.8rem; }
+  .about-img::before { display: none; }
+  section { padding: 4rem 1.8rem; }
+  .menu-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .menu-col { padding: 0; }
+  .menu-col:last-child { padding: 0; border-left: none; border-top: 1px solid var(--light-rule); }
+  footer { padding: 2rem 1.8rem; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">The Amber <span>Owl</span></div>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="#" class="nav-cta" onclick="openModal();return false;">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Independent Café &mdash; Chelmsford, Essex</p>
+    <h1 class="hero-headline">Where<br>Moulsham<br>Street<br><em>slows down.</em></h1>
+    <p class="hero-sub">Proper coffee, made with care. Pastries baked fresh. A corner of Chelmsford where you can actually breathe for a moment.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">See the Menu</a>
+      <button class="btn-ghost" onclick="openModal()">Say Hello</button>
+    </div>
+    <div class="hero-address">
+      34f Moulsham Street, Chelmsford CM2 0HY &nbsp;&middot;&nbsp;
+      <a href="mailto:hello@the-amber-owl.co.uk" style="color:var(--amber);text-decoration:none;">hello@the-amber-owl.co.uk</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-frame">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80" alt="Warm café interior with coffee and morning light at The Amber Owl">
+    </div>
+    <div class="hero-badge">Open daily from 8am &mdash; walk-ins very welcome</div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-text">
+    <div class="section-rule"></div>
+    <p class="section-eyebrow">Our Story</p>
+    <h2 class="section-title">A proper independent, not a chain in disguise.</h2>
+    <p>The Amber Owl opened on Moulsham Street because Chelmsford deserved somewhere that takes its coffee seriously without taking itself too seriously. We're not a franchise. There's no loyalty app. Just good people, good beans, and a room that feels like it's yours for as long as you need it.</p>
+    <p>We work with small-batch roasters, buy our pastries from a local baker who starts at four in the morning, and we remember how you take your flat white after your second visit.</p>
+    <p>The name? An amber owl sat in the window of the space when we first viewed it. It stayed.</p>
+  </div>
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Close-up of a latte art coffee cup at The Amber Owl Chelmsford">
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="menu-intro">
+    <div>
+      <div class="section-rule"></div>
+      <p class="section-eyebrow">What We Make</p>
+      <h2 class="section-title">The Menu</h2>
+    </div>
+    <div>
+      <p>Everything on the menu is made here, in this room, by people who care about it. Prices include a quiet table and as many refills of tap water as you like. We use oat milk from Oatly as standard &mdash; just ask if you want something different.</p>
+    </div>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-col">
+      <p class="menu-category">Espresso Drinks</p>
+
+      <div class="menu-item">
+        <div><div class="item-name">Flat White</div><div class="item-desc">Double ristretto, steamed whole or oat milk</div></div>
+        <div class="item-price">£3.40</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Cappuccino</div><div class="item-desc">Classic ratio, light chocolate dust</div></div>
+        <div class="item-price">£3.20</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Cortado</div><div class="item-desc">Equal parts espresso and warm milk</div></div>
+        <div class="item-price">£3.00</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Long Black</div><div class="item-desc">Double espresso over hot water</div></div>
+        <div class="item-price">£2.80</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Latte</div><div class="item-desc">Regular or large</div></div>
+        <div class="item-price">£3.40 / £3.90</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Mocha</div><div class="item-desc">Dark chocolate, espresso, steamed milk</div></div>
+        <div class="item-price">£3.80</div>
+      </div>
+
+      <p class="menu-category">Filter &amp; Others</p>
+
+      <div class="menu-item">
+        <div><div class="item-name">Filter Coffee</div><div class="item-desc">Single-origin, changed daily</div></div>
+        <div class="item-price">£2.50</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Matcha Latte</div><div class="item-desc">Ceremonial grade, oat milk</div></div>
+        <div class="item-price">£3.90</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Chai Latte</div><div class="item-desc">House spice blend, not a syrup</div></div>
+        <div class="item-price">£3.60</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Hot Chocolate</div><div class="item-desc">Valrhona 70% with steamed milk</div></div>
+        <div class="item-price">£3.80</div>
+      </div>
+
+      <p class="menu-category">Cold Drinks</p>
+
+      <div class="menu-item">
+        <div><div class="item-name">Iced Latte</div><div class="item-desc">Espresso over ice, cold milk</div></div>
+        <div class="item-price">£3.80</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Cold Brew</div><div class="item-desc">18-hour steep, served long</div></div>
+        <div class="item-price">£3.50</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Sparkling Lemonade</div><div class="item-desc">Made in-house, mint &amp; lemon</div></div>
+        <div class="item-price">£3.20</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Elderflower Fizz</div><div class="item-desc">Belvoir cordial, sparkling water</div></div>
+        <div class="item-price">£3.00</div>
+      </div>
+    </div>
+
+    <div class="menu-col menu-stagger">
+      <p class="menu-category">Pastries &amp; Sweet Things</p>
+
+      <div class="menu-item">
+        <div><div class="item-name">Almond Croissant</div><div class="item-desc">Twice-baked, frangipane filled</div></div>
+        <div class="item-price">£3.20</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Pain au Chocolat</div><div class="item-desc">Dark chocolate batons, flaky pastry</div></div>
+        <div class="item-price">£2.80</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Brown Butter Kouign-Amann</div><div class="item-desc">Caramelised, sticky, worth it</div></div>
+        <div class="item-price">£3.60</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Banana &amp; Walnut Loaf</div><div class="item-desc">Slice, toasted if you like</div></div>
+        <div class="item-price">£2.80</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Cardamom Bun</div><div class="item-desc">Swedish-style, pearl sugar</div></div>
+        <div class="item-price">£3.20</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Seasonal Tart</div><div class="item-desc">Ask at the counter for today's</div></div>
+        <div class="item-price">from £3.80</div>
+      </div>
+
+      <p class="menu-category">Toasties &amp; Savoury</p>
+
+      <div class="menu-item">
+        <div><div class="item-name">Aged Cheddar &amp; Pickle</div><div class="item-desc">Sourdough, Montgomery cheddar, Branston</div></div>
+        <div class="item-price">£6.50</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Ham &amp; Gruyère</div><div class="item-desc">Honey roast ham, Dijon, sourdough</div></div>
+        <div class="item-price">£7.00</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Mushroom &amp; Taleggio</div><div class="item-desc">Roasted flat mushrooms, thyme, melt</div></div>
+        <div class="item-price">£6.80</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Avocado on Sourdough</div><div class="item-desc">Chilli flakes, lemon, sea salt</div></div>
+        <div class="item-price">£6.50</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Smoked Salmon Bagel</div><div class="item-desc">Cream cheese, capers, dill</div></div>
+        <div class="item-price">£7.50</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="item-name">Soup of the Day</div><div class="item-desc">With sourdough &amp; butter, ask at counter</div></div>
+        <div class="item-price">£5.80</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit-left">
+    <div class="section-rule"></div>
+    <p class="section-eyebrow">Find Us</p>
+    <h2 class="section-title">34f Moulsham Street</h2>
+    <ul class="hours-list">
+      <li><span>Monday &ndash; Friday</span><span>8:00am &ndash; 5:00pm</span></li>
+      <li><span>Saturday</span><span>8:30am &ndash; 5:30pm</span></li>
+      <li><span>Sunday</span><span>9:00am &ndash; 4:00pm</span></li>
+      <li><span>Bank Holidays</span><span>10:00am &ndash; 3:00pm</span></li>
+    </ul>
+  </div>
+  <div class="visit-right">
+    <p>We're tucked into Moulsham Street, a short walk from Chelmsford station and right in the heart of the independent stretch of the road. Look for the owl in the window.</p>
+    <p>No reservation needed for a table &mdash; just walk in. If you're planning to bring a group of six or more, drop us a line first and we'll make sure there's room.</p>
+    <p><strong>Email:</strong> <a href="mailto:hello@the-amber-owl.co.uk" style="color:var(--amber);">hello@the-amber-owl.co.uk</a></p>
+    <p><strong>Post:</strong> The Amber Owl, 34f Moulsham Street, Chelmsford, CM2 0HY</p>
+    <div class="map-placeholder">Chelmsford &mdash; CM2 0HY</div>
+  </div>
+</section>
+
+<section class="enquire" id="enquire">
+  <div class="section-rule" style="margin:0 auto 1.2rem;"></div>
+  <p class="section-eyebrow" style="color:rgba(245,240,232,.5);">Get in Touch</p>
+  <h2 class="section-title">Got a question?</h2>
+  <p>Whether it's a group visit, a private hire enquiry, or you just want to say hello &mdash; we're easy to reach.</p>
+  <button class="btn-primary" onclick="openModal()" style="font-size:.9rem;">Send us a message</button>
+</section>
+
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div id="formWrap">
+      <h3 id="modalTitle">Say hello.</h3>
+      <p class="sub">Questions, group bookings, private hire &mdash; we read every message ourselves.</p>
+      <form id="enquiryForm" onsubmit="submitForm(event)" novalidate>
+        <div class="form-row">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-row">
+          <label for="femail">Email Address</label>
+          <input type="email" id="femail" name="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="fsubject">What's it about?</label>
+          <select id="fsubject" name="subject">
+            <option value="">Please choose...</option>
+            <option>Group visit (6+ people)</option>
+            <option>Private hire enquiry</option>
+            <option>General question</option>
+            <option>Wholesale / supply enquiry</option>
+            <option>Just saying hi</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="fmessage">Your Message</label>
+          <textarea id="fmessage" name="message" placeholder="Tell us what you need..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+      </form>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div class="tick">&#9749;</div>
+      <h4>Message received.</h4>
+      <p>Thanks for getting in touch. We'll get back to you within one working day at the latest &mdash; usually much sooner.</p>
+      <p style="margin-top:1rem;font-size:.8rem;color:var(--warm-mid);">In the meantime, the kettle's on.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">The Amber Owl</div>
+    <div style="margin-top:.4rem;">34f Moulsham Street, Chelmsford, CM2 0HY</div>
+    <div style="margin-top:.3rem;"><a href="mailto:hello@the-amber-owl.co.uk">hello@the-amber-owl.co.uk</a></div>
+  </div>
+  <div style="text-align:right;">
+    <div>Independent since day one.</div>
+    <div style="margin-top:.4rem;">&copy; 2025 The Amber Owl. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  function openModal() {
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      document.getElementById('formWrap').style.display = 'block';
+      document.getElementById('formSuccess').style.display = 'none';
+      document.getElementById('enquiryForm').reset();
+    }, 300);
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const message = document.getElementById('fmessage').value.trim();
+    if (!name || !email || !message) {
+      alert('Please fill in your name, email, and message before sending.');
+      return;
+    }
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">The Amber Owl — Independent Café, Chelmsford</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for The Amber Owl — Independent Café, Chelmsford has been received.</div></div></div>
+<script>(function(){
+const modal=document.getElementById("wc-universal-modal");
+const closeBtn=document.getElementById("wc-modal-close");
+const form=document.getElementById("wc-modal-form");
+const okBox=document.getElementById("wc-modal-ok");
+function openModal(){if(!modal)return;if(form){form.style.display="grid";form.reset();}if(okBox)okBox.style.display="none";modal.style.display="flex";}
+function closeModal(){if(modal)modal.style.display="none";}
+if(closeBtn)closeBtn.addEventListener("click",closeModal);
+if(modal)modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});
+if(form)form.addEventListener("submit",function(e){e.preventDefault();form.style.display="none";if(okBox)okBox.style.display="block";});
+const burger=document.getElementById("hamburger-btn")||document.querySelector(".nav-hamburger");
+const mMenu=document.getElementById("mobile-menu")||document.querySelector(".mobile-menu");
+const mClose=document.getElementById("mobile-close")||document.querySelector(".mobile-menu-close");
+const mOverlay=document.getElementById("mobile-overlay");
+if(burger&&mMenu)burger.addEventListener("click",function(){mMenu.classList.add("open");mMenu.style.transform="translateX(0)";if(mOverlay)mOverlay.classList.add("active");});
+if(mClose&&mMenu)mClose.addEventListener("click",function(){mMenu.classList.remove("open");mMenu.style.transform="";if(mOverlay)mOverlay.classList.remove("active");});
+document.querySelectorAll("a[href^=document.querySelectorAll("button").forEach(function(btn){if(btn.id==="wc-modal-close"||btn.type==="submit"||btn.id==="hamburger-btn"||btn.id==="mobile-close")return;if(/enquir|book|contact|quote|order|reserve|touch|call/.test((btn.textContent||"").toLowerCase())){btn.addEventListener("click",function(e){e.preventDefault();openModal();});}});
+})();</script>
+</body>
+</html>

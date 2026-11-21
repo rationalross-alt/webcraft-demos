@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miracles Cafe – 33 High Street, Brentwood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Miracles Cafe Brentwood",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "33 High Street",
+    "addressLocality": "Brentwood",
+    "addressRegion": "Essex",
+    "postalCode": "CM14 4RG",
+    "addressCountry": "GB"
+  },
+  "email": "hello@miracles-cafe-brentwood.co.uk",
+  "url": "https://miracles-cafe-brentwood.co.uk",
+  "servesCuisine": "Coffee, Brunch, Light Bites",
+  "priceRange": "£"
+}
+</script>
+<style>
+:root {
+  --stone: #f5f2ee;
+  --stone-mid: #ede9e3;
+  --sage: #7a9e7e;
+  --sage-dark: #5c7d60;
+  --sage-light: #e8f0e9;
+  --ink: #1e1e1b;
+  --ink-soft: #4a4a44;
+  --warm-white: #faf9f6;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --radius: 14px;
+  --shadow: 0 8px 32px rgba(30,30,27,.09);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--stone); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.65; }
+
+/* LAYOUT */
+.site-wrap { display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; }
+.sidebar { position: sticky; top: 0; height: 100vh; background: var(--ink); color: var(--warm-white); display: flex; flex-direction: column; padding: 2.5rem 2rem; overflow-y: auto; }
+.main { background: var(--stone); }
+
+/* SIDEBAR */
+.sidebar-logo { font-family: var(--serif); font-size: 1.6rem; line-height: 1.2; margin-bottom: .4rem; }
+.sidebar-logo span { color: var(--sage); font-style: italic; }
+.sidebar-tag { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: #a8a89e; margin-bottom: 2rem; }
+.sidebar-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); margin-bottom: 2rem; opacity: .85; }
+.sidebar-nav { list-style: none; margin-bottom: auto; }
+.sidebar-nav li { margin-bottom: .2rem; }
+.sidebar-nav a { color: #ccc; text-decoration: none; font-size: .88rem; font-weight: 400; padding: .4rem 0; display: block; transition: color .2s; }
+.sidebar-nav a:hover { color: var(--sage); }
+.sidebar-divider { border: none; border-top: 1px solid #333; margin: 1.8rem 0; }
+.sidebar-contact { font-size: .82rem; color: #a8a89e; line-height: 1.8; }
+.sidebar-contact a { color: var(--sage); text-decoration: none; }
+.sidebar-contact a:hover { text-decoration: underline; }
+.btn-enquire { display: inline-block; margin-top: 1.4rem; background: var(--sage); color: #fff; border: none; border-radius: 50px; padding: .65rem 1.4rem; font-size: .85rem; font-weight: 600; cursor: pointer; letter-spacing: .03em; transition: background .2s; text-decoration: none; }
+.btn-enquire:hover { background: var(--sage-dark); }
+
+/* MAIN SECTIONS */
+section { padding: 4rem 3.5rem; }
+.hero { padding: 0; position: relative; height: 520px; overflow: hidden; }
+.hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30,30,27,.55) 0%, rgba(30,30,27,.1) 100%); display: flex; align-items: flex-end; padding: 3rem; }
+.hero-text h1 { font-family: var(--serif); font-size: clamp(2rem,4vw,3.2rem); color: #fff; line-height: 1.1; max-width: 520px; }
+.hero-text p { color: rgba(255,255,255,.82); font-size: .95rem; margin-top: .8rem; max-width: 400px; }
+.hero-badge { display: inline-block; background: var(--sage); color: #fff; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .85rem; border-radius: 50px; margin-bottom: 1rem; }
+
+/* INTRO */
+.intro { background: var(--warm-white); }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.intro h2 { font-family: var(--serif); font-size: 2rem; line-height: 1.2; margin-bottom: 1rem; }
+.intro p { color: var(--ink-soft); margin-bottom: .9rem; }
+.intro-img { width: 100%; aspect-ratio: 5/4; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* MENU */
+.menu { background: var(--stone); }
+.section-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sage-dark); font-weight: 600; margin-bottom: .5rem; }
+.section-title { font-family: var(--serif); font-size: 1.9rem; margin-bottom: 2.5rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.2rem; }
+.menu-card { background: var(--warm-white); border-radius: var(--radius); padding: 1.4rem 1.5rem; box-shadow: var(--shadow); transition: transform .2s; }
+.menu-card:hover { transform: translateY(-3px); }
+.menu-card-cat { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sage-dark); font-weight: 600; margin-bottom: .8rem; }
+.menu-item { display: flex; justify-content: space-between; align-items: baseline; padding: .45rem 0; border-bottom: 1px solid var(--stone-mid); }
+.menu-item:last-child { border-bottom: none; }
+.menu-item-name { font-size: .9rem; font-weight: 500; }
+.menu-item-desc { font-size: .78rem; color: var(--ink-soft); margin-top: .1rem; }
+.menu-item-price { font-family: var(--serif); font-size: 1rem; color: var(--sage-dark); white-space: nowrap; margin-left: 1rem; }
+
+/* VISIT */
+.visit { background: var(--sage-light); }
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.visit h2 { font-family: var(--serif); font-size: 1.9rem; margin-bottom: 1.2rem; }
+.visit p { color: var(--ink-soft); margin-bottom: .6rem; }
+.hours-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.hours-table td { padding: .45rem 0; font-size: .88rem; border-bottom: 1px solid rgba(122,158,126,.25); }
+.hours-table td:last-child { text-align: right; color: var(--ink-soft); }
+.map-placeholder { background: var(--stone-mid); border-radius: var(--radius); height: 280px; display: flex; align-items: center; justify-content: center; font-size: .85rem; color: var(--ink-soft); text-align: center; padding: 2rem; }
+
+/* MODAL */
+.modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(30,30,27,.6); z-index: 999; align-items: center; justify-content: center; }
+.modal-backdrop.open { display: flex; }
+.modal { background: var(--warm-white); border-radius: 18px; padding: 2.5rem; width: min(520px, 92vw); position: relative; box-shadow: 0 24px 64px rgba(0,0,0,.22); }
+.modal h3 { font-family: var(--serif); font-size: 1.7rem; margin-bottom: .4rem; }
+.modal p { color: var(--ink-soft); font-size: .88rem; margin-bottom: 1.5rem; }
+.modal-close { position: absolute; top: 1.2rem; right: 1.4rem; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink-soft); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.form-group { display: flex; flex-direction: column; margin-bottom: .85rem; }
+.form-group label { font-size: .78rem; font-weight: 600; letter-spacing: .05em; margin-bottom: .3rem; color: var(--ink-soft); }
+.form-group input, .form-group select, .form-group textarea { border: 1.5px solid var(--stone-mid); border-radius: 8px; padding: .6rem .85rem; font-family: var(--sans); font-size: .9rem; background: var(--stone); color: var(--ink); outline: none; transition: border-color .2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sage); }
+.form-group textarea { resize: vertical; min-height: 80px; }
+.btn-submit { width: 100%; background: var(--sage); color: #fff; border: none; border-radius: 50px; padding: .8rem; font-size: .9rem; font-weight: 600; cursor: pointer; transition: background .2s; margin-top: .3rem; }
+.btn-submit:hover { background: var(--sage-dark); }
+.form-success { display: none; text-align: center; padding: 1.5rem 0; }
+.form-success .tick { font-size: 2.5rem; }
+.form-success p { margin-top: .6rem; font-size: .95rem; color: var(--ink-soft); }
+
+footer { background: var(--ink); color: #a8a89e; text-align: center; padding: 2rem; font-size: .8rem; }
+footer a { color: var(--sage); text-decoration: none; }
+
+@media (max-width: 820px) {
+  .site-wrap { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; padding: 1.8rem 1.5rem; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 1rem; }
+  .sidebar-logo { font-size: 1.3rem; }
+  .sidebar-img, .sidebar-nav, .sidebar-divider { display: none; }
+  .sidebar-contact { font-size: .8rem; }
+  .btn-enquire { margin-top: 0; padding: .5rem 1.1rem; }
+  section { padding: 2.5rem 1.4rem; }
+  .hero { height: 380px; }
+  .intro-grid, .visit-grid, .form-row { grid-template-columns: 1fr; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="site-wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-logo">Miracles<br><span>Cafe</span></div>
+      <div class="sidebar-tag">Brentwood, Essex</div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Coffee at Miracles Cafe" class="sidebar-img">
+    <ul class="sidebar-nav">
+      <li><a href="#menu">Menu &amp; Drinks</a></li>
+      <li><a href="#intro">Our Story</a></li>
+      <li><a href="#visit">Find Us</a></li>
+      <li><a href="#enquire" onclick="openModal(event)">Table Enquiry</a></li>
+    </ul>
+    <hr class="sidebar-divider">
+    <div class="sidebar-contact" id="enquire">
+      <strong style="color:#fff;font-size:.85rem;">33 High Street</strong><br>
+      Brentwood, Essex<br>
+      CM14 4RG<br><br>
+      <a href="mailto:hello@miracles-cafe-brentwood.co.uk">hello@miracles-cafe-brentwood.co.uk</a><br><br>
+      Walk-ins always welcome
+    </div>
+    <button class="btn-enquire" onclick="openModal()">Send an Enquiry</button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Miracles Cafe Brentwood interior">
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <div class="hero-badge">Open Daily &mdash; Brentwood High Street</div>
+          <h1>A proper local cafe, right in the heart of Brentwood.</h1>
+          <p>Good coffee, honest food, and a warm seat on the High Street. No fuss, no theatre &mdash; just the kind of place you come back to.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro" id="intro">
+      <div class="intro-grid">
+        <div>
+          <div class="section-label">Our Story</div>
+          <h2>Miracles started with a simple idea.</h2>
+          <p>Brentwood deserved a cafe that felt like a proper local: somewhere you could sit with your morning flat white and actually enjoy it, not feel rushed out the door before you'd finished your croissant.</p>
+          <p>We're right on the High Street at number 33 &mdash; a short walk from the station and a world away from the chain coffee shops. Everything we serve is made fresh each morning, from our pastries to our toasties. We use a small-batch Essex roaster for our espresso, and we know a lot of our regulars by name.</p>
+          <p>Whether you're after a quick takeaway on your commute or a long table with a pot of tea and your laptop, you're genuinely welcome here.</p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Coffee being prepared" class="intro-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+      <div class="section-label">What We Serve</div>
+      <div class="section-title">Menu &amp; Drinks</div>
+
+      <div class="menu-grid">
+
+        <!-- Espresso -->
+        <div class="menu-card">
+          <div class="menu-card-cat">Espresso Bar</div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Flat White</div>
+              <div class="menu-item-desc">Double ristretto, steamed whole milk</div>
+            </div>
+            <div class="menu-item-price">&pound;3.20</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Cappuccino</div>
+              <div class="menu-item-desc">Classic 6oz, thick microfoam</div>
+            </div>
+            <div class="menu-item-price">&pound;3.30</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Cortado</div>
+              <div class="menu-item-desc">Equal parts espresso &amp; warm milk</div>
+            </div>
+            <div class="menu-item-price">&pound;3.00</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Americano</div>
+              <div class="menu-item-desc">Double shot, hot water</div>
+            </div>
+            <div class="menu-item-price">&pound;2.90</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Oat / Almond Milk</div>
+              <div class="menu-item-desc">Any drink</div>
+            </div>
+            <div class="menu-item-price">+&pound;0.40</div>
+          </div>
+        </div>
+
+        <!-- Cold Drinks -->
+        <div class="menu-card">
+          <div class="menu-card-cat">Cold Drinks</div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Iced Latte</div>
+              <div class="menu-item-desc">Double shot over ice, your choice of milk</div>
+            </div>
+            <div class="menu-item-price">&pound;3.60</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Cold Brew</div>
+              <div class="menu-item-desc">12-hour steep, served long</div>
+            </div>
+            <div class="menu-item-price">&pound;3.80</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Matcha Latte (iced)</div>
+              <div class="menu-item-desc">Ceremonial grade, oat milk</div>
+            </div>
+            <div class="menu-item-price">&pound;4.00</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Fresh Orange Juice</div>
+              <div class="menu-item-desc">Pressed to order</div>
+            </div>
+            <div class="menu-item-price">&pound;3.50</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Still / Sparkling Water</div>
+              <div class="menu-item-desc">330ml bottle</div>
+            </div>
+            <div class="menu-item-price">&pound;1.50</div>
+          </div>
+        </div>
+
+        <!-- Hot Food -->
+        <div class="menu-card">
+          <div class="menu-card-cat">Hot Food</div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Cheese &amp; Ham Toastie</div>
+              <div class="menu-item-desc">Thick white bloomer, Dijon mustard</div>
+            </div>
+            <div class="menu-item-price">&pound;5.50</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Mushroom &amp; Gruy&egrave;re Toastie</div>
+              <div class="menu-item-desc">Chestnut mushrooms, thyme butter</div>
+            </div>
+            <div class="menu-item-price">&pound;5.80</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Avocado Toast</div>
+              <div class="menu-item-desc">Sourdough, chilli flakes, lemon, sea salt</div>
+            </div>
+            <div class="menu-item-price">&pound;6.50</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Scrambled Eggs on Toast</div>
+              <div class="menu-item-desc">Free-range eggs, chives, butter</div>
+            </div>
+            <div class="menu-item-price">&pound;6.00</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Add Smoked Salmon</div>
+            </div>
+            <div class="menu-item-price">+&pound;2.50</div>
+          </div>
+        </div>
+
+        <!-- Pastries & Sweet -->
+        <div class="menu-card">
+          <div class="menu-card-cat">Pastries &amp; Sweet Things</div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Butter Croissant</div>
+              <div class="menu-item-desc">Baked fresh each morning</div>
+            </div>
+            <div class="menu-item-price">&pound;2.60</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Almond Croissant</div>
+              <div class="menu-item-desc">Frangipane-filled, toasted flakes</div>
+            </div>
+            <div class="menu-item-price">&pound;3.20</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Banana &amp; Walnut Loaf</div>
+              <div class="menu-item-desc">Slice, served warm</div>
+            </div>
+            <div class="menu-item-price">&pound;2.80</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Cookie of the Day</div>
+              <div class="menu-item-desc">Changes daily, ask at the counter</div>
+            </div>
+            <div class="menu-item-price">&pound;2.20</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Granola Pot</div>
+              <div class="menu-item-desc">Greek yoghurt, seasonal compote</div>
+            </div>
+            <div class="menu-item-price">&pound;4.50</div>
+          </div>
+        </div>
+
+        <!-- Tea & Other -->
+        <div class="menu-card">
+          <div class="menu-card-cat">Tea &amp; Other Hot Drinks</div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">English Breakfast</div>
+              <div class="menu-item-desc">Yorkshire blend, pot for one</div>
+            </div>
+            <div class="menu-item-price">&pound;2.50</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Earl Grey</div>
+              <div class="menu-item-desc">Loose leaf, pot for one</div>
+            </div>
+            <div class="menu-item-price">&pound;2.50</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Peppermint / Camomile</div>
+            </div>
+            <div class="menu-item-price">&pound;2.50</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Hot Chocolate</div>
+              <div class="menu-item-desc">Valrhona, whole or oat milk</div>
+            </div>
+            <div class="menu-item-price">&pound;3.80</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Chai Latte</div>
+              <div class="menu-item-desc">Spiced concentrate, steamed milk</div>
+            </div>
+            <div class="menu-item-price">&pound;3.60</div>
+          </div>
+        </div>
+
+        <!-- Group & Catering -->
+        <div class="menu-card">
+          <div class="menu-card-cat">Groups &amp; Private Hire</div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Morning Meeting Tray</div>
+              <div class="menu-item-desc">Coffee, pastries &amp; juice for 4</div>
+            </div>
+            <div class="menu-item-price">&pound;28.00</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Toastie Platter (6)</div>
+              <div class="menu-item-desc">Mixed selection, cut &amp; served</div>
+            </div>
+            <div class="menu-item-price">&pound;24.00</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Afternoon Tea for Two</div>
+              <div class="menu-item-desc">Sandwiches, scones, cake &amp; tea</div>
+            </div>
+            <div class="menu-item-price">&pound;22.00</div>
+          </div>
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">Private Hire (evenings)</div>
+              <div class="menu-item-desc">Up to 30 guests, ask for details</div>
+            </div>
+            <div class="menu-item-price">POA</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+      <div class="visit-grid">
+        <div>
+          <div class="section-label">Find Us</div>
+          <h2>We're on the High Street.</h2>
+          <p>You'll find us at <strong>33 High Street, Brentwood CM14 4RG</strong> &mdash; a short walk from Brentwood train station and right in the middle of the town centre. Look for the green door.</p>
+          <p>Parking is available in the William Hunter Way car park, roughly 3 minutes on foot.</p>
+          <table class="hours-table">
+            <tr><td>Monday &ndash; Friday</td><td>7:30am &ndash; 5:00pm</td></tr>
+            <tr><td>Saturday</td><td>8:00am &ndash; 5:30pm</td></tr>
+            <tr><td>Sunday</td><td>9:00am &ndash; 4:00pm</td></tr>
+          </table>
+          <br>
+          <a href="mailto:hello@miracles-cafe-brentwood.co.uk" class="btn-enquire" style="margin-top:.5rem;">Email Us</a>
+          &nbsp;
+          <button class="btn-enquire" onclick="openModal()" style="background:var(--ink);">Table Enquiry</button>
+        </div>
+        <div>
+          <div class="map-placeholder">
+            <div>
+              <strong style="color:var(--ink);font-size:1rem;">33 High Street<br>Brentwood CM14 4RG</strong><br><br>
+              <a href="https://maps.google.com/?q=33+High+Street+Brentwood+CM14+4RG" target="_blank" rel="noopener" style="color:var(--sage-dark);font-weight:600;text-decoration:underline;">Open in Google Maps &rarr;</a><br><br>
+              <span style="font-size:.8rem;">Near Brentwood Station &bull; Town Centre</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Miracles Cafe Brentwood &bull; 33 High Street, Brentwood CM14 4RG &bull;
+      <a href="mailto:hello@miracles-cafe-brentwood.co.uk">hello@miracles-cafe-brentwood.co.uk</a>
+    </footer>
+
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="enquiryModal" role="dialog" aria-modal="true" aria-label="Table Enquiry">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div id="formWrap">
+      <h3>Send us a message</h3>
+      <p>Whether it's a table for the morning rush, an afternoon tea booking, or something a little bigger &mdash; drop us a note and we'll come back to you quickly.</p>
+      <form id="enquiryForm" onsubmit="submitForm(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests">
+              <option value="">Just me</option>
+              <option>2</option>
+              <option>3-4</option>
+              <option>5-8</option>
+              <option>9-15</option>
+              <option>16-30</option>
+              <option>30+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="occasion">Occasion</label>
+            <select id="occasion" name="occasion">
+              <option value="">General visit</option>
+              <option>Morning meeting</option>
+              <option>Afternoon tea</option>
+              <option>Birthday</option>
+              <option>Private hire</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Anything else we should know?</label>
+          <textarea id="message" name="message" placeholder="Dietary requirements, preferred date, anything at all..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Enquiry</button>
+      </form>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div class="tick">&#10003;</div>
+      <h3 style="font-family:var(--serif);margin-top:.6rem;">Thanks, we've got your message.</h3>
+      <p>We'll be in touch shortly at the email address you gave us. In the meantime, you're always welcome to walk in &mdash; we're at 33 High Street, Brentwood.</p>
+      <button class="btn-enquire" onclick="closeModal()" style="margin-top:1.2rem;">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(e) {
+    if (e) e.preventDefault();
+    document.getElementById('enquiryModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('enquiryModal').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function() {
+      document.getElementById('formWrap').style.display = 'block';
+      document.getElementById('formSuccess').style.display = 'none';
+      document.getElementById('enquiryForm').reset();
+    }, 300);
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    var fname = document.getElementById('fname').value.trim();
+    var email = document.getElementById('email').value.trim();
+    if (!fname || !email) {
+      alert('Please fill in your name and email address.');
+      return;
+    }
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+  document.getElementById('enquiryModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>

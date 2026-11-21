@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P K Autos | Garage & Servicing | Billericay, Essex</title>
+<meta name="description" content="P K Autos – trusted local garage at Unit 15, Ardley Works, London Rd, Billericay CM12 9HP. MOTs, servicing, tyres, brakes and more. Call 01277 659556.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sand: #f5ede0;
+  --sand-light: #faf5ee;
+  --espresso: #2c1a0e;
+  --espresso-mid: #4a2f1a;
+  --caramel: #b87333;
+  --caramel-light: #d4956a;
+  --warm-white: #fefcf9;
+  --text: #2c1a0e;
+  --text-mid: #5a3e2b;
+  --text-light: #8a6a52;
+  --ff-head: 'Playfair Display', Georgia, serif;
+  --ff-body: 'DM Sans', system-ui, sans-serif;
+  --radius: 6px;
+  --shadow: 0 8px 32px rgba(44,26,14,0.13);
+  --shadow-sm: 0 2px 12px rgba(44,26,14,0.09);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-body); background: var(--warm-white); color: var(--text); font-size: 16px; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(254,252,249,0.94); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(184,115,51,0.15); }
+.nav-inner { max-width: 1160px; margin: auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--ff-head); font-size: 1.35rem; color: var(--espresso); letter-spacing: -0.02em; }
+.nav-logo span { color: var(--caramel); }
+.nav-links { display: flex; gap: 28px; align-items: center; list-style: none; }
+.nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-mid); transition: color .2s; }
+.nav-links a:hover { color: var(--caramel); }
+.nav-cta { background: var(--espresso); color: var(--sand) !important; padding: 9px 20px; border-radius: var(--radius); font-weight: 600 !important; transition: background .2s !important; }
+.nav-cta:hover { background: var(--caramel) !important; color: var(--warm-white) !important; }
+
+/* HERO */
+.hero { padding-top: 64px; min-height: 100vh; background: var(--sand-light); display: grid; grid-template-columns: 1fr 1fr; }
+.hero-text { display: flex; flex-direction: column; justify-content: center; padding: 72px 56px 72px 64px; }
+.hero-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--caramel); margin-bottom: 18px; }
+.hero-h1 { font-family: var(--ff-head); font-size: clamp(2.4rem, 4vw, 3.4rem); line-height: 1.12; color: var(--espresso); margin-bottom: 12px; }
+.hero-sub { font-family: var(--ff-head); font-style: italic; font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--caramel-light); margin-bottom: 24px; }
+.hero-p { font-size: 1rem; color: var(--text-mid); max-width: 420px; margin-bottom: 36px; line-height: 1.75; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary { background: var(--espresso); color: var(--sand); padding: 14px 28px; border-radius: var(--radius); font-weight: 600; font-size: 0.9rem; border: none; cursor: pointer; transition: background .2s, transform .15s; }
+.btn-primary:hover { background: var(--caramel); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--espresso); border: 2px solid var(--espresso); padding: 12px 26px; border-radius: var(--radius); font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all .2s; }
+.btn-outline:hover { background: var(--espresso); color: var(--sand); }
+.hero-collage { position: relative; overflow: hidden; }
+.collage-main { width: 100%; height: 100%; object-fit: cover; }
+.collage-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(44,26,14,0.35) 0%, rgba(184,115,51,0.15) 100%); }
+.collage-card { position: absolute; bottom: 48px; left: -28px; width: 200px; background: var(--warm-white); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
+.collage-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--caramel); margin-bottom: 4px; }
+.collage-card .value { font-family: var(--ff-head); font-size: 1.6rem; color: var(--espresso); line-height: 1; }
+.collage-card .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+.hero-badge { position: absolute; top: 40px; right: 32px; background: var(--caramel); color: var(--warm-white); width: 90px; height: 90px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--shadow); }
+.hero-badge span:first-child { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+.hero-badge span:last-child { font-family: var(--ff-head); font-size: 1.1rem; line-height: 1.1; }
+
+/* STRIP */
+.trust-strip { background: var(--espresso); color: var(--sand); padding: 18px 24px; }
+.trust-inner { max-width: 1160px; margin: auto; display: flex; gap: 32px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.83rem; font-weight: 500; opacity: 0.9; }
+.trust-dot { width: 6px; height: 6px; background: var(--caramel-light); border-radius: 50%; }
+
+/* SECTIONS */
+section { padding: 88px 24px; }
+.container { max-width: 1160px; margin: auto; }
+.section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--caramel); margin-bottom: 10px; }
+.section-h2 { font-family: var(--ff-head); font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--espresso); line-height: 1.2; margin-bottom: 16px; }
+.section-intro { color: var(--text-mid); max-width: 540px; font-size: 0.97rem; line-height: 1.8; }
+
+/* SERVICES */
+.services-bg { background: var(--sand-light); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+.service-card { background: var(--warm-white); border-radius: 10px; padding: 32px 28px; box-shadow: var(--shadow-sm); border-bottom: 3px solid transparent; transition: border-color .2s, transform .2s, box-shadow .2s; }
+.service-card:hover { border-color: var(--caramel); transform: translateY(-4px); box-shadow: var(--shadow); }
+.service-icon { width: 44px; height: 44px; background: var(--sand); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 1.3rem; }
+.service-card h3 { font-family: var(--ff-head); font-size: 1.15rem; color: var(--espresso); margin-bottom: 8px; }
+.service-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 14px; }
+.service-price { font-weight: 600; color: var(--caramel); font-size: 0.9rem; }
+
+/* ABOUT SPLIT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.about-img-wrap { position: relative; }
+.about-img { width: 100%; height: 480px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow); }
+.about-accent { position: absolute; bottom: -24px; right: -24px; background: var(--caramel); color: var(--warm-white); padding: 24px 28px; border-radius: 10px; box-shadow: var(--shadow); }
+.about-accent .num { font-family: var(--ff-head); font-size: 2.2rem; line-height: 1; }
+.about-accent .txt { font-size: 0.78rem; font-weight: 500; opacity: 0.9; }
+.about-text .section-h2 { margin-bottom: 20px; }
+.about-text p { color: var(--text-mid); font-size: 0.96rem; line-height: 1.8; margin-bottom: 16px; }
+.about-text p em { font-family: var(--ff-head); font-style: italic; color: var(--caramel-light); font-size: 1.05em; }
+
+/* PRICING TABLE */
+.pricing-bg { background: var(--sand); }
+.pricing-intro { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; flex-wrap: wrap; gap: 20px; }
+.price-table { width: 100%; border-collapse: collapse; }
+.price-table thead th { text-align: left; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); padding: 0 0 12px; border-bottom: 2px solid var(--caramel); }
+.price-table tbody tr { border-bottom: 1px solid rgba(184,115,51,0.15); transition: background .15s; }
+.price-table tbody tr:hover { background: rgba(184,115,51,0.06); }
+.price-table td { padding: 16px 12px; font-size: 0.92rem; color: var(--text-mid); }
+.price-table td:first-child { font-weight: 500; color: var(--espresso); }
+.price-table td:last-child { font-weight: 600; color: var(--caramel); white-space: nowrap; }
+.badge-mot { background: var(--espresso); color: var(--sand); font-size: 0.68rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle; }
+
+/* ENQUIRY */
+.enquiry-bg { background: var(--espresso); color: var(--sand); }
+.enquiry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.enquiry-bg .section-label { color: var(--caramel-light); }
+.enquiry-bg .section-h2 { color: var(--sand); }
+.enquiry-bg .section-intro { color: rgba(245,237,224,0.75); }
+.enquiry-details { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.detail-row { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; }
+.detail-icon { width: 36px; height: 36px; background: rgba(184,115,51,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.detail-row a { color: var(--caramel-light); font-weight: 500; transition: color .2s; }
+.detail-row a:hover { color: var(--sand); }
+.enquiry-form { background: var(--warm-white); border-radius: 12px; padding: 40px 36px; box-shadow: var(--shadow); }
+.enquiry-form h3 { font-family: var(--ff-head); font-size: 1.3rem; color: var(--espresso); margin-bottom: 24px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 0.8rem; font-weight: 600; color: var(--text-mid); text-transform: uppercase; letter-spacing: 0.06em; }
+.form-group input, .form-group select, .form-group textarea { background: var(--sand-light); border: 1.5px solid rgba(184,115,51,0.2); border-radius: var(--radius); padding: 11px 14px; font-family: var(--ff-body); font-size: 0.9rem; color: var(--text); outline: none; transition: border-color .2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--caramel); }
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-success { display: none; background: #eaf5ea; border: 1.5px solid #4caf50; border-radius: var(--radius); padding: 16px 20px; color: #2e7d32; font-size: 0.9rem; font-weight: 500; margin-top: 12px; }
+
+/* MAP / FIND US */
+.find-bg { background: var(--sand-light); }
+.find-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.map-placeholder { width: 100%; height: 340px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); background: #e8ddd3; display: flex; align-items: center; justify-content: center; }
+.map-placeholder iframe { width: 100%; height: 100%; border: none; }
+.find-info h3 { font-family: var(--ff-head); font-size: 1.6rem; color: var(--espresso); margin-bottom: 20px; }
+.find-info p { color: var(--text-mid); font-size: 0.93rem; line-height: 1.8; margin-bottom: 20px; }
+.hours-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.hours-list li { display: flex; justify-content: space-between; font-size: 0.88rem; padding-bottom: 8px; border-bottom: 1px solid rgba(184,115,51,0.12); }
+.hours-list li span:first-child { color: var(--text-mid); }
+.hours-list li span:last-child { font-weight: 600; color: var(--espresso); }
+
+/* FOOTER */
+footer { background: var(--espresso); color: rgba(245,237,224,0.7); padding: 48px 24px 28px; }
+.footer-inner { max-width: 1160px; margin: auto; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; margin-bottom: 36px; }
+.footer-logo { font-family: var(--ff-head); font-size: 1.3rem; color: var(--sand); margin-bottom: 8px; }
+.footer-logo span { color: var(--caramel-light); }
+.footer-tagline { font-size: 0.83rem; font-style: italic; opacity: 0.7; }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 0.85rem; transition: color .2s; }
+.footer-links a:hover { color: var(--caramel-light); }
+.footer-bottom { border-top: 1px solid rgba(245,237,224,0.1); padding-top: 20px; font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+/* RESPONSIVE */
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-text { padding: 40px 24px 36px; }
+  .hero-collage { height: 320px; }
+  .collage-card { left: 16px; bottom: 20px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .about-grid, .enquiry-grid, .find-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-accent { right: 0; bottom: -16px; }
+  .form-row { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .pricing-intro { flex-direction: column; align-items: flex-start; }
+  .footer-top { flex-direction: column; }
+  .trust-inner { gap: 16px; justify-content: flex-start; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "P K Autos",
+  "url": "https://www.p-k-autos.co.uk",
+  "telephone": "01277659556",
+  "email": "hello@p-k-autos.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 15, Ardley Works, London Road",
+    "addressLocality": "Billericay",
+    "addressRegion": "Essex",
+    "postalCode": "CM12 9HP",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.6259,
+    "longitude": 0.4184
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:30","closes":"13:00"}
+  ],
+  "priceRange": "££",
+  "description": "P K Autos is a trusted independent garage in Billericay, Essex, offering MOTs, full and interim services, tyres, brakes, exhausts and diagnostics."
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">P K <span>Autos</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#find">Find Us</a></li>
+      <li><a href="#enquiry" class="nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Independent Garage &mdash; Billericay, Essex</p>
+    <h1 class="hero-h1">Your car's in<br>good hands.</h1>
+    <p class="hero-sub">Straight talking, fair prices.</p>
+    <p class="hero-p">P K Autos has looked after cars across Billericay and the surrounding villages for years. From a straightforward MOT to a full engine diagnostic, we do the job right and tell you exactly what it costs before we start.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">Book or Enquire</button>
+      <a href="tel:01277659556" class="btn-outline">&#128222; 01277 659556</a>
+    </div>
+  </div>
+  <div class="hero-collage">
+    <img class="collage-main" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80" alt="Mechanic working in garage" loading="eager">
+    <div class="collage-overlay"></div>
+    <div class="collage-card">
+      <div class="label">MOT from</div>
+      <div class="value">&pound;45</div>
+      <div class="sub">Class 4 vehicles</div>
+    </div>
+    <div class="hero-badge">
+      <span>Est.</span>
+      <span>Local<br>Trust</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>MOT Testing Station</div>
+    <div class="trust-item"><span class="trust-dot"></span>All Makes &amp; Models</div>
+    <div class="trust-item"><span class="trust-dot"></span>No Hidden Charges</div>
+    <div class="trust-item"><span class="trust-dot"></span>Free Health Check</div>
+    <div class="trust-item"><span class="trust-dot"></span>Billericay CM12 9HP</div>
+    <div class="trust-item"><span class="trust-dot"></span>Mon&ndash;Fri 8am&ndash;6pm</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="container">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-h2">Proper garage work,<br>done properly.</h2>
+    <p class="section-intro">We cover the full range of mechanical and electrical work at Unit 15, Ardley Works. No job too small, no quote padded out.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">&#128663;</div>
+        <h3>MOT Testing</h3>
+        <p>Class 4 and Class 7 MOTs carried out on-site. We give you an honest report and, if a retest is needed, we'll sort the work at a fair rate.</p>
+        <div class="service-price">From &pound;45.00</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#128295;</div>
+        <h3>Full &amp; Interim Service</h3>
+        <p>Oil change, filters, fluid top-ups, spark plugs, belts and a thorough visual inspection &mdash; everything your handbook says, nothing it doesn't.</p>
+        <div class="service-price">Interim from &pound;79 &middot; Full from &pound;149</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9881;</div>
+        <h3>Engine Diagnostics</h3>
+        <p>That warning light needn't be a mystery. We plug in to all makes and models, read the fault codes and talk you through what it means in plain English.</p>
+        <div class="service-price">From &pound;35.00</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#128260;</div>
+        <h3>Brakes &amp; Suspension</h3>
+        <p>Pads, discs, callipers, wheel bearings and shock absorbers. If it affects how your car stops or handles, we'll find it and fix it.</p>
+        <div class="service-price">Pads from &pound;65 fitted</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#127932;</div>
+        <h3>Tyres &amp; Tracking</h3>
+        <p>Supply and fit across all budget, mid-range and premium brands. Wheel alignment checked and corrected on our four-wheel tracking rig.</p>
+        <div class="service-price">Budget tyres from &pound;45 fitted</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9889;</div>
+        <h3>Exhausts &amp; Electrics</h3>
+        <p>Stainless and mild-steel exhaust repairs and replacements, plus battery testing, alternator faults, starter motors and general auto-electrical work.</p>
+        <div class="service-price">Exhaust repair from &pound;55</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img class="about-img" src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&q=80" alt="Garage workshop at P K Autos" loading="lazy">
+        <div class="about-accent">
+          <div class="num">15+</div>
+          <div class="txt">Years serving<br>Billericay</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">About P K Autos</p>
+        <h2 class="section-h2">A garage that<br>gives it to you straight.</h2>
+        <p>We're based at Unit 15, Ardley Works, just off London Road in Billericay &mdash; easy to find, with off-road parking right outside. We've been here long enough that a good chunk of our work comes from people who first brought their parents' cars in years ago.</p>
+        <p>No upselling. No inventing problems. If your car needs a part, we'll show you why and give you options on brand and price. If it doesn't need something yet, we'll tell you that too. <em>Honest work from people who know cars.</em></p>
+        <p>We work on all makes and models &mdash; Ford, Vauxhall, VW, BMW, Toyota, Nissan, Renault, you name it. Petrol, diesel, and we're set up for hybrid battery health checks as well.</p>
+        <a href="tel:01277659556" style="display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-weight:600;color:var(--caramel);font-size:0.95rem;">&#128222; Ring us on 01277 659556</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-bg" id="pricing">
+  <div class="container">
+    <div class="pricing-intro">
+      <div>
+        <p class="section-label">Transparent Pricing</p>
+        <h2 class="section-h2">No surprises on the invoice.</h2>
+      </div>
+      <p style="color:var(--text-mid);font-size:0.88rem;max-width:320px;text-align:right;">All prices include VAT. Labour quoted separately for larger jobs. Ring us if you'd like a specific quote.</p>
+    </div>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Details</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MOT Test &ndash; Class 4 <span class="badge-mot">Book Online</span></td>
+          <td>Cars up to 8 seats, standard test</td>
+          <td>&pound;45.00</td>
+        </tr>
+        <tr>
+          <td>MOT Test &ndash; Class 7</td>
+          <td>Light commercial vehicles up to 3,500kg</td>
+          <td>&pound;55.00</td>
+        </tr>
+        <tr>
+          <td>Interim Service</td>
+          <td>Oil &amp; filter, 30-point check, top-ups</td>
+          <td>From &pound;79.00</td>
+        </tr>
+        <tr>
+          <td>Full Service</td>
+          <td>Oil, filters, plugs, 60-point check</td>
+          <td>From &pound;149.00</td>
+        </tr>
+        <tr>
+          <td>Engine Diagnostic Scan</td>
+          <td>Fault code read &amp; report, all makes</td>
+          <td>&pound;35.00</td>
+        </tr>
+        <tr>
+          <td>Brake Pads &ndash; Front Axle</td>
+          <td>Supply &amp; fit, budget brand</td>
+          <td>From &pound;65.00</td>
+        </tr>
+        <tr>
+          <td>Brake Pads &amp; Discs &ndash; Front</td>
+          <td>Supply &amp; fit, mid-range</td>
+          <td>From &pound;130.00</td>
+        </tr>
+        <tr>
+          <td>Wheel Alignment (4-wheel)</td>
+          <td>Check, adjust and print-out report</td>
+          <td>&pound;49.00</td>
+        </tr>
+        <tr>
+          <td>Exhaust Repair</td>
+          <td>Weld, clamp or section replace</td>
+          <td>From &pound;55.00</td>
+        </tr>
+        <tr>
+          <td>Battery Supply &amp; Fit</td>
+          <td>Bosch or equivalent, most models</td>
+          <td>From &pound;89.00</td>
+        </tr>
+        <tr>
+          <td>Air Con Regas</td>
+          <td>R134a or R1234yf, leak check included</td>
+          <td>From &pound;55.00</td>
+        </tr>
+        <tr>
+          <td>Timing Belt Kit</td>
+          <td>Belt, tensioner &amp; idler, most 1.4&ndash;2.0 engines</td>
+          <td>From &pound;245.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:20px;font-size:0.82rem;color:var(--text-light);">Prices correct at time of publishing. Parts prices subject to vehicle specification. Call 01277 659556 for a firm quote.</p>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="enquiry-bg" id="enquiry">
+  <div class="container">
+    <div class="enquiry-grid">
+      <div>
+        <p class="section-label">Book or Enquire</p>
+        <h2 class="section-h2">Drop us a message<br>or give us a ring.</h2>
+        <p class="section-intro">Fill in the form and we'll get back to you the same working day. Prefer to talk? Just call &mdash; you'll get a real person, not a menu system.</p>
+        <div class="enquiry-details">
+          <div class="detail-row">
+            <div class="detail-icon">&#128222;</div>
+            <a href="tel:01277659556">01277 659556</a>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">&#9993;</div>
+            <a href="mailto:hello@p-k-autos.co.uk">hello@p-k-autos.co.uk</a>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">&#128205;</div>
+            <span style="color:rgba(245,237,224,0.75);font-size:0.88rem;">Unit 15, Ardley Works, London Road,<br>Billericay, Essex CM12 9HP</span>
+          </div>
+          <div class="detail-row">
+            <div class="detail-icon">&#128337;</div>
+            <span style="color:rgba(245,237,224,0.75);font-size:0.88rem;">Mon&ndash;Fri: 8:00am &ndash; 6:00pm<br>Saturday: 8:30am &ndash; 1:00pm</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="enquiry-form" id="enquiryForm" novalidate>
+          <h3>Quick Enquiry</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="07xxx xxxxxx">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>MOT Test</option>
+                <option>Full Service</option>
+                <option>Interim Service</option>
+                <option>Brakes / Suspension</option>
+                <option>Engine Diagnostics</option>
+                <option>Tyres &amp; Tracking</option>
+                <option>Exhaust Repair</option>
+                <option>Air Con Regas</option>
+                <option>Timing Belt</option>
+                <option>Electrics / Battery</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="vrn">Vehicle Reg (optional)</label>
+              <input type="text" id="vrn" name="vrn" placeholder="e.g. AB12 CDE" style="text-transform:uppercase">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" placeholder="Describe the issue or any extra details..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:0.95rem;">Send Enquiry</button>
+          <div class="form-success" id="formSuccess">
+            &#10003;&nbsp; Thanks &mdash; we've got your message! We'll be in touch within the same working day. If it's urgent, ring us on <a href="tel:01277659556" style="color:#2e7d32;font-weight:700;">01277 659556</a>.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section class="find-bg" id="find">
+  <div class="container">
+    <div class="find-grid">
+      <div class="map-placeholder">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.3!2d0.4184!3d51.6259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8c0a1e1234567%3A0xabcdef1234567890!2sArdley%20Works%2C%20London%20Rd%2C%20Billericay%20CM12%209HP!5e0!3m2!1sen!2suk!4v1699999999999"
+          title="P K Autos location map"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="find-info">
+        <p class="section-label">Find Us</p>
+        <h3>Unit 15, Ardley Works</h3>
+        <p>We're on London Road, heading out of Billericay town centre towards the A129 junction. Ardley Works is a small industrial estate on the right-hand side &mdash; look for the blue unit signs. Parking is free right outside our workshop.</p>
+        <p style="font-size:0.88rem;color:var(--text-light);margin-bottom:28px;">Unit 15, Ardley Works, London Road, Billericay, Essex <strong style="color:var(--espresso);">CM12 9HP</strong></p>
+        <ul class="hours-list">
+          <li><span>Monday &ndash; Friday</span><span>8:00am &ndash; 6:00pm</span></li>
+          <li><span>Saturday</span><span>8:30am &ndash; 1:00pm</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+          <li><span>Bank Holidays</span><span>Closed</span></li>
+        </ul>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="tel:01277659556" class="btn-primary" style="display:inline-block;">&#128222; Call Now</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Ardley+Works+London+Rd+Billericay+CM12+9HP" target="_blank" rel="noopener" class="btn-outline" style="display:inline-block;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">P K <span>Autos</span></div>
+        <div class="footer-tagline">Straight talking. Fair prices. Billericay's local garage.</div>
+        <p style="font-size:0.82rem;margin-top:12px;max-width:280px;line-height:1.7;">Unit 15, Ardley Works, London Road,<br>Billericay, Essex CM12 9HP</p>
+      </div>
+      <div>
+        <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--caramel-light);margin-bottom:12px;">Services</p>
+        <div class="footer-links">
+          <a href="#services">MOT Testing</a>
+          <a href="#services">Full &amp; Interim Service</a>
+          <a href="#services">Brakes &amp; Suspension</a>
+          <a href="#services">Engine Diagnostics</a>
+          <a href="#services">Tyres &amp; Wheel Alignment</a>
+          <a href="#services">Exhausts &amp; Electrics</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--caramel-light);margin-bottom:12px;">Contact</p>
+        <div class="footer-links">
+          <a href="tel:01277659556">01277 659556</a>
+          <a href="mailto:hello@p-k-autos.co.uk">hello@p-k-autos.co.uk</a>
+          <a href="#find">Find &amp; Directions</a>
+          <a href="#enquiry">Send an Enquiry</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 P K Autos. All rights reserved.</span>
+      <span>Unit 15, Ardley Works, London Rd, Billericay CM12 9HP</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Enquiry form handler
+  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if (!fname || !email) {
+      alert('Please fill in your name and email address so we can get back to you.');
+      return;
+    }
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(function() {
+      document.getElementById('formSuccess').style.display = 'block';
+      btn.style.display = 'none';
+      document.getElementById('enquiryForm').querySelectorAll('input, select, textarea').forEach(function(el) {
+        el.disabled = true;
+        el.style.opacity = '0.5';
+      });
+    }, 900);
+  });
+
+  // VRN uppercase
+  document.getElementById('vrn').addEventListener('input', function() {
+    this.value = this.value.toUpperCase();
+  });
+
+  // Smooth active nav highlight
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(function(s) {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
+    });
+    navLinks.forEach(function(a) {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--caramel)' : '';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Nosh — Colchester's Favourite Independent Café</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d0d0d;
+  --white: #f5f5f0;
+  --crimson: #c0392b;
+  --orange: #d4500a;
+  --mid: #1a1a1a;
+  --muted: #6b6b6b;
+  --serif: 'Bebas Neue', sans-serif;
+  --body: 'Inter', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--white); color: var(--ink); overflow-x: hidden; }
+img { display: block; width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2.5rem; background: var(--ink); }
+.nav-logo { font-family: var(--serif); font-size: 1.8rem; color: var(--white); letter-spacing: 2px; }
+.nav-logo span { color: var(--crimson); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: .8rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--white); transition: color .2s; }
+.nav-links a:hover { color: var(--crimson); }
+.nav-cta { background: var(--crimson); color: var(--white) !important; padding: .45rem 1.1rem; }
+
+/* HERO */
+.hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: flex-end; padding: 0 2.5rem 4rem; overflow: hidden; }
+.hero-img { position: absolute; inset: 0; object-fit: cover; height: 100%; filter: brightness(.45); }
+.hero-content { position: relative; z-index: 2; max-width: 780px; }
+.hero-tag { display: inline-block; background: var(--crimson); color: var(--white); font-size: .7rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; padding: .3rem .8rem; margin-bottom: 1.2rem; }
+.hero h1 { font-family: var(--serif); font-size: clamp(4rem, 10vw, 9rem); color: var(--white); line-height: .95; margin-bottom: 1.4rem; }
+.hero h1 em { color: var(--crimson); font-style: normal; }
+.hero-sub { font-size: 1rem; color: rgba(245,245,240,.75); font-weight: 300; max-width: 460px; line-height: 1.65; margin-bottom: 2rem; }
+.btn { display: inline-block; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; padding: .85rem 2rem; cursor: pointer; border: none; transition: all .22s; }
+.btn-primary { background: var(--crimson); color: var(--white); }
+.btn-primary:hover { background: var(--orange); }
+.btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(245,245,240,.5); margin-left: 1rem; }
+.btn-outline:hover { border-color: var(--white); background: rgba(245,245,240,.08); }
+.hero-scroll { position: absolute; bottom: 2rem; right: 2.5rem; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,245,240,.45); writing-mode: vertical-rl; }
+
+/* STRIP */
+.strip { background: var(--crimson); padding: .75rem 2.5rem; display: flex; gap: 3rem; overflow: hidden; }
+.strip span { font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--white); white-space: nowrap; }
+.strip span::before { content: '●'; margin-right: .6rem; opacity: .6; }
+
+/* ABOUT */
+.about { display: grid; grid-template-columns: 1fr 1fr; background: var(--white); }
+.about-copy { padding: 6rem 3.5rem 6rem 2.5rem; }
+.section-label { font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--crimson); margin-bottom: 1rem; }
+.about-copy h2 { font-family: var(--serif); font-size: clamp(3rem, 5vw, 5rem); line-height: 1; margin-bottom: 1.8rem; }
+.about-copy p { font-size: .95rem; line-height: 1.8; color: #333; margin-bottom: 1.1rem; max-width: 440px; }
+.about-stat { display: flex; gap: 3rem; margin-top: 2.5rem; }
+.stat-num { font-family: var(--serif); font-size: 3.2rem; color: var(--crimson); line-height: 1; }
+.stat-label { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .3rem; }
+.about-img-wrap { position: relative; overflow: hidden; min-height: 480px; }
+.about-img-wrap img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+.about-badge { position: absolute; bottom: 2.5rem; left: -1rem; background: var(--ink); color: var(--white); padding: 1.2rem 1.5rem; font-family: var(--serif); font-size: 1.1rem; letter-spacing: .08em; box-shadow: 4px 4px 0 var(--crimson); }
+
+/* MENU SELECTOR */
+.menu-section { background: var(--ink); padding: 6rem 2.5rem; }
+.menu-section .section-label { color: var(--orange); }
+.menu-section h2 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 5rem); color: var(--white); line-height: 1; margin-bottom: .5rem; }
+.menu-intro { font-size: .9rem; color: rgba(245,245,240,.55); margin-bottom: 3rem; max-width: 500px; }
+.menu-tabs { display: flex; gap: 0; margin-bottom: 3rem; border-bottom: 1px solid rgba(245,245,240,.12); }
+.tab-btn { background: none; border: none; color: rgba(245,245,240,.45); font-family: var(--body); font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; padding: .9rem 1.8rem; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all .2s; }
+.tab-btn.active, .tab-btn:hover { color: var(--white); border-bottom-color: var(--crimson); }
+.menu-panel { display: none; }
+.menu-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: rgba(245,245,240,.06); }
+.menu-item { background: var(--mid); padding: 1.8rem; transition: background .2s; }
+.menu-item:hover { background: #222; }
+.menu-item-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .5rem; }
+.menu-item-name { font-weight: 600; font-size: .95rem; color: var(--white); line-height: 1.3; }
+.menu-item-price { font-family: var(--serif); font-size: 1.4rem; color: var(--crimson); white-space: nowrap; margin-left: 1rem; }
+.menu-item-desc { font-size: .8rem; color: rgba(245,245,240,.45); line-height: 1.6; }
+.menu-tag { display: inline-block; font-size: .62rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding: .15rem .55rem; margin-top: .6rem; }
+.tag-hot { background: rgba(192,57,43,.25); color: var(--crimson); }
+.tag-new { background: rgba(212,80,10,.25); color: var(--orange); }
+.tag-vg { background: rgba(40,140,80,.25); color: #3cb371; }
+
+/* PHOTO BREAK */
+.photo-break { height: 55vh; position: relative; overflow: hidden; }
+.photo-break img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+.photo-break-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,13,13,.6) 0%, transparent 60%); }
+.photo-break-text { position: absolute; bottom: 3rem; left: 2.5rem; font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 6rem); color: var(--white); line-height: .95; }
+.photo-break-text span { color: var(--crimson); }
+
+/* INFO GRID */
+.info-grid { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--white); }
+.info-block { padding: 4rem 2.5rem; border-right: 1px solid rgba(13,13,13,.08); }
+.info-block:last-child { border-right: none; }
+.info-block h3 { font-family: var(--serif); font-size: 2rem; margin-bottom: 1.2rem; }
+.info-block p, .info-block a { font-size: .88rem; color: #444; line-height: 1.75; }
+.info-block a { color: var(--crimson); font-weight: 500; }
+.info-block a:hover { text-decoration: underline; }
+.hours-row { display: flex; justify-content: space-between; font-size: .85rem; padding: .3rem 0; border-bottom: 1px solid rgba(13,13,13,.06); color: #333; }
+.hours-row:last-child { border-bottom: none; }
+.hours-row strong { font-weight: 500; }
+
+/* CONTACT / FORM */
+.contact-section { background: var(--ink); padding: 6rem 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.contact-section h2 { font-family: var(--serif); font-size: clamp(2.8rem, 4vw, 4.5rem); color: var(--white); line-height: 1; margin-bottom: 1.5rem; }
+.contact-section p { font-size: .9rem; color: rgba(245,245,240,.55); line-height: 1.75; margin-bottom: 2rem; }
+.contact-detail { display: flex; align-items: center; gap: .8rem; margin-bottom: 1rem; font-size: .88rem; color: rgba(245,245,240,.7); }
+.contact-detail strong { color: var(--white); }
+form { display: flex; flex-direction: column; gap: 1rem; }
+form input, form textarea, form select { background: rgba(245,245,240,.06); border: 1px solid rgba(245,245,240,.14); color: var(--white); font-family: var(--body); font-size: .88rem; padding: .9rem 1.1rem; outline: none; transition: border-color .2s; }
+form input::placeholder, form textarea::placeholder { color: rgba(245,245,240,.35); }
+form input:focus, form textarea:focus, form select:focus { border-color: var(--crimson); }
+form select option { background: var(--mid); }
+form textarea { min-height: 120px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-confirm { display: none; background: rgba(40,140,80,.15); border: 1px solid rgba(40,140,80,.4); color: #5dba7d; padding: 1rem 1.2rem; font-size: .85rem; margin-top: .5rem; }
+
+/* FOOTER */
+footer { background: #080808; padding: 3rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-family: var(--serif); font-size: 2rem; color: var(--white); letter-spacing: 2px; }
+.footer-logo span { color: var(--crimson); }
+footer p { font-size: .75rem; color: rgba(245,245,240,.3); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(245,245,240,.35); transition: color .2s; }
+.footer-links a:hover { color: var(--crimson); }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.75); z-index: 999; align-items: center; justify-content: center; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--white); max-width: 480px; width: 90%; padding: 2.5rem; position: relative; }
+.modal h3 { font-family: var(--serif); font-size: 2.2rem; margin-bottom: 1.5rem; }
+.modal-close { position: absolute; top: 1rem; right: 1.2rem; font-size: 1.4rem; cursor: pointer; background: none; border: none; color: var(--ink); }
+
+/* RESPONSIVE */
+@media (max-width: 820px) {
+  nav { padding: .9rem 1.2rem; }
+  .nav-links { display: none; }
+  .hero { padding: 0 1.2rem 3rem; }
+  .about { grid-template-columns: 1fr; }
+  .about-img-wrap { min-height: 300px; }
+  .about-copy { padding: 3.5rem 1.2rem; }
+  .menu-section { padding: 4rem 1.2rem; }
+  .menu-tabs { overflow-x: auto; }
+  .info-grid { grid-template-columns: 1fr; }
+  .info-block { border-right: none; border-bottom: 1px solid rgba(13,13,13,.08); }
+  .contact-section { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .strip { gap: 1.5rem; }
+  footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.2rem; }
+  .photo-break { height: 40vh; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café Nosh",
+  "url": "https://caf-nosh.co.uk",
+  "telephone": "01206648035",
+  "email": "hello@caf-nosh.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1b Wimpole Road",
+    "addressLocality": "Colchester",
+    "addressRegion": "Essex",
+    "postalCode": "CO1 2BX",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "16:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "15:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "14:00" }
+  ],
+  "servesCuisine": ["Breakfast", "Brunch", "Sandwiches", "Coffee"],
+  "priceRange": "£",
+  "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80",
+  "description": "Independent neighbourhood café on Wimpole Road, Colchester. Proper coffee, fresh toasties, home-baked pastries and a full breakfast menu served daily."
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">CAFÉ <span>NOSH</span></div>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Table</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80" alt="Coffee being poured at Café Nosh, Colchester">
+  <div class="hero-content">
+    <span class="hero-tag">Wimpole Road, Colchester</span>
+    <h1>Good<br>Food.<br><em>Great</em><br>Coffee.</h1>
+    <p class="hero-sub">Your neighbourhood spot on Wimpole Road for proper breakfasts, fresh-made toasties and coffee that actually tastes like something.</p>
+    <a href="#menu" class="btn btn-primary">See the Menu</a>
+    <a href="tel:01206648035" class="btn btn-outline">Call Us</a>
+  </div>
+  <div class="hero-scroll">Scroll to explore</div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <span>Open 7 Days a Week</span>
+  <span>Fresh Food Daily</span>
+  <span>Wimpole Road CO1 2BX</span>
+  <span>Eat In or Take Away</span>
+  <span>Dog Friendly</span>
+  <span>Local Roasted Coffee</span>
+  <span>Open 7 Days a Week</span>
+  <span>Fresh Food Daily</span>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-copy">
+    <p class="section-label">Our Story</p>
+    <h2>A Proper<br>Local Café</h2>
+    <p>Café Nosh has been a fixture on Wimpole Road for years, feeding the people of Colchester with the kind of honest, uncomplicated food that never goes out of fashion. We're not a chain. We're not a concept. We're a café.</p>
+    <p>Everything is made fresh each morning. The bread is sliced thick, the eggs come from a local farm, and the coffee is ground to order from beans roasted right here in Essex. Come in on your own, bring the kids, bring the dog — you'll get the same warm welcome either way.</p>
+    <p>Find us at 1b Wimpole Road, just off the main drag, with parking nearby and a walk from Colchester town centre. We open early so you're sorted before work, and we keep going until mid-afternoon for a proper lazy lunch.</p>
+    <div class="about-stat">
+      <div>
+        <div class="stat-num">7</div>
+        <div class="stat-label">Days Open</div>
+      </div>
+      <div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Fresh Daily</div>
+      </div>
+      <div>
+        <div class="stat-num">CO1</div>
+        <div class="stat-label">Colchester</div>
+      </div>
+    </div>
+  </div>
+  <div class="about-img-wrap">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Coffee at Café Nosh">
+    <div class="about-badge">Est.<br>Wimpole Rd</div>
+  </div>
+</section>
+
+<!-- MENU SELECTOR -->
+<section class="menu-section" id="menu">
+  <p class="section-label">What We Serve</p>
+  <h2>The Nosh<br>Menu</h2>
+  <p class="menu-intro">Everything made fresh. No freezer-to-fryer shortcuts here — just good ingredients, straightforward cooking and generous portions.</p>
+
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-tab="coffee">Coffee &amp; Drinks</button>
+    <button class="tab-btn" data-tab="breakfast">Breakfast</button>
+    <button class="tab-btn" data-tab="toasties">Toasties &amp; Sarnies</button>
+    <button class="tab-btn" data-tab="sweet">Sweet Things</button>
+  </div>
+
+  <!-- COFFEE -->
+  <div class="menu-panel active" id="tab-coffee">
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Flat White</span><span class="menu-item-price">£3.20</span></div>
+      <p class="menu-item-desc">Double ristretto, steamed whole milk. Tight and strong, the way it should be.</p>
+      <span class="menu-tag tag-hot">Hot</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Cappuccino</span><span class="menu-item-price">£3.10</span></div>
+      <p class="menu-item-desc">Equal thirds espresso, steamed milk and dry foam. Dusted with proper cocoa.</p>
+      <span class="menu-tag tag-hot">Hot</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Americano</span><span class="menu-item-price">£2.80</span></div>
+      <p class="menu-item-desc">Double shot, hot water. No fuss. Milk on the side if you like.</p>
+      <span class="menu-tag tag-hot">Hot</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Latte</span><span class="menu-item-price">£3.30</span></div>
+      <p class="menu-item-desc">Single shot, silky steamed milk. Available with oat, soy or almond milk at no extra charge.</p>
+      <span class="menu-tag tag-hot">Hot</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Iced Latte</span><span class="menu-item-price">£3.60</span></div>
+      <p class="menu-item-desc">Shot over ice, cold milk, optional vanilla syrup. Good any time of year.</p>
+      <span class="menu-tag tag-new">New</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Builder's Tea</span><span class="menu-item-price">£2.00</span></div>
+      <p class="menu-item-desc">Yorkshire Gold, proper mug, milk in last. Biscuit included.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Fresh Orange Juice</span><span class="menu-item-price">£3.00</span></div>
+      <p class="menu-item-desc">Pressed to order. No cartons, no concentrate.</p>
+      <span class="menu-tag tag-vg">Vegan</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Hot Chocolate</span><span class="menu-item-price">£3.50</span></div>
+      <p class="menu-item-desc">Belgian chocolate flakes, steamed milk, a heap of cream on top if you want it.</p>
+    </div>
+  </div>
+
+  <!-- BREAKFAST -->
+  <div class="menu-panel" id="tab-breakfast">
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">The Full Nosh</span><span class="menu-item-price">£9.50</span></div>
+      <p class="menu-item-desc">Back bacon, two sausages, fried egg, beans, mushrooms, grilled tomato, black pudding and two slices of toast. This is the one.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Veggie Full</span><span class="menu-item-price">£8.50</span></div>
+      <p class="menu-item-desc">Halloumi, veggie sausages, fried egg, beans, mushrooms, grilled tomato and toast.</p>
+      <span class="menu-tag tag-vg">Veggie</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Eggs on Toast</span><span class="menu-item-price">£5.50</span></div>
+      <p class="menu-item-desc">Two eggs your way — fried, scrambled or poached — on thick-cut brown or white.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Bacon Roll</span><span class="menu-item-price">£4.20</span></div>
+      <p class="menu-item-desc">Back bacon in a soft white roll. Brown sauce or red — you choose, we won't judge.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Sausage Bap</span><span class="menu-item-price">£4.20</span></div>
+      <p class="menu-item-desc">Two proper pork sausages in a floury bap. Add egg for 80p.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Smashed Avo on Toast</span><span class="menu-item-price">£6.50</span></div>
+      <p class="menu-item-desc">Ripe avocado, chilli flakes, lemon, sourdough. Topped with a poached egg if you like.</p>
+      <span class="menu-tag tag-vg">Vegan</span><span class="menu-tag tag-new">New</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Porridge</span><span class="menu-item-price">£4.00</span></div>
+      <p class="menu-item-desc">Rolled oats, whole milk, brown sugar, banana or golden syrup. Warms you right through.</p>
+      <span class="menu-tag tag-vg">Veggie</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Beans on Toast</span><span class="menu-item-price">£4.50</span></div>
+      <p class="menu-item-desc">Heinz beans, thick white toast, butter. Sometimes the classics are the classics for a reason.</p>
+      <span class="menu-tag tag-vg">Vegan</span>
+    </div>
+  </div>
+
+  <!-- TOASTIES -->
+  <div class="menu-panel" id="tab-toasties">
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Cheese &amp; Tomato Toastie</span><span class="menu-item-price">£5.00</span></div>
+      <p class="menu-item-desc">Mature cheddar, sliced tomato, white bloomer. Pressed until golden.</p>
+      <span class="menu-tag tag-vg">Veggie</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Ham &amp; Cheese Toastie</span><span class="menu-item-price">£5.50</span></div>
+      <p class="menu-item-desc">Thick-cut ham, cheddar, Dijon mustard. A proper toastie done right.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Tuna Melt</span><span class="menu-item-price">£5.80</span></div>
+      <p class="menu-item-desc">Tuna mayo, red onion, cheddar, pressed on granary. A lunchtime favourite.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">BLT</span><span class="menu-item-price">£5.50</span></div>
+      <p class="menu-item-desc">Back bacon, iceberg lettuce, beef tomato, mayo on white bread. Proper old-school.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Club Sandwich</span><span class="menu-item-price">£7.50</span></div>
+      <p class="menu-item-desc">Triple-decker with chicken, bacon, egg, lettuce and tomato. Served with crisps.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Egg Mayo Bap</span><span class="menu-item-price">£4.50</span></div>
+      <p class="menu-item-desc">Free-range egg mayo, cress, soft white bap. Light, simple, satisfying.</p>
+      <span class="menu-tag tag-vg">Veggie</span>
+    </div>
+  </div>
+
+  <!-- SWEET -->
+  <div class="menu-panel" id="tab-sweet">
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Almond Croissant</span><span class="menu-item-price">£2.80</span></div>
+      <p class="menu-item-desc">Flaky, buttery, loaded with frangipane and toasted flaked almonds. Baked fresh each morning.</p>
+      <span class="menu-tag tag-new">Fresh Today</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Pain au Chocolat</span><span class="menu-item-price">£2.60</span></div>
+      <p class="menu-item-desc">Two fingers of dark chocolate wrapped in laminated pastry. Goes well with anything.</p>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Banana Loaf</span><span class="menu-item-price">£2.50</span></div>
+      <p class="menu-item-desc">Made in-house with overripe bananas, walnuts and a touch of cinnamon. Serve warm.</p>
+      <span class="menu-tag tag-vg">Veggie</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Flapjack</span><span class="menu-item-price">£2.20</span></div>
+      <p class="menu-item-desc">Golden syrup, rolled oats, butter. Thick-cut squares, chewy in the middle, crisp at the edges.</p>
+      <span class="menu-tag tag-vg">Vegan</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Brownie</span><span class="menu-item-price">£2.50</span></div>
+      <p class="menu-item-desc">Dense chocolate brownie with a proper fudgy middle. Not cakey. Never cakey.</p>
+      <span class="menu-tag tag-vg">Veggie</span>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-top"><span class="menu-item-name">Toast &amp; Jam</span><span class="menu-item-price">£2.00</span></div>
+      <p class="menu-item-desc">Two thick slices, butter, your choice of strawberry jam, marmalade or Marmite.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK -->
+<div class="photo-break">
+  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80" alt="Coffee at Café Nosh">
+  <div class="photo-break-overlay"></div>
+  <div class="photo-break-text">Come in.<br><span>Sit down.</span><br>Eat well.</div>
+</div>
+
+<!-- INFO GRID -->
+<section class="info-grid" id="visit">
+  <div class="info-block">
+    <p class="section-label">Opening Hours</p>
+    <h3>When We're Open</h3>
+    <div class="hours-row"><strong>Monday – Friday</strong><span>7:30am – 4:00pm</span></div>
+    <div class="hours-row"><strong>Saturday</strong><span>8:00am – 3:00pm</span></div>
+    <div class="hours-row"><strong>Sunday</strong><span>9:00am – 2:00pm</span></div>
+    <p style="margin-top:1.2rem;font-size:.82rem;color:#888;">Last food orders 30 minutes before closing. Kitchen closes early on bank holidays.</p>
+  </div>
+  <div class="info-block">
+    <p class="section-label">Find Us</p>
+    <h3>Getting Here</h3>
+    <p>We're at <strong>1b Wimpole Road, Colchester CO1 2BX</strong>, a short walk from Colchester town centre and a few minutes from Colchester North railway station.</p>
+    <p style="margin-top:.8rem;">Street parking available on Wimpole Road and surrounding streets. We're also on the local bus routes into town.</p>
+    <a href="https://maps.google.com/?q=1b+Wimpole+Road+Colchester+CO1+2BX" target="_blank" rel="noopener" style="display:inline-block;margin-top:1rem;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);">Open in Maps &rarr;</a>
+  </div>
+  <div class="info-block">
+    <p class="section-label">Get in Touch</p>
+    <h3>Contact</h3>
+    <p><a href="tel:01206648035">01206 648035</a></p>
+    <p><a href="mailto:hello@caf-nosh.co.uk">hello@caf-nosh.co.uk</a></p>
+    <p style="margin-top:1rem;">For large group bookings (6+), catering enquiries or private hire, drop us a message and we'll get back to you same day during opening hours.</p>
+    <button class="btn btn-primary" style="margin-top:1.5rem;font-size:.75rem;" onclick="document.getElementById('modal').classList.add('open')">Book a Table</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div>
+    <p class="section-label">Drop Us a Line</p>
+    <h2>Say Hello<br>to Nosh</h2>
+    <p>Whether you want to book a table, ask about allergies, arrange a group visit or just tell us you liked your coffee — we're easy to reach and we actually reply.</p>
+    <div class="contact-detail"><strong>Phone:</strong> <a href="tel:01206648035" style="color:var(--crimson);">01206 648035</a></div>
+    <div class="contact-detail"><strong>Email:</strong> <a href="mailto:hello@caf-nosh.co.uk" style="color:var(--crimson);">hello@caf-nosh.co.uk</a></div>
+    <div class="contact-detail"><strong>Address:</strong> 1b Wimpole Road, Colchester CO1 2BX</div>
+  </div>
+  <div>
+    <form id="contact-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+      </div>
+      <input type="tel" name="phone" placeholder="Phone number (optional)">
+      <select name="reason">
+        <option value="" disabled selected>What's this about?</option>
+        <option>Table booking</option>
+        <option>Group visit (6+ people)</option>
+        <option>Catering enquiry</option>
+        <option>Allergy / dietary question</option>
+        <option>General message</option>
+      </select>
+      <textarea name="message" placeholder="Your message..."></textarea>
+      <button type="submit" class="btn btn-primary" style="font-size:.78rem;">Send Message</button>
+      <div class="form-confirm" id="form-confirm">
+        Thanks for getting in touch! We'll reply within a few hours during opening times.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">CAFÉ <span>NOSH</span></div>
+  <p>1b Wimpole Road, Colchester CO1 2BX &nbsp;|&nbsp; &copy; 2025 Café Nosh</p>
+  <div class="footer-links">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#visit">Visit</a>
+    <a href="tel:01206648035">Call</a>
+    <a href="mailto:hello@caf-nosh.co.uk">Email</a>
+  </div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">&times;</button>
+    <h3>Book a Table</h3>
+    <form id="modal-form">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Email address" required>
+      <input type="tel" name="phone" placeholder="Phone number">
+      <div class="form-row">
+        <input type="date" name="date" required>
+        <input type="time" name="time" min="07:30" max="15:30" required>
+      </div>
+      <select name="guests">
+        <option value="" disabled selected>Number of guests</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6+</option>
+      </select>
+      <textarea name="notes" placeholder="Any dietary requirements or notes..."></textarea>
+      <button type="submit" class="btn btn-primary" style="font-size:.78rem;">Confirm Booking Request</button>
+      <div class="form-confirm" id="modal-confirm">
+        Brilliant — we've got your request. We'll confirm by phone or email shortly. See you soon!
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Menu tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Contact form
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const confirm = document.getElementById('form-confirm');
+    confirm.style.display = 'block';
+    this.querySelectorAll('input, textarea, select, button').forEach(el => el.disabled = true);
+    setTimeout(() => { confirm.style.display = 'block'; }, 100);
+  });
+
+  // Modal form
+  document.getElementById('modal-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const confirm = document.getElementById('modal-confirm');
+    confirm.style.display = 'block';
+    this.querySelectorAll('input, textarea, select, button').forEach(el => el.disabled = true);
+  });
+
+  // Close modal on overlay click
+  document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('open');
+  });
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 60 ? '0 2px 20px rgba(0,0,0,.4)' : 'none';
+  });
+</script>
+</body>
+</html>

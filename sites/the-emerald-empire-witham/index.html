@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Emerald Empire | Beauty Salon, Witham Essex</title>
+<meta name="description" content="The Emerald Empire beauty salon at 28 Newlands Dr, Witham CM8 2AP. Nails, lashes, brows, waxing and more. Walk-ins welcome.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "The Emerald Empire",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "28 Newlands Dr",
+    "addressLocality": "Witham",
+    "addressRegion": "Essex",
+    "postalCode": "CM8 2AP",
+    "addressCountry": "GB"
+  },
+  "email": "hello@the-emerald-empire.co.uk",
+  "url": "https://the-emerald-empire.co.uk",
+  "description": "Beauty salon in Witham, Essex offering nails, lashes, brows, waxing and skin treatments.",
+  "openingHours": "Tu-Sa 09:00-18:00"
+}
+</script>
+<style>
+:root {
+  --cream: #f9f4ec;
+  --warm-white: #fdfaf5;
+  --terracotta: #c4623a;
+  --terracotta-light: #e07a52;
+  --terracotta-dark: #9e4a28;
+  --sage: #7a8c6e;
+  --sage-light: #a8b89a;
+  --ink: #2c2416;
+  --ink-soft: #5a4e3c;
+  --gold: #b8935a;
+  --border: rgba(196,98,58,0.18);
+  --radius-arch: 50% 50% 0 0 / 40% 40% 0 0;
+  --shadow: 0 8px 40px rgba(44,36,22,0.12);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 4%; background: rgba(249,244,236,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.nav-logo { font-family: var(--font-serif); font-size: 1.25rem; color: var(--terracotta); letter-spacing: 0.02em; }
+.nav-logo span { color: var(--ink); }
+.nav-links { display: flex; gap: 2rem; font-size: 0.875rem; font-weight: 500; color: var(--ink-soft); }
+.nav-links a:hover { color: var(--terracotta); }
+.nav-cta { background: var(--terracotta); color: #fff; padding: 0.55rem 1.4rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; transition: background 0.2s; }
+.nav-cta:hover { background: var(--terracotta-dark); }
+
+/* HERO */
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 70px; }
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6% 5% 6% 7%; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+.hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+.hero-h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 4vw, 3.6rem); line-height: 1.15; color: var(--ink); margin-bottom: 1.25rem; }
+.hero-h1 em { font-style: italic; color: var(--terracotta); }
+.hero-sub { font-size: 1.05rem; color: var(--ink-soft); max-width: 380px; margin-bottom: 2.5rem; font-weight: 300; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--terracotta); color: #fff; padding: 0.8rem 2rem; border-radius: 2rem; font-weight: 500; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+.btn-primary:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
+.btn-ghost { border: 1.5px solid var(--terracotta); color: var(--terracotta); padding: 0.8rem 1.8rem; border-radius: 2rem; font-weight: 500; font-size: 0.95rem; background: transparent; cursor: pointer; transition: all 0.2s; }
+.btn-ghost:hover { background: var(--terracotta); color: #fff; }
+.hero-right { position: relative; overflow: hidden; }
+.hero-arch-wrap { position: absolute; inset: 8% 8% 0; border-radius: 50% 50% 0 0 / 30% 30% 0 0; overflow: hidden; box-shadow: var(--shadow); }
+.hero-arch-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-arch-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(196,98,58,0.18) 100%); }
+
+/* STRIP */
+.visit-strip { background: var(--terracotta); color: #fff; display: flex; align-items: center; justify-content: center; gap: 3rem; padding: 1rem 4%; flex-wrap: wrap; font-size: 0.875rem; font-weight: 400; }
+.visit-strip strong { font-weight: 600; }
+.visit-strip a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+
+/* PULL QUOTE */
+.pull-quote-section { padding: 5rem 7%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.pull-quote { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.5vw, 2.1rem); line-height: 1.4; color: var(--ink); font-style: italic; position: relative; padding-left: 2rem; }
+.pull-quote::before { content: ''; position: absolute; left: 0; top: 0.3em; width: 3px; height: 80%; background: var(--terracotta); border-radius: 2px; }
+.pull-quote cite { display: block; font-family: var(--font-sans); font-style: normal; font-size: 0.85rem; color: var(--gold); margin-top: 1rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.story-text p { color: var(--ink-soft); font-weight: 300; margin-bottom: 1rem; font-size: 1rem; }
+
+/* ARCH GALLERY */
+.gallery-row { display: flex; gap: 1.5rem; padding: 0 7% 5rem; align-items: flex-end; }
+.arch-frame { flex: 1; border-radius: 50% 50% 0 0 / 28% 28% 0 0; overflow: hidden; box-shadow: var(--shadow); }
+.arch-frame img { width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform 0.4s; }
+.arch-frame:hover img { transform: scale(1.03); }
+.arch-frame.tall { flex: 1.3; }
+.arch-frame.short { flex: 0.8; align-self: flex-end; }
+.arch-frame.short img { aspect-ratio: 3/3.5; }
+
+/* SERVICES / PRICE LEDGER */
+.services-section { background: var(--warm-white); padding: 5rem 7%; }
+.section-label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.section-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--ink); margin-bottom: 3rem; }
+.price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; }
+.price-category { margin-bottom: 2.5rem; }
+.price-category h3 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--terracotta); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px dotted rgba(44,36,22,0.1); font-size: 0.92rem; }
+.price-row:last-child { border-bottom: none; }
+.price-row .item { color: var(--ink-soft); }
+.price-row .price { font-weight: 600; color: var(--ink); white-space: nowrap; margin-left: 1rem; }
+
+/* BOOKING SECTION */
+.booking-section { padding: 5rem 7%; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.booking-info h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 2.8vw, 2.4rem); color: var(--ink); margin-bottom: 1rem; }
+.booking-info p { color: var(--ink-soft); font-weight: 300; margin-bottom: 1.5rem; }
+.booking-detail { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1rem; font-size: 0.92rem; color: var(--ink-soft); }
+.booking-detail .icon { color: var(--terracotta); font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1em; }
+.enquiry-form { background: #fff; border-radius: 1.5rem; padding: 2.5rem; box-shadow: var(--shadow); }
+.enquiry-form h3 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--ink); margin-bottom: 1.5rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; font-size: 0.82rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 0.4rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid var(--border); border-radius: 0.75rem; background: var(--cream); font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink); outline: none; transition: border-color 0.2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--terracotta); }
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-success { display: none; background: #e8f5e9; border-radius: 0.75rem; padding: 1rem 1.25rem; color: #2e7d32; font-size: 0.92rem; margin-top: 1rem; }
+
+/* FOOTER */
+footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 3rem 7% 2rem; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; }
+.footer-brand .logo { font-family: var(--font-serif); font-size: 1.2rem; color: var(--terracotta-light); margin-bottom: 0.75rem; }
+.footer-brand p { font-size: 0.875rem; line-height: 1.7; }
+footer h4 { color: #fff; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+footer ul { list-style: none; }
+footer ul li { margin-bottom: 0.5rem; font-size: 0.875rem; }
+footer ul li a:hover { color: var(--terracotta-light); }
+.footer-bottom { background: var(--ink); text-align: center; padding: 1rem 7%; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(44,36,22,0.5); z-index: 200; align-items: center; justify-content: center; padding: 1rem; }
+.modal-overlay.open { display: flex; }
+.modal-box { background: #fff; border-radius: 1.5rem; padding: 2.5rem; max-width: 480px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(44,36,22,0.25); }
+.modal-close { position: absolute; top: 1rem; right: 1.25rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ink-soft); }
+
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-right { height: 55vw; min-height: 280px; }
+  .hero-arch-wrap { inset: 4% 10% 0; }
+  .hero-left { padding: 2rem 6% 2.5rem; }
+  .pull-quote-section, .booking-section { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 6%; }
+  .gallery-row { padding: 0 6% 3rem; }
+  .price-grid { grid-template-columns: 1fr; gap: 0; }
+  .services-section { padding: 3rem 6%; }
+  footer { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 6% 1.5rem; }
+  .nav-links { display: none; }
+  .visit-strip { gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">The Emerald <span>Empire</span></div>
+  <div class="nav-links">
+    <a href="#about">Our Story</a>
+    <a href="#services">Treatments</a>
+    <a href="#booking">Book</a>
+  </div>
+  <button class="nav-cta btn-primary" onclick="openModal()">Make an Enquiry</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Witham, Essex</div>
+    <h1 class="hero-h1">Where every visit feels like a <em>little treat</em> you actually deserve.</h1>
+    <p class="hero-sub">A proper neighbourhood beauty salon on Newlands Drive. Nails, lashes, brows and skin — done well, without the fuss.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal()">Book a Treatment</button>
+      <a class="btn-ghost" href="#services">See Treatments</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-arch-wrap">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=80" alt="Beauty treatment at The Emerald Empire salon, Witham">
+    </div>
+  </div>
+</section>
+
+<div class="visit-strip">
+  <span>&#128205; 28 Newlands Dr, Witham CM8 2AP</span>
+  <span>&#128337; Tue &ndash; Sat, 9am &ndash; 6pm</span>
+  <span>Walk-ins welcome &middot; <a href="mailto:hello@the-emerald-empire.co.uk">hello@the-emerald-empire.co.uk</a></span>
+</div>
+
+<section class="pull-quote-section" id="about">
+  <blockquote class="pull-quote">
+    "Good beauty shouldn't feel like a luxury &mdash; it should feel like coming home."
+    <cite>The Emerald Empire, Witham</cite>
+  </blockquote>
+  <div class="story-text">
+    <p>We set up on Newlands Drive because Witham deserved a salon that felt relaxed and real. No pretension, no pressure to spend more than you came in for. Just skilled hands, honest prices and a proper cup of tea while you wait.</p>
+    <p>Whether you're in for a fresh set of nails before a big occasion or a quick brow tidy on your lunch break, we'll look after you the same way. Regular clients, new faces and walk-ins all get the same care here.</p>
+  </div>
+</section>
+
+<div class="gallery-row">
+  <div class="arch-frame tall">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80" alt="Nail treatment close-up">
+  </div>
+  <div class="arch-frame short">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="Lash and brow treatments at The Emerald Empire">
+  </div>
+</div>
+
+<section class="services-section" id="services">
+  <div class="section-label">What we offer</div>
+  <h2 class="section-title">Treatments &amp; Prices</h2>
+  <div class="price-grid">
+
+    <div>
+      <div class="price-category">
+        <h3>Nails</h3>
+        <div class="price-row"><span class="item">Classic manicure</span><span class="price">&pound;22</span></div>
+        <div class="price-row"><span class="item">Gel manicure</span><span class="price">&pound;30</span></div>
+        <div class="price-row"><span class="item">Gel removal &amp; reapplication</span><span class="price">&pound;35</span></div>
+        <div class="price-row"><span class="item">Acrylic full set</span><span class="price">&pound;42</span></div>
+        <div class="price-row"><span class="item">Acrylic infill</span><span class="price">&pound;30</span></div>
+        <div class="price-row"><span class="item">Classic pedicure</span><span class="price">&pound;28</span></div>
+        <div class="price-row"><span class="item">Gel pedicure</span><span class="price">&pound;36</span></div>
+        <div class="price-row"><span class="item">Nail art (per nail)</span><span class="price">from &pound;2</span></div>
+      </div>
+      <div class="price-category">
+        <h3>Lashes</h3>
+        <div class="price-row"><span class="item">Classic lash extensions</span><span class="price">&pound;48</span></div>
+        <div class="price-row"><span class="item">Hybrid lash extensions</span><span class="price">&pound;55</span></div>
+        <div class="price-row"><span class="item">Volume lash extensions</span><span class="price">&pound;62</span></div>
+        <div class="price-row"><span class="item">Lash infill (2&ndash;3 weeks)</span><span class="price">&pound;35</span></div>
+        <div class="price-row"><span class="item">Lash lift &amp; tint</span><span class="price">&pound;42</span></div>
+        <div class="price-row"><span class="item">Lash removal</span><span class="price">&pound;15</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="price-category">
+        <h3>Brows</h3>
+        <div class="price-row"><span class="item">Brow shape &amp; tint</span><span class="price">&pound;18</span></div>
+        <div class="price-row"><span class="item">Brow lamination</span><span class="price">&pound;38</span></div>
+        <div class="price-row"><span class="item">Brow lamination &amp; tint</span><span class="price">&pound;45</span></div>
+        <div class="price-row"><span class="item">HD brows</span><span class="price">&pound;35</span></div>
+        <div class="price-row"><span class="item">Threading (brows)</span><span class="price">&pound;10</span></div>
+      </div>
+      <div class="price-category">
+        <h3>Waxing</h3>
+        <div class="price-row"><span class="item">Upper lip</span><span class="price">&pound;8</span></div>
+        <div class="price-row"><span class="item">Chin</span><span class="price">&pound;8</span></div>
+        <div class="price-row"><span class="item">Half leg</span><span class="price">&pound;20</span></div>
+        <div class="price-row"><span class="item">Full leg</span><span class="price">&pound;32</span></div>
+        <div class="price-row"><span class="item">Underarm</span><span class="price">&pound;14</span></div>
+        <div class="price-row"><span class="item">Bikini line</span><span class="price">&pound;18</span></div>
+        <div class="price-row"><span class="item">Hollywood / Brazilian</span><span class="price">&pound;35</span></div>
+      </div>
+      <div class="price-category">
+        <h3>Skin &amp; Extras</h3>
+        <div class="price-row"><span class="item">Mini facial (30 min)</span><span class="price">&pound;30</span></div>
+        <div class="price-row"><span class="item">Full facial (60 min)</span><span class="price">&pound;52</span></div>
+        <div class="price-row"><span class="item">Eyebrow tint only</span><span class="price">&pound;10</span></div>
+        <div class="price-row"><span class="item">Patch test</span><span class="price">Free</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking-section" id="booking">
+  <div class="booking-info">
+    <h2>Ready to come in?</h2>
+    <p>Drop us a message and we'll get back to you quickly to confirm a time. Walk-ins are always welcome when we have space &mdash; just pop your head round the door.</p>
+    <div class="booking-detail">
+      <span class="icon">&#128205;</span>
+      <span>28 Newlands Dr, Witham CM8 2AP &mdash; just off the main residential stretch, easy parking nearby.</span>
+    </div>
+    <div class="booking-detail">
+      <span class="icon">&#128337;</span>
+      <span>Tuesday to Saturday, 9am &ndash; 6pm. Closed Sunday &amp; Monday.</span>
+    </div>
+    <div class="booking-detail">
+      <span class="icon">&#9993;</span>
+      <span><a href="mailto:hello@the-emerald-empire.co.uk" style="color:var(--terracotta);">hello@the-emerald-empire.co.uk</a></span>
+    </div>
+    <div class="booking-detail">
+      <span class="icon">&#128221;</span>
+      <span>A patch test is required at least 48 hours before lash or tint treatments if you're a new client. We'll remind you when you book.</span>
+    </div>
+  </div>
+
+  <div class="enquiry-form">
+    <h3>Send an enquiry</h3>
+    <form id="enquiryForm" onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label for="fname">Your name</label>
+        <input type="text" id="fname" name="name" placeholder="e.g. Sarah" required>
+      </div>
+      <div class="form-group">
+        <label for="femail">Email address</label>
+        <input type="email" id="femail" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="fservice">Treatment you're interested in</label>
+        <select id="fservice" name="service">
+          <option value="">Select a treatment...</option>
+          <option>Nails (manicure / pedicure)</option>
+          <option>Gel or acrylic nails</option>
+          <option>Lash extensions</option>
+          <option>Lash lift &amp; tint</option>
+          <option>Brow lamination</option>
+          <option>Brow shape &amp; tint / HD brows</option>
+          <option>Waxing</option>
+          <option>Facial</option>
+          <option>Not sure yet &mdash; just want a chat</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fmessage">Anything else to mention?</label>
+        <textarea id="fmessage" name="message" placeholder="Preferred days, any skin sensitivities, first-time patch test needed..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Enquiry</button>
+      <div class="form-success" id="formSuccess">
+        &#10003;&nbsp; Thank you! We've received your message and will be in touch within one working day.
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <div class="logo">The Emerald Empire</div>
+    <p>A neighbourhood beauty salon on Newlands Drive, Witham. Honest treatments, fair prices and a warm welcome every time.</p>
+    <p style="margin-top:1rem;font-size:0.82rem;">&#169; 2025 The Emerald Empire. All rights reserved.</p>
+  </div>
+  <div>
+    <h4>Treatments</h4>
+    <ul>
+      <li><a href="#services">Nails &amp; Gel</a></li>
+      <li><a href="#services">Lash Extensions</a></li>
+      <li><a href="#services">Lash Lift &amp; Tint</a></li>
+      <li><a href="#services">Brow Lamination</a></li>
+      <li><a href="#services">Waxing</a></li>
+      <li><a href="#services">Facials</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Visit Us</h4>
+    <ul>
+      <li>28 Newlands Dr</li>
+      <li>Witham, Essex</li>
+      <li>CM8 2AP</li>
+      <li style="margin-top:0.75rem;"><a href="mailto:hello@the-emerald-empire.co.uk">hello@the-emerald-empire.co.uk</a></li>
+      <li style="margin-top:0.5rem;">Tue &ndash; Sat: 9am &ndash; 6pm</li>
+      <li>Walk-ins welcome</li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">Designed with care &middot; The Emerald Empire, Witham CM8 2AP</div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <h3 id="modalTitle" style="font-family:var(--font-serif);font-size:1.5rem;color:var(--ink);margin-bottom:0.5rem;">Book a Treatment</h3>
+    <p style="color:var(--ink-soft);font-size:0.9rem;margin-bottom:1.5rem;">Fill in your details and we'll confirm your appointment by email.</p>
+    <form id="modalForm" onsubmit="submitModal(event)">
+      <div class="form-group">
+        <label for="mname">Name</label>
+        <input type="text" id="mname" required placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label for="memail">Email</label>
+        <input type="email" id="memail" required placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="mservice">Treatment</label>
+        <select id="mservice">
+          <option value="">Choose a treatment...</option>
+          <option>Gel manicure</option>
+          <option>Acrylic full set</option>
+          <option>Lash extensions</option>
+          <option>Lash lift &amp; tint</option>
+          <option>Brow lamination</option>
+          <option>HD brows</option>
+          <option>Waxing</option>
+          <option>Facial</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="mdate">Preferred date &amp; time</label>
+        <input type="text" id="mdate" placeholder="e.g. Thursday afternoon, any day after 3pm">
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;">Confirm Enquiry</button>
+      <div class="form-success" id="modalSuccess">
+        &#10003;&nbsp; Brilliant &mdash; we'll be in touch within one working day to confirm your slot!
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(function() {
+      document.getElementById('formSuccess').style.display = 'block';
+      btn.textContent = 'Sent!';
+      e.target.querySelectorAll('input,select,textarea').forEach(function(el){ el.value = ''; });
+    }, 900);
+  }
+  function submitModal(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(function() {
+      document.getElementById('modalSuccess').style.display = 'block';
+      btn.style.display = 'none';
+      e.target.querySelectorAll('input,select').forEach(function(el){ el.value = ''; });
+    }, 900);
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>

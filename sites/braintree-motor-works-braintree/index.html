@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Braintree Motor Works | Garage & MOT Centre, Braintree Essex</title>
+<meta name="description" content="Braintree Motor Works – trusted independent garage at 4 Harrison Dr, Braintree CM7 1DE. MOT testing, servicing, diagnostics & repairs. Call 01376 327577.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --char: #111214;
+  --char2: #1c1e22;
+  --amber: #e8a020;
+  --amber2: #f5b840;
+  --offwhite: #f0ede8;
+  --muted: #8a8d94;
+  --glass: rgba(255,255,255,0.07);
+  --glass-border: rgba(255,255,255,0.12);
+  --radius: 10px;
+  --font-head: 'Barlow Condensed', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --transition: 0.25s ease;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--char); color: var(--offwhite); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 64px; background: rgba(17,18,20,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--glass-border); }
+.nav-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 800; letter-spacing: 0.04em; color: var(--offwhite); }
+.nav-logo span { color: var(--amber); }
+.nav-links { display: flex; gap: 2rem; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+.nav-links a { color: var(--muted); transition: color var(--transition); }
+.nav-links a:hover { color: var(--amber); }
+.nav-cta { background: var(--amber); color: var(--char); padding: 0.45rem 1.2rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; transition: background var(--transition); }
+.nav-cta:hover { background: var(--amber2); }
+
+/* HERO */
+.hero { position: relative; height: 100vh; min-height: 620px; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; transform: scale(1.04); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(17,18,20,0.55) 0%, rgba(17,18,20,0.92) 75%); }
+.hero-content { position: relative; z-index: 2; width: 100%; padding: 0 5% 7%; }
+.hero-eyebrow { font-family: var(--font-head); font-size: 0.95rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.6rem; }
+.hero-title { font-family: var(--font-head); font-size: clamp(3.2rem, 8vw, 6.8rem); font-weight: 800; line-height: 0.95; text-transform: uppercase; letter-spacing: 0.01em; color: var(--offwhite); max-width: 780px; }
+.hero-title span { color: var(--amber); }
+.hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(240,237,232,0.72); max-width: 480px; margin: 1.4rem 0 2rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--amber); color: var(--char); padding: 0.85rem 2rem; border-radius: 8px; font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: none; cursor: pointer; transition: background var(--transition), transform var(--transition); }
+.btn-primary:hover { background: var(--amber2); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--offwhite); padding: 0.85rem 2rem; border-radius: 8px; font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--glass-border); cursor: pointer; transition: border-color var(--transition), color var(--transition); }
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* GLASS BAR */
+.glass-bar { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: rgba(17,18,20,0.72); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); }
+.glass-item { padding: 1.1rem 1.5rem; border-right: 1px solid var(--glass-border); }
+.glass-item:last-child { border-right: none; }
+.glass-item .label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+.glass-item .value { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; color: var(--offwhite); }
+.glass-item .value a { color: var(--amber); }
+
+/* SECTIONS */
+section { padding: 5rem 5%; }
+.section-tag { font-family: var(--font-head); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.5rem; }
+.section-title { font-family: var(--font-head); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; text-transform: uppercase; line-height: 1.05; color: var(--offwhite); margin-bottom: 1rem; }
+.section-lead { font-size: 1rem; color: rgba(240,237,232,0.6); max-width: 560px; line-height: 1.7; }
+
+/* SERVICES */
+#services { background: var(--char2); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; margin-top: 3rem; background: var(--glass-border); border-radius: var(--radius); overflow: hidden; }
+.service-card { background: var(--char2); padding: 2rem 1.8rem; transition: background var(--transition); }
+.service-card:hover { background: #22252b; }
+.service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+.service-card h3 { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--offwhite); margin-bottom: 0.4rem; }
+.service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin-bottom: 0.8rem; }
+.service-price { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: var(--amber); }
+
+/* SPLIT SECTION */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; }
+.split-img { position: relative; min-height: 480px; overflow: hidden; }
+.split-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.split-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 60%, var(--char) 100%); }
+.split-text { padding: 4rem 4rem 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+.split-text .section-lead { margin-bottom: 1.5rem; }
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
+.check-list li { font-size: 0.92rem; color: rgba(240,237,232,0.75); display: flex; align-items: center; gap: 0.7rem; }
+.check-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+
+/* PRICING TABLE */
+#pricing { background: var(--char); }
+.pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.price-row { background: var(--char2); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 1.4rem 1.6rem; display: flex; align-items: center; justify-content: space-between; transition: border-color var(--transition); }
+.price-row:hover { border-color: var(--amber); }
+.price-row-name { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.price-row-desc { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+.price-tag { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--amber); white-space: nowrap; }
+
+/* TESTIMONIALS */
+#reviews { background: var(--char2); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.review-card { background: #16181d; border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 1.6rem; }
+.stars { color: var(--amber); font-size: 0.85rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; }
+.review-card p { font-size: 0.9rem; color: rgba(240,237,232,0.72); line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+.reviewer { font-size: 0.82rem; font-weight: 600; color: var(--offwhite); }
+.reviewer span { color: var(--muted); font-weight: 400; }
+
+/* CONTACT / MAP */
+#contact { background: var(--char); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; margin-top: 2.5rem; align-items: start; }
+.contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+.contact-block .label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+.contact-block .val { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; color: var(--offwhite); }
+.contact-block .val a { color: var(--amber); transition: color var(--transition); }
+.contact-block .val a:hover { color: var(--amber2); }
+.map-embed { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--glass-border); height: 320px; background: #1c1e22; display: flex; align-items: center; justify-content: center; }
+.map-embed iframe { width: 100%; height: 100%; border: none; filter: grayscale(60%) invert(92%) contrast(85%); }
+
+/* FORM */
+.enquiry-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+.form-group label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.form-group input, .form-group select, .form-group textarea { background: var(--char2); border: 1px solid var(--glass-border); border-radius: 6px; padding: 0.75rem 1rem; color: var(--offwhite); font-family: var(--font-body); font-size: 0.92rem; transition: border-color var(--transition); outline: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--amber); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group select option { background: var(--char2); }
+.form-confirm { display: none; background: rgba(232,160,32,0.12); border: 1px solid var(--amber); border-radius: var(--radius); padding: 1.2rem 1.5rem; color: var(--amber); font-size: 0.95rem; font-weight: 500; margin-top: 0.5rem; }
+
+/* FOOTER */
+footer { background: #0d0e10; border-top: 1px solid var(--glass-border); padding: 2.5rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; letter-spacing: 0.04em; }
+.footer-logo span { color: var(--amber); }
+.footer-copy { font-size: 0.78rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.5rem; font-size: 0.78rem; color: var(--muted); }
+.footer-links a:hover { color: var(--amber); }
+
+/* MOBILE */
+@media (max-width: 820px) {
+  .nav-links { display: none; }
+  .hero-title { font-size: 3rem; }
+  .glass-bar { grid-template-columns: 1fr 1fr; }
+  .glass-item:nth-child(2) { border-right: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .split { grid-template-columns: 1fr; }
+  .split-img { min-height: 260px; }
+  .split-img::after { display: none; }
+  .split-text { padding: 2.5rem 1.5rem; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  section { padding: 3.5rem 5%; }
+  footer { flex-direction: column; text-align: center; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Braintree Motor Works",
+  "url": "http://www.braintreemotorworks.co.uk/",
+  "telephone": "01376327577",
+  "email": "hello@braintree-motor-works.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4 Harrison Drive",
+    "addressLocality": "Braintree",
+    "addressRegion": "Essex",
+    "postalCode": "CM7 1DE",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "13:00" }
+  ],
+  "priceRange": "££",
+  "description": "Independent garage in Braintree, Essex offering MOT testing, full servicing, diagnostics, tyres, brakes and general repairs.",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.8785,
+    "longitude": 0.5527
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Braintree<span>MW</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#pricing">Prices</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Independent Garage &mdash; Braintree, Essex</p>
+    <h1 class="hero-title">Straight<br>Talking<br><span>Motor Works</span></h1>
+    <p class="hero-sub">Honest, thorough vehicle care from a team that knows Braintree roads and the cars that drive them. No fuss, no hidden charges.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Service</button>
+      <a href="tel:01376327577" class="btn-ghost">Call 01376 327577</a>
+    </div>
+  </div>
+  <div class="glass-bar">
+    <div class="glass-item">
+      <div class="label">Phone</div>
+      <div class="value"><a href="tel:01376327577">01376 327577</a></div>
+    </div>
+    <div class="glass-item">
+      <div class="label">Address</div>
+      <div class="value">4 Harrison Dr, CM7 1DE</div>
+    </div>
+    <div class="glass-item">
+      <div class="label">Mon&ndash;Fri</div>
+      <div class="value">08:00 &ndash; 17:30</div>
+    </div>
+    <div class="glass-item">
+      <div class="label">Saturday</div>
+      <div class="value">08:30 &ndash; 13:00</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="section-tag">What We Do</p>
+  <h2 class="section-title">Everything Your<br>Car Actually Needs</h2>
+  <p class="section-lead">From a Class 4 MOT to a full cambelt change, we handle it properly the first time. No unnecessary upsells, no vague estimates.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <h3>MOT Testing</h3>
+      <p>Class 4 MOTs carried out on site at Harrison Drive. Fast turnaround, same-day certificates, and a plain-English explanation of any advisories.</p>
+      <div class="service-price">From &pound;54.85</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Full Servicing</h3>
+      <p>Interim and full services using quality oil and OEM-spec filters. We check all fluid levels, brakes, lights, and tyres as standard.</p>
+      <div class="service-price">From &pound;89</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>Diagnostics</h3>
+      <p>Engine management lights, ABS faults, gearbox codes &ndash; we run a full multi-system diagnostic scan and talk you through exactly what it means.</p>
+      <div class="service-price">From &pound;45</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🛞</div>
+      <h3>Tyres &amp; Wheels</h3>
+      <p>Supply and fit across all common sizes, plus tracking, balancing and TPMS resets. Budget to premium brands available.</p>
+      <div class="service-price">From &pound;55 fitted</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>Brakes &amp; Clutches</h3>
+      <p>Pads, discs, drums, callipers and hydraulic lines. Clutch replacements on most makes. We only fit parts that are going to last.</p>
+      <div class="service-price">From &pound;79 axle</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌡️</div>
+      <h3>Cooling &amp; Electrics</h3>
+      <p>Radiators, thermostats, water pumps, alternators and starter motors. We carry common parts in stock to keep your wait short.</p>
+      <div class="service-price">POA</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SPLIT -->
+<section id="about" style="padding:0; background: var(--char);">
+  <div class="split">
+    <div class="split-img">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80" alt="Workshop interior at Braintree Motor Works">
+    </div>
+    <div class="split-text">
+      <p class="section-tag">About the Workshop</p>
+      <h2 class="section-title">Local Garage,<br>Proper Standards</h2>
+      <p class="section-lead">Braintree Motor Works has been keeping Essex drivers on the road from our workshop on Harrison Drive. We work on most makes and models &ndash; from Fords and Vauxhalls to VW Group cars and light commercials.</p>
+      <ul class="check-list">
+        <li>Fully trained, experienced technicians</li>
+        <li>Approved MOT Testing Station</li>
+        <li>Genuine and quality aftermarket parts</li>
+        <li>Written quotes before any work begins</li>
+        <li>Courtesy updates by phone or text</li>
+        <li>No job too small &ndash; we see walk-ins for bulbs, wipers and more</li>
+      </ul>
+      <a href="tel:01376327577" class="btn-primary" style="align-self: flex-start;">Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <p class="section-tag">Transparent Pricing</p>
+  <h2 class="section-title">Know What You're<br>Paying Before We Start</h2>
+  <p class="section-lead">Indicative prices for the most common jobs. All quotes are confirmed in writing before any work is authorised. VAT included where shown.</p>
+  <div class="pricing-grid">
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">Class 4 MOT</div>
+        <div class="price-row-desc">Cars up to 8 seats &ndash; same-day certificate</div>
+      </div>
+      <div class="price-tag">&pound;54.85</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">MOT + Interim Service</div>
+        <div class="price-row-desc">Oil, filter, top-ups &amp; full safety check</div>
+      </div>
+      <div class="price-tag">&pound;129</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">Interim Service</div>
+        <div class="price-row-desc">Oil &amp; filter, 20-point check, fluid top-ups</div>
+      </div>
+      <div class="price-tag">From &pound;89</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">Full Service</div>
+        <div class="price-row-desc">Comprehensive service including air &amp; pollen filters</div>
+      </div>
+      <div class="price-tag">From &pound;149</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">Diagnostic Scan</div>
+        <div class="price-row-desc">Full multi-system read &amp; report</div>
+      </div>
+      <div class="price-tag">&pound;45</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">Front Brake Pads &amp; Discs</div>
+        <div class="price-row-desc">Supply &amp; fit, most popular models</div>
+      </div>
+      <div class="price-tag">From &pound;120</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">Tyre Supply &amp; Fit</div>
+        <div class="price-row-desc">Budget to premium &ndash; per tyre, balanced</div>
+      </div>
+      <div class="price-tag">From &pound;55</div>
+    </div>
+    <div class="price-row">
+      <div>
+        <div class="price-row-name">Wheel Alignment</div>
+        <div class="price-row-desc">4-wheel tracking check &amp; adjustment</div>
+      </div>
+      <div class="price-tag">&pound;49</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <p class="section-tag">Customer Reviews</p>
+  <h2 class="section-title">What Braintree<br>Drivers Say</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Took my Fiesta in for an MOT and a rattle I'd been ignoring for months. They found the issue quickly, gave me a fair quote, and had it back to me the same afternoon. Exactly what you want from a local garage."</p>
+      <div class="reviewer">Mark T. <span>&mdash; Braintree</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Really refreshing to find a garage that just tells you straight what's needed. No horror-story list of extras, just the actual problem fixed at a sensible price. Will be back for my next service."</p>
+      <div class="reviewer">Sarah P. <span>&mdash; Witham</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"My Golf had an engine management light on and three other garages quoted me over &pound;400. Braintree Motor Works diagnosed it properly, sorted the actual fault for a fraction of that. Genuinely decent people."</p>
+      <div class="reviewer">James R. <span>&mdash; Great Notley</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & BOOKING -->
+<section id="contact">
+  <p class="section-tag">Get in Touch</p>
+  <h2 class="section-title">Book a Service<br>or Send an Enquiry</h2>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info" style="margin-bottom:2rem;">
+        <div class="contact-block">
+          <div class="label">Phone</div>
+          <div class="val"><a href="tel:01376327577">01376 327577</a></div>
+        </div>
+        <div class="contact-block">
+          <div class="label">Email</div>
+          <div class="val"><a href="mailto:hello@braintree-motor-works.co.uk">hello@braintree-motor-works.co.uk</a></div>
+        </div>
+        <div class="contact-block">
+          <div class="label">Address</div>
+          <div class="val">4 Harrison Drive<br>Braintree, Essex CM7 1DE</div>
+        </div>
+        <div class="contact-block">
+          <div class="label">Opening Hours</div>
+          <div class="val" style="font-size:1rem;">Mon&ndash;Fri: 08:00&ndash;17:30<br>Saturday: 08:30&ndash;13:00<br><span style="color:var(--muted);font-size:0.85rem;font-family:var(--font-body);font-weight:400;">Closed Sunday &amp; Bank Holidays</span></div>
+        </div>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2458.0!2d0.5527!3d51.8785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8e4d5f0000001%3A0x1!2s4+Harrison+Dr%2C+Braintree+CM7+1DE!5e0!3m2!1sen!2suk!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Braintree Motor Works location map">
+        </iframe>
+      </div>
+    </div>
+    <div>
+      <form class="enquiry-form" id="enquiryForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="e.g. Mark" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="e.g. Taylor" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="01376 ..." required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vreg">Vehicle Reg</label>
+            <input type="text" id="vreg" name="vreg" placeholder="e.g. AB12 CDE" style="text-transform:uppercase;">
+          </div>
+          <div class="form-group">
+            <label for="make">Make &amp; Model</label>
+            <input type="text" id="make" name="make" placeholder="e.g. Ford Focus 1.6">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Required</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service...</option>
+            <option>MOT Test</option>
+            <option>Interim Service</option>
+            <option>Full Service</option>
+            <option>MOT + Service Combo</option>
+            <option>Diagnostic Scan</option>
+            <option>Brakes / Pads / Discs</option>
+            <option>Tyres &amp; Fitting</option>
+            <option>Clutch Replacement</option>
+            <option>Cooling System</option>
+            <option>Electrical Fault</option>
+            <option>General Repair / Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Additional Details</label>
+          <textarea id="message" name="message" placeholder="Describe any symptoms, warning lights, or preferred dates..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="align-self:flex-start; font-size:1rem;">Send Enquiry</button>
+        <div class="form-confirm" id="formConfirm">
+          Thanks &mdash; we've received your enquiry and will be in touch shortly. For urgent bookings, ring us on <a href="tel:01376327577" style="color:inherit;text-decoration:underline;">01376 327577</a>.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Braintree<span>MW</span></div>
+  <div class="footer-copy">&copy; 2025 Braintree Motor Works Ltd &bull; 4 Harrison Drive, Braintree, Essex CM7 1DE</div>
+  <div class="footer-links">
+    <a href="tel:01376327577">01376 327577</a>
+    <a href="mailto:hello@braintree-motor-works.co.uk">Email Us</a>
+    <a href="http://www.braintreemotorworks.co.uk/">Website</a>
+  </div>
+</footer>
+
+<script>
+  // Form submission handler
+  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fname = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value;
+    if (!fname || !phone || !service) {
+      alert('Please fill in your name, phone number and the service you need.');
+      return;
+    }
+    const confirm = document.getElementById('formConfirm');
+    confirm.style.display = 'block';
+    this.querySelector('button[type="submit"]').textContent = 'Sent';
+    this.querySelector('button[type="submit"]').disabled = true;
+    this.querySelector('button[type="submit"]').style.opacity = '0.6';
+    confirm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  // Nav background on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 60
+      ? 'rgba(17,18,20,0.97)'
+      : 'rgba(17,18,20,0.82)';
+  });
+
+  // Subtle hero parallax
+  const heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < window.innerHeight) {
+      heroBg.style.transform = `scale(1.04) translateY(${window.scrollY * 0.18}px)`;
+    }
+  });
+
+  // VReg uppercase
+  const vregInput = document.getElementById('vreg');
+  if (vregInput) {
+    vregInput.addEventListener('input', function() {
+      this.value = this.value.toUpperCase();
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-layout="split-sticky" data-palette="ink-monochrome">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet coffee | Cafe in Colchester</title>
+  <meta name="description" content="Located at 43 Head St, Colchester CO1 1NH" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --paper: #f6f5f2;
+      --ink: #111111;
+      --muted: #525252;
+      --accent: #b91c1c;
+      --accent-fg: #ffffff;
+      --rule: #18181b;
+      --head-font: 'Space Grotesk', system-ui, sans-serif;
+      --body-font: 'Inter', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--body-font); background: var(--bg); color: var(--ink); line-height: 1.55; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 6% 44px; }
+    .top-strip { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 8px 6%; border-bottom: 1px solid var(--rule); font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+    .nav-bar { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+    .brand { font-family: var(--head-font); font-size: 1.55rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { color: inherit; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    .hero-block { padding: 38px 0 28px; border-bottom: 1px solid var(--rule); }
+    h1 { font-family: var(--head-font); font-size: clamp(2rem, 4.1vw, 3.25rem); line-height: 1.08; }
+    h2 { font-family: var(--head-font); font-size: clamp(1.4rem, 2.3vw, 1.9rem); line-height: 1.18; }
+    h3 { font-family: var(--head-font); font-size: 1.12rem; margin: 6px 0; }
+    .kicker { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: var(--accent); }
+    .muted { color: var(--muted); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn-solid { background: var(--accent); color: var(--accent-fg); padding: 11px 18px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; }
+    .btn-outline { border: 1px solid var(--rule); color: var(--ink); padding: 10px 18px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 20px; font-size: 0.84rem; font-weight: 600; color: var(--muted); }
+    .badge-col { display: flex; flex-direction: column; gap: 6px; margin-top: 22px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+    .sec-bar { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .ledger-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; background: var(--paper); border: 1px solid var(--rule); padding: 24px; }
+    .ledger-item { padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+    .l-line { display: flex; align-items: baseline; gap: 8px; }
+    .l-dots { flex: 1; border-bottom: 1px dotted var(--muted); opacity: 0.45; }
+    .l-price { color: var(--accent); font-weight: 700; white-space: nowrap; }
+    .l-meta { font-size: 0.85rem; color: var(--muted); margin-top: 3px; }
+    .tile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .tile-card { background: var(--paper); border: 1px solid var(--rule); padding: 20px; }
+    .tile-card p { font-size: 0.88rem; color: var(--muted); }
+    .tile-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .tile-tag { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
+    .row-list { background: var(--paper); border: 1px solid var(--rule); padding: 8px 22px; }
+    .row-item { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .row-item:last-child { border-bottom: none; }
+    .row-right { display: flex; align-items: center; gap: 14px; white-space: nowrap; }
+    .split-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
+    .box { background: var(--paper); border: 1px solid var(--rule); padding: 24px; }
+    .hr-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 0.92rem; }
+    .map-frame { border: 1px solid var(--rule); min-height: 270px; background: var(--paper); }
+    .map-frame iframe { width: 100%; height: 100%; min-height: 270px; border: 0; display: block; }
+    .q-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .q-form input:nth-child(3) { grid-column: 1 / -1; }
+    .q-form input { padding: 10px 12px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink); font-family: inherit; }
+    .q-form button { grid-column: 1 / -1; background: var(--accent); color: var(--accent-fg); border: none; padding: 12px; font-weight: 700; cursor: pointer; }
+    .sent { display: none; grid-column: 1 / -1; color: var(--accent); font-weight: 700; font-size: 0.9rem; }
+    .sticky-shell { max-width: 1220px; margin: 0 auto; padding: 32px 6%; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 32px; align-items: start; }
+    .sticky-rail { position: sticky; top: 24px; background: var(--paper); border: 1px solid var(--rule); padding: 26px; }
+    .sticky-main { display: flex; flex-direction: column; gap: 24px; }
+    .accent-band { background: var(--accent); color: var(--accent-fg); padding: 24px 0 32px; }
+    .poster-frame { background: var(--paper); border: 2px solid var(--rule); padding: 28px; }
+    footer { max-width: 1140px; margin: 0 auto; padding: 20px 6% 40px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.84rem; color: var(--muted); }
+    @media (max-width: 840px) {
+      .ledger-cols, .split-2, .sticky-shell, .q-form { grid-template-columns: 1fr; }
+      .sticky-rail { position: static; }
+    }
+  </style>
+</head>
+<body>
+  
+        <div class="sticky-shell">
+          <aside class="sticky-rail">
+            <a class="brand" href="#">Velvet coffee</a>
+            <div class="kicker" style="margin-top:18px;">CAFE &bull; COLCHESTER</div>
+            <h1 style="font-size:clamp(1.9rem,3vw,2.6rem);">Good coffee and proper bakes on 43 Head St.</h1>
+            <p class="muted" style="margin:12px 0 18px;">Located at 43 Head St, Colchester CO1 1NH</p>
+            <div class="btn-row">
+              <a class="btn-solid" href="#action">Send Group / Counter Order</a>
+              <a class="btn-outline" href="#hours">Find on Map</a>
+            </div>
+            <div class="badge-col"><span>&#10003; Walk-ins only</span><span>&#10003; Oat &amp; soy milk free</span><span>&#10003; Dog friendly</span><span>&#10003; Takeaway cups ready</span></div>
+          </aside>
+          <main class="sticky-main">
+            <section class="box" id="menu">
+              <div class="kicker">COUNTER MENU &amp; BAKES</div>
+              <h2>Drinks &amp; Counter Food</h2>
+              <div style="margin-top:16px;"><div class="row-list"><div class="row-item"><div><strong>Flat White / Cortado</strong><div class="l-meta">Double shot espresso with whole or oat milk at no extra charge</div></div><div class="row-right"><span class="tile-tag">All Day</span><strong class="l-price">?3.60</strong></div></div><div class="row-item"><div><strong>Batch Filter Coffee</strong><div class="l-meta">Single-origin brew, free top-up before 11am</div></div><div class="row-right"><span class="tile-tag">Morning</span><strong class="l-price">?3.20</strong></div></div><div class="row-item"><div><strong>Iced Oat Latte</strong><div class="l-meta">Pulled over ice with optional house vanilla syrup</div></div><div class="row-right"><span class="tile-tag">All Day</span><strong class="l-price">?4.20</strong></div></div><div class="row-item"><div><strong>Warm Cinnamon Bun</strong><div class="l-meta">Baked early each morning while stocks last</div></div><div class="row-right"><span class="tile-tag">Fresh Batch</span><strong class="l-price">?3.75</strong></div></div><div class="row-item"><div><strong>Mature Cheddar &amp; Chutney Toastie</strong><div class="l-meta">Thick-cut sourdough toasted to order</div></div><div class="row-right"><span class="tile-tag">Lunch</span><strong class="l-price">?6.80</strong></div></div><div class="row-item"><div><strong>Almond Frangipane Croissant</strong><div class="l-meta">Twice-baked flaky pastry with toasted flaked almonds</div></div><div class="row-right"><span class="tile-tag">Morning</span><strong class="l-price">?3.90</strong></div></div></div></div>
+            </section>
+            
+    <div class="split-2" id="hours">
+      <div class="box">
+        <div class="kicker">LOCATION &amp; HOURS</div>
+        <h2>43 Head St, Colchester CO1 1NH</h2>
+        <p class="muted" style="margin:6px 0 14px;">Colchester, United Kingdom</p>
+        <div class="hr-row"><span>Mon - Fri</span><strong>7:30am - 4:30pm</strong></div><div class="hr-row"><span>Saturday</span><strong>8:30am - 5:00pm</strong></div><div class="hr-row"><span>Sunday</span><strong>9:30am - 3:30pm</strong></div>
+        
+      </div>
+      <div class="map-frame">
+        <iframe title="Map for Velvet coffee" src="https://maps.google.com/maps?q=Velvet+coffee%2C+43+Head+St%2C+Colchester+CO1+1NH%2C+Colchester%2C+UK&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+            
+    <div class="box" id="action">
+      <div class="kicker">DIRECT ENQUIRY</div>
+      <h2>Office Coffee Run or Pre-Order</h2>
+      <p class="muted" style="margin:6px 0 14px;">Tell us what you&#x27;d like ready when you pass 43 Head St.</p>
+      <form class="q-form" onsubmit="event.preventDefault(); this.querySelector('.sent').style.display='block';">
+        <input type="text" placeholder="Your name" required />
+        <input type="tel" placeholder="Phone number" required />
+        <input type="text" placeholder="e.g. 4 flat whites, 2 iced lattes, 3 cinnamon buns for 10:15am" required />
+        <button type="submit">Send Group / Counter Order</button>
+        <div class="sent">Received by Velvet coffee (Colchester).</div>
+      </form>
+    </div>
+          </main>
+        </div>
+  <footer>
+    <span><strong>Velvet coffee</strong> &bull; 43 Head St, Colchester CO1 1NH, Colchester</span>
+    <span>hello@velvet-coffee.co.uk</span>
+  </footer>
+</body>
+</html>

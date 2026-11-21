@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LuxeAura Lounge | Beauty Salon | Braintree, Essex</title>
+<meta name="description" content="LuxeAura Lounge — a beauty salon tucked inside The Barn, Horn Courtyard on Braintree High Street. Lashes, facials, waxing, nails & more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "LuxeAura Lounge",
+  "url": "https://www.luxeaura-lounge.co.uk",
+  "telephone": "01376337291",
+  "email": "hello@luxeaura-lounge.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "The Barn, Horn Courtyard, High Street",
+    "addressLocality": "Braintree",
+    "addressRegion": "Essex",
+    "postalCode": "CM7 1JP",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"10:00","closes":"15:00"}
+  ],
+  "priceRange": "££",
+  "description": "Beauty salon in The Barn, Horn Courtyard, Braintree High Street. Offering lash lifts, facials, waxing, manicures, pedicures, and HD brows.",
+  "geo": {"@type":"GeoCoordinates","latitude":51.8784,"longitude":0.5498}
+}
+</script>
+<style>
+:root {
+  --sand: #f5ede0;
+  --sand-light: #fdf7f0;
+  --espresso: #2c1a0e;
+  --mocha: #6b3f22;
+  --blush: #d4a896;
+  --warm-white: #fffaf5;
+  --text: #2c1a0e;
+  --muted: #7a5c48;
+  --ff-serif: 'Playfair Display', Georgia, serif;
+  --ff-sans: 'DM Sans', system-ui, sans-serif;
+  --radius: 4px;
+  --shadow: 0 8px 32px rgba(44,26,14,.13);
+  --transition: .3s ease;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-sans); background: var(--warm-white); color: var(--text); font-size: 16px; line-height: 1.65; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(253,247,240,.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(107,63,34,.1); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.nav-logo { font-family: var(--ff-serif); font-size: 1.25rem; color: var(--espresso); letter-spacing: .02em; }
+.nav-logo span { color: var(--mocha); font-style: italic; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: .875rem; font-weight: 500; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; transition: color var(--transition); }
+.nav-links a:hover { color: var(--espresso); }
+.nav-cta { background: var(--espresso); color: var(--sand) !important; padding: .45rem 1.2rem; border-radius: var(--radius); }
+.nav-cta:hover { background: var(--mocha) !important; color: var(--sand) !important; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.burger span { width: 24px; height: 2px; background: var(--espresso); transition: var(--transition); }
+
+/* HERO */
+.hero { min-height: 100vh; padding-top: 64px; display: grid; grid-template-columns: 1fr 1fr; background: var(--sand-light); overflow: hidden; }
+.hero-left { padding: 8vh 5vw 6vh 7vw; display: flex; flex-direction: column; justify-content: center; }
+.hero-tag { font-size: .78rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--mocha); margin-bottom: 1.2rem; display: flex; align-items: center; gap: .6rem; }
+.hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--blush); display: block; }
+.hero-h1 { font-family: var(--ff-serif); font-size: clamp(2.4rem, 4.5vw, 3.6rem); line-height: 1.15; color: var(--espresso); margin-bottom: 1rem; }
+.hero-h1 em { font-style: italic; color: var(--mocha); }
+.hero-sub { font-family: var(--ff-serif); font-style: italic; font-size: 1.15rem; color: var(--blush); margin-bottom: 1.5rem; }
+.hero-body { max-width: 420px; color: var(--muted); font-size: .95rem; margin-bottom: 2.2rem; }
+.btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--espresso); color: var(--sand); padding: .8rem 2rem; border-radius: var(--radius); font-weight: 500; font-size: .9rem; letter-spacing: .03em; transition: background var(--transition); border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--mocha); }
+.btn-outline { border: 1.5px solid var(--espresso); color: var(--espresso); padding: .8rem 1.8rem; border-radius: var(--radius); font-weight: 500; font-size: .9rem; transition: all var(--transition); background: none; cursor: pointer; }
+.btn-outline:hover { background: var(--espresso); color: var(--sand); }
+.hero-right { position: relative; display: grid; grid-template-rows: 3fr 2fr; gap: 12px; padding: 6vh 5vw 6vh 2vw; }
+.hero-img-main { border-radius: 8px 8px 0 8px; overflow: hidden; box-shadow: var(--shadow); }
+.hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+.hero-img-secondary { border-radius: 0 8px 8px 8px; overflow: hidden; box-shadow: var(--shadow); position: relative; }
+.hero-img-secondary img { width: 100%; height: 100%; object-fit: cover; }
+.hero-badge { position: absolute; bottom: 1.2rem; left: 1.2rem; background: var(--warm-white); border-radius: var(--radius); padding: .6rem 1rem; font-size: .78rem; font-weight: 500; color: var(--espresso); box-shadow: 0 4px 16px rgba(44,26,14,.15); }
+
+/* STRIP */
+.strip { background: var(--espresso); color: var(--sand); padding: 1rem 5vw; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+.strip span::before { content: '✦ '; color: var(--blush); }
+
+/* ABOUT */
+.about { padding: 7rem 7vw; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-img { border-radius: 6px; overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/5; }
+.about-img img { width: 100%; height: 100%; object-fit: cover; }
+.section-label { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--mocha); font-weight: 500; margin-bottom: 1rem; }
+.section-h2 { font-family: var(--ff-serif); font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1.2; color: var(--espresso); margin-bottom: 1.2rem; }
+.section-h2 em { font-style: italic; color: var(--mocha); }
+.about-body p { color: var(--muted); font-size: .95rem; margin-bottom: 1rem; }
+.about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+.fact { background: var(--sand); border-radius: var(--radius); padding: 1rem 1.2rem; }
+.fact strong { display: block; font-family: var(--ff-serif); font-size: 1.5rem; color: var(--espresso); }
+.fact span { font-size: .8rem; color: var(--muted); }
+
+/* SERVICES */
+.services { background: var(--sand); padding: 6rem 7vw; }
+.services-head { text-align: center; max-width: 560px; margin: 0 auto 3.5rem; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card { background: var(--warm-white); border-radius: 6px; overflow: hidden; box-shadow: 0 2px 16px rgba(44,26,14,.08); transition: transform var(--transition), box-shadow var(--transition); }
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.service-card-head { background: var(--espresso); padding: 1.4rem 1.5rem; }
+.service-card-head h3 { font-family: var(--ff-serif); font-size: 1.15rem; color: var(--sand); }
+.service-card-head .icon { font-size: 1.4rem; margin-bottom: .4rem; }
+.service-items { padding: 1.2rem 1.5rem 1.5rem; }
+.service-item { display: flex; justify-content: space-between; align-items: baseline; padding: .55rem 0; border-bottom: 1px solid rgba(107,63,34,.1); font-size: .88rem; }
+.service-item:last-child { border-bottom: none; }
+.service-item span { color: var(--muted); }
+.service-item strong { color: var(--mocha); font-weight: 600; white-space: nowrap; margin-left: .5rem; }
+
+/* TESTIMONIALS */
+.testimonials { padding: 6rem 7vw; background: var(--warm-white); }
+.testimonials-head { text-align: center; max-width: 500px; margin: 0 auto 3rem; }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.testi-card { background: var(--sand-light); border-left: 3px solid var(--blush); border-radius: 0 6px 6px 0; padding: 1.6rem 1.5rem; }
+.testi-stars { color: var(--mocha); font-size: .85rem; margin-bottom: .8rem; letter-spacing: .1em; }
+.testi-text { font-size: .9rem; color: var(--text); line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+.testi-name { font-size: .8rem; font-weight: 600; color: var(--mocha); text-transform: uppercase; letter-spacing: .08em; }
+
+/* FIND US */
+.findus { background: var(--espresso); color: var(--sand); padding: 6rem 7vw; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.findus .section-label { color: var(--blush); }
+.findus .section-h2 { color: var(--sand); }
+.findus .section-h2 em { color: var(--blush); }
+.findus p { color: rgba(245,237,224,.75); font-size: .95rem; margin-bottom: 1.5rem; }
+.contact-list { list-style: none; display: flex; flex-direction: column; gap: .9rem; margin-top: 1.5rem; }
+.contact-list li { display: flex; align-items: flex-start; gap: .8rem; font-size: .9rem; color: rgba(245,237,224,.85); }
+.contact-list .icon { font-size: 1rem; margin-top: .1rem; color: var(--blush); flex-shrink: 0; }
+.contact-list a { color: var(--blush); text-decoration: underline; text-underline-offset: 3px; }
+.hours-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.hours-table td { padding: .5rem 0; font-size: .88rem; border-bottom: 1px solid rgba(245,237,224,.1); color: rgba(245,237,224,.8); }
+.hours-table td:last-child { text-align: right; color: var(--blush); font-weight: 500; }
+
+/* FORM */
+.enquiry { background: var(--sand); padding: 6rem 7vw; }
+.enquiry-inner { max-width: 680px; margin: 0 auto; }
+.enquiry-head { text-align: center; margin-bottom: 2.5rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-full { grid-column: 1/-1; }
+.form-group { display: flex; flex-direction: column; gap: .4rem; }
+label { font-size: .8rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--mocha); }
+input, select, textarea { font-family: var(--ff-sans); font-size: .9rem; padding: .75rem 1rem; border: 1.5px solid rgba(107,63,34,.2); border-radius: var(--radius); background: var(--warm-white); color: var(--text); transition: border-color var(--transition); width: 100%; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--mocha); }
+textarea { resize: vertical; min-height: 100px; }
+.form-submit { grid-column: 1/-1; text-align: center; margin-top: .5rem; }
+.form-confirm { display: none; text-align: center; padding: 2rem; background: var(--warm-white); border-radius: 6px; border: 1.5px solid var(--blush); margin-top: 1.5rem; }
+.form-confirm h3 { font-family: var(--ff-serif); color: var(--espresso); margin-bottom: .5rem; }
+.form-confirm p { color: var(--muted); font-size: .9rem; }
+
+/* FOOTER */
+footer { background: #1a0f07; color: rgba(245,237,224,.6); padding: 2.5rem 7vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: .8rem; }
+footer .logo-f { font-family: var(--ff-serif); font-size: 1.1rem; color: var(--sand); }
+
+/* MOBILE */
+@media (max-width: 820px) {
+  .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--warm-white); padding: 1.5rem 5vw; gap: 1rem; border-bottom: 1px solid rgba(107,63,34,.1); }
+  .nav-links.open { display: flex; }
+  .burger { display: flex; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 4vh 6vw 2vh; }
+  .hero-right { padding: 2vh 6vw 5vh; height: 55vw; grid-template-rows: 1fr; grid-template-columns: 1fr 1fr; }
+  .hero-img-secondary { display: none; }
+  .strip { gap: 1.2rem; }
+  .about, .findus { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 6vw; }
+  .about-img { aspect-ratio: 16/9; }
+  .services { padding: 4rem 5vw; }
+  .services-grid, .testi-grid { grid-template-columns: 1fr; }
+  .testimonials { padding: 4rem 5vw; }
+  .enquiry { padding: 4rem 5vw; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-full { grid-column: 1; }
+  footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-logo">LuxeAura <span>Lounge</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Treatments</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#findus">Find Us</a></li>
+    <li><a href="#enquiry" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Braintree High Street, Essex</p>
+    <h1 class="hero-h1">A salon that feels like<br><em>a proper treat.</em></h1>
+    <p class="hero-sub">Tucked inside The Barn, Horn Courtyard</p>
+    <p class="hero-body">Step off the High Street and into something a little quieter. LuxeAura Lounge is a beauty salon in a converted barn courtyard where the pace slows down and the results speak for themselves. Lashes, facials, waxing, nails — done properly.</p>
+    <div class="btn-group">
+      <button class="btn-primary" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">Book a Treatment</button>
+      <a href="tel:01376337291" class="btn-outline">Call 01376 337291</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-main">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="LuxeAura Lounge beauty treatment" loading="eager">
+    </div>
+    <div class="hero-img-secondary">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=80" alt="Salon interior LuxeAura Lounge" loading="eager">
+      <div class="hero-badge">&#10024; The Barn, Horn Courtyard</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <span>Lash Lifts &amp; Tints</span>
+  <span>HD Brows</span>
+  <span>Gel Nails</span>
+  <span>Waxing</span>
+  <span>Facials</span>
+  <span>Braintree, Essex</span>
+</div>
+
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=80" alt="Inside LuxeAura Lounge salon">
+  </div>
+  <div class="about-body">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-h2">Not your average<br><em>High Street salon.</em></h2>
+    <p>There's something genuinely special about our spot. You'll find us through the archway off Braintree High Street, tucked into Horn Courtyard inside a beautiful old barn. It's the kind of place you tell your friends about.</p>
+    <p>We've built LuxeAura Lounge around one straightforward idea: every client deserves a treatment that's been thought through properly. No rushing, no cutting corners. Our therapists train regularly, use quality products, and take real pride in their work.</p>
+    <p>Whether you're in for a quick tidy-up before a night out or a full afternoon of treatments, you'll leave feeling genuinely looked after. That's the standard we hold ourselves to.</p>
+    <div class="about-facts">
+      <div class="fact"><strong>5&#9733;</strong><span>Google reviews from local clients</span></div>
+      <div class="fact"><strong>The Barn</strong><span>Horn Courtyard, Braintree CM7 1JP</span></div>
+      <div class="fact"><strong>7 Days</strong><span>Open every day of the week</span></div>
+      <div class="fact"><strong>10+</strong><span>Specialist treatments available</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="services-head">
+    <p class="section-label">Treatments &amp; Pricing</p>
+    <h2 class="section-h2">What we <em>do best</em></h2>
+    <p style="color:var(--muted);font-size:.92rem;margin-top:.8rem;">Honest prices, skilled hands. No upselling, no surprises on the bill.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-card-head">
+        <div class="icon">👁️</div>
+        <h3>Lashes &amp; Brows</h3>
+      </div>
+      <div class="service-items">
+        <div class="service-item"><span>Lash Lift &amp; Tint</span><strong>£52</strong></div>
+        <div class="service-item"><span>Classic Lash Extensions</span><strong>£65</strong></div>
+        <div class="service-item"><span>Hybrid Lash Extensions</span><strong>£75</strong></div>
+        <div class="service-item"><span>Lash Infill (2–3 wks)</span><strong>£40</strong></div>
+        <div class="service-item"><span>HD Brows</span><strong>£38</strong></div>
+        <div class="service-item"><span>Brow Lamination &amp; Tint</span><strong>£48</strong></div>
+        <div class="service-item"><span>Brow Tint Only</span><strong>£14</strong></div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-head">
+        <div class="icon">💅</div>
+        <h3>Nails</h3>
+      </div>
+      <div class="service-items">
+        <div class="service-item"><span>Gel Manicure</span><strong>£35</strong></div>
+        <div class="service-item"><span>Classic Manicure</span><strong>£25</strong></div>
+        <div class="service-item"><span>Gel Pedicure</span><strong>£42</strong></div>
+        <div class="service-item"><span>Classic Pedicure</span><strong>£30</strong></div>
+        <div class="service-item"><span>Nail Art (per hand)</span><strong>from £8</strong></div>
+        <div class="service-item"><span>Gel Removal &amp; Tidy</span><strong>£18</strong></div>
+        <div class="service-item"><span>Mani &amp; Pedi Combo</span><strong>£65</strong></div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-head">
+        <div class="icon">✨</div>
+        <h3>Skin &amp; Waxing</h3>
+      </div>
+      <div class="service-items">
+        <div class="service-item"><span>Express Facial (30 min)</span><strong>£38</strong></div>
+        <div class="service-item"><span>Full Facial (60 min)</span><strong>£58</strong></div>
+        <div class="service-item"><span>Half Leg Wax</span><strong>£22</strong></div>
+        <div class="service-item"><span>Full Leg Wax</span><strong>£38</strong></div>
+        <div class="service-item"><span>Underarm Wax</span><strong>£14</strong></div>
+        <div class="service-item"><span>Bikini Wax</span><strong>£24</strong></div>
+        <div class="service-item"><span>Lip or Chin Wax</span><strong>£10</strong></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-head">
+    <p class="section-label">Client Reviews</p>
+    <h2 class="section-h2">What Braintree <em>is saying</em></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">"Found this place by accident walking past the courtyard archway — so glad I did. Had a lash lift and brow tint, absolutely loved the results. The barn setting is gorgeous and the whole vibe is really relaxed."</p>
+      <p class="testi-name">Sarah M. &mdash; Braintree</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">"Gel nails done here for the past six months and they always last perfectly. The girls are brilliant and never try to push you into anything extra. Genuinely one of the best salons in Essex."</p>
+      <p class="testi-name">Claire T. &mdash; Witham</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">"Booked in for a facial and came out looking like I'd had a full week's rest. The space is so calm and the therapist took time to actually ask about my skin properly. Already rebooked for next month."</p>
+      <p class="testi-name">Jo W. &mdash; Halstead</p>
+    </div>
+  </div>
+</section>
+
+<section class="findus" id="findus">
+  <div>
+    <p class="section-label">Getting Here</p>
+    <h2 class="section-h2">Come and <em>find us</em></h2>
+    <p>We're in a lovely spot that's easier to reach than you might think. Walk along Braintree High Street, look for the archway into Horn Courtyard, and you'll find us inside The Barn. There's parking nearby on the High Street and at Great Square car park a short walk away.</p>
+    <ul class="contact-list">
+      <li><span class="icon">📍</span><span>The Barn, Horn Courtyard, High Street,<br>Braintree, Essex CM7 1JP</span></li>
+      <li><span class="icon">📞</span><a href="tel:01376337291">01376 337291</a></li>
+      <li><span class="icon">✉️</span><a href="mailto:hello@luxeaura-lounge.co.uk">hello@luxeaura-lounge.co.uk</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="section-label">Opening Hours</p>
+    <table class="hours-table">
+      <tr><td>Monday &mdash; Friday</td><td>9:00am &mdash; 6:30pm</td></tr>
+      <tr><td>Saturday</td><td>9:00am &mdash; 5:00pm</td></tr>
+      <tr><td>Sunday</td><td>10:00am &mdash; 3:00pm</td></tr>
+    </table>
+    <p style="margin-top:1.8rem;font-size:.85rem;">Walk-ins are welcome when we have space, but we'd always suggest calling ahead or using the enquiry form below to avoid a wait — especially on Saturdays.</p>
+    <a href="tel:01376337291" class="btn-primary" style="display:inline-block;margin-top:1.5rem;background:var(--blush);color:var(--espresso);">&#128222; Call to Book</a>
+  </div>
+</section>
+
+<section class="enquiry" id="enquiry">
+  <div class="enquiry-inner">
+    <div class="enquiry-head">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-h2">Book or <em>enquire</em></h2>
+      <p style="color:var(--muted);font-size:.92rem;margin-top:.6rem;">Fill in the form and we'll get back to you within a few hours to confirm your appointment.</p>
+    </div>
+    <form id="enquiryForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" placeholder="e.g. Sarah" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" placeholder="e.g. Mitchell" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="07700 000000">
+        </div>
+        <div class="form-group form-full">
+          <label for="treatment">Treatment Interested In</label>
+          <select id="treatment" name="treatment" required>
+            <option value="" disabled selected>Select a treatment...</option>
+            <optgroup label="Lashes &amp; Brows">
+              <option>Lash Lift &amp; Tint</option>
+              <option>Classic Lash Extensions</option>
+              <option>Hybrid Lash Extensions</option>
+              <option>Lash Infill</option>
+              <option>HD Brows</option>
+              <option>Brow Lamination &amp; Tint</option>
+            </optgroup>
+            <optgroup label="Nails">
+              <option>Gel Manicure</option>
+              <option>Classic Manicure</option>
+              <option>Gel Pedicure</option>
+              <option>Mani &amp; Pedi Combo</option>
+            </optgroup>
+            <optgroup label="Skin &amp; Waxing">
+              <option>Express Facial</option>
+              <option>Full Facial</option>
+              <option>Leg Wax</option>
+              <option>Bikini Wax</option>
+            </optgroup>
+            <option>Not sure — happy to be advised</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label for="preferred">Preferred Day &amp; Time</label>
+          <input type="text" id="preferred" name="preferred" placeholder="e.g. Thursday afternoon, or Saturday morning">
+        </div>
+        <div class="form-group form-full">
+          <label for="message">Anything Else?</label>
+          <textarea id="message" name="message" placeholder="Any extra details, questions, or things we should know about..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary" style="font-size:1rem;padding:.9rem 2.8rem;">Send Enquiry</button>
+        </div>
+      </div>
+    </form>
+    <div class="form-confirm" id="formConfirm">
+      <h3>Thank you! We'll be in touch shortly.</h3>
+      <p>Your enquiry has been received. A member of our team will get back to you within a few hours to confirm your booking. If you need to speak to us urgently, please call <a href="tel:01376337291" style="color:var(--mocha);">01376 337291</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo-f">LuxeAura Lounge</div>
+  <div>The Barn, Horn Courtyard, High St, Braintree CM7 1JP</div>
+  <div>&copy; 2025 LuxeAura Lounge. All rights reserved.</div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const treatment = document.getElementById('treatment').value;
+    if (!fname || !email || !treatment) {
+      alert('Please fill in your name, email, and the treatment you are interested in.');
+      return;
+    }
+    this.style.display = 'none';
+    const confirm = document.getElementById('formConfirm');
+    confirm.style.display = 'block';
+    confirm.querySelector('h3').textContent = 'Thanks ' + fname + '! We\u2019ll be in touch shortly.';
+    confirm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(44,26,14,.12)' : 'none';
+  });
+</script>
+</body>
+</html>
