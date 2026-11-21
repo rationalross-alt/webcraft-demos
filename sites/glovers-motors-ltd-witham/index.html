@@ -296,168 +296,9 @@ nav{padding:0 16px}
   </div>
 </section>
 
-<section class="pricing" id="pricing">
-  <div class="container">
-    <div class="section-label">Simple pricing</div>
-    <h2 class="section-h2">No Surprises, No Hidden Fees</h2>
-    <p class="section-intro">Pick what your car needs and we'll confirm the price before booking you in. All work carries a 12-month parts and labour warranty.</p>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Interim Service</h3>
-        <div class="price-amount">£79</div>
-        <div class="price-unit">cars up to 2.0L petrol</div>
-        <ul>
-          <li>Engine oil &amp; filter change</li>
-          <li>Visual brake inspection</li>
-          <li>Tyre condition &amp; pressures</li>
-          <li>Lights &amp; wipers check</li>
-          <li>Fluid top-up (washer, coolant)</li>
-          <li>Service stamp in book</li>
-        </ul>
-        <button class="btn-primary" onclick="openModal()" style="width:100%">Book This</button>
-      </div>
-      <div class="price-card featured">
-        <h3>Full Service + MOT</h3>
-        <div class="price-amount">£169</div>
-        <div class="price-unit">combined saving vs. separate</div>
-        <ul>
-          <li>Full manufacturer-schedule service</li>
-          <li>MOT test included</li>
-          <li>Spark plugs where due</li>
-          <li>Air &amp; cabin filter check</li>
-          <li>Brake fluid condition test</li>
-          <li>Written health check report</li>
-        </ul>
-        <button class="btn-primary" onclick="openModal()" style="width:100%;background:var(--rust)">Book This</button>
-      </div>
-      <div class="price-card">
-        <h3>MOT Only</h3>
-        <div class="price-amount">£54.85</div>
-        <div class="price-unit">DVSA max fee for Class 4</div>
-        <ul>
-          <li>Full DVSA-standard test</li>
-          <li>Pass certificate issued</li>
-          <li>Free advisory note</li>
-          <li>Free retest within 10 days</li>
-          <li>Book online or by phone</li>
-          <li>Most slots same week</li>
-        </ul>
-        <button class="btn-primary" onclick="openModal()" style="width:100%">Book MOT</button>
-      </div>
-    </div>
 
-    <div style="margin-top:40px;background:var(--espresso);border-radius:var(--radius);padding:36px 32px;display:flex;gap:32px;align-items:center;flex-wrap:wrap">
-      <div style="flex:1;min-width:260px">
-        <div style="font-family:var(--font-head);font-size:1.6rem;color:var(--sand2);margin-bottom:6px">Looking for a website for your own business?</div>
-        <h3 style="color:var(--white);font-size:1.3rem;font-weight:600;margin-bottom:10px">Everything Included &mdash; £99/month</h3>
-        <p style="color:var(--sand2);font-size:.9rem;line-height:1.7">Custom website build, UK hosting, SSL security, Google Business setup, local SEO and ongoing updates. No big upfront costs, no technical headaches. Ideal for independent garages, tradespeople and local shops across Essex.</p>
-      </div>
-      <div style="flex-shrink:0">
-        <button class="btn-primary" onclick="openModal('web')">Find Out More</button>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="enquiry" id="enquiry">
-  <div class="container">
-    <div class="enquiry-wrap">
-      <div class="form-card">
-        <h3>Quick Enquiry</h3>
-        <p>Fill in below and we'll get back to you same day during opening hours.</p>
-        <form id="enquiryForm" onsubmit="submitForm(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" name="name" placeholder="Jane Smith" required>
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" placeholder="07700 900123" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="jane@example.com">
-          </div>
-          <div class="form-group">
-            <label>Vehicle (make, model, year)</label>
-            <input type="text" name="vehicle" placeholder="e.g. Ford Focus 2019">
-          </div>
-          <div class="form-group">
-            <label>What do you need?</label>
-            <select name="service" required>
-              <option value="">Select a service...</option>
-              <option>MOT Test</option>
-              <option>Interim Service</option>
-              <option>Full Service</option>
-              <option>Full Service + MOT</option>
-              <option>Diagnostics / Warning Light</option>
-              <option>Brakes or Suspension</option>
-              <option>Tyres</option>
-              <option>Air Con Re-gas</option>
-              <option>Battery / Electrics</option>
-              <option>Exhaust Repair</option>
-              <option>General Repair</option>
-              <option>£99/month Website Plan</option>
-              <option>Something Else</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Anything else we should know?</label>
-            <textarea name="message" placeholder="Describe the issue or ask us a question..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width:100%;padding:15px">Send Enquiry</button>
-          <div class="form-success" id="formSuccess">
-            Thanks! We've received your enquiry and will be in touch shortly. If it's urgent, call us on <a href="tel:01376513373" style="color:#2e7d32;font-weight:600">01376 513373</a>.
-          </div>
-        </form>
-      </div>
-      <div class="enquiry-info">
-        <div class="section-label">Find us</div>
-        <h2 class="section-h2">Come and See Us</h2>
-        <p style="color:var(--muted);font-size:.95rem;margin-bottom:8px">We're on Newland Street in the heart of Witham, with parking on site and easy access from the A12.</p>
-        <div class="info-block">
-          <div class="info-item">
-            <div class="info-item-icon">📍</div>
-            <div>
-              <h4>Address</h4>
-              <p>Newland St, Witham<br>Essex CM8 2AY</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-item-icon">📞</div>
-            <div>
-              <h4>Phone</h4>
-              <a href="tel:01376513373">01376 513373</a>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-item-icon">✉️</div>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:hello@glovers-motors-ltd.co.uk">hello@glovers-motors-ltd.co.uk</a>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-item-icon">🕐</div>
-            <div>
-              <h4>Opening Hours</h4>
-              <p>Mon to Fri: 8:00am &ndash; 5:30pm<br>Saturday: 8:00am &ndash; 1:00pm<br>Sunday: Closed</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-item-icon">📘</div>
-            <div>
-              <h4>Follow Us</h4>
-              <a href="https://www.facebook.com/vehicleservicingandrepairsGLOVERSMOTORS/" target="_blank" rel="noopener">Facebook: Glovers Motors</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <footer>
   <div class="container">
@@ -530,7 +371,7 @@ nav{padding:0 16px}
           <option>Tyres</option>
           <option>Air Con Re-gas</option>
           <option>General Repair</option>
-          <option value="web">£99/month Website Plan</option>
+          
         </select>
       </div>
       <div class="form-group">
@@ -584,7 +425,7 @@ function submitModal(e){
   },900);
 }
 </script>
-<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Glovers Motors Ltd – Independent Garage, Witham, Essex</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="£99/month Everything Included (Build, Hosting & Updates)" selected>£99/month — Everything Included (Build, Hosting &amp; Updates)</option><option value="One-Off Custom Build Enquiry">One-Off Custom Build Enquiry</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Glovers Motors Ltd – Independent Garage, Witham, Essex has been received.</div></div></div>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Glovers Motors Ltd – Independent Garage, Witham, Essex</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Glovers Motors Ltd – Independent Garage, Witham, Essex has been received.</div></div></div>
 <script>(function(){
 const modal=document.getElementById("wc-universal-modal");
 const closeBtn=document.getElementById("wc-modal-close");

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stratford Builder Co #9 | Local Builder in Stratford, Essex</title>
+<meta name="description" content="Independent builder in Stratford, Essex. Extensions, renovations, brickwork, loft conversions and more. Get a free quote today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Stratford Builder Co #9",
+  "description": "Independent builder in Stratford, Essex offering extensions, renovations, brickwork, loft conversions and refurbishments.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stratford Town Centre",
+    "addressLocality": "Stratford",
+    "addressRegion": "Essex",
+    "addressCountry": "GB"
+  },
+  "email": "hello@stratford-builder-co-9.co.uk",
+  "url": "https://stratford-builder-co-9.co.uk",
+  "openingHours": "Mo-Fr 07:30-17:30",
+  "priceRange": "££"
+}
+</script>
+<style>
+:root {
+  --sand: #f5ede0;
+  --sand-light: #fdf7f0;
+  --espresso: #2c1a0e;
+  --espresso-mid: #4a2e1a;
+  --caramel: #b07d4a;
+  --caramel-light: #d4a96a;
+  --warm-white: #fefcf9;
+  --text: #2c1a0e;
+  --text-muted: #7a5c3e;
+  --font-hand: 'Caveat', cursive;
+  --font-body: 'DM Sans', sans-serif;
+  --radius: 4px;
+  --shadow: 0 8px 32px rgba(44,26,14,0.13);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--warm-white); color: var(--text); font-size: 16px; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* NAV */
+nav { background: var(--espresso); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 62px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { color: var(--sand); font-family: var(--font-hand); font-size: 1.45rem; letter-spacing: 0.01em; }
+.nav-logo span { color: var(--caramel-light); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: rgba(245,237,224,0.8); font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--caramel-light); }
+.nav-cta { background: var(--caramel); color: #fff; padding: 0.5rem 1.25rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 600; transition: background 0.2s; }
+.nav-cta:hover { background: var(--caramel-light); color: var(--espresso); }
+
+/* HERO */
+.hero { min-height: 88vh; background: var(--espresso); display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+.hero-text-col { display: flex; flex-direction: column; justify-content: center; padding: 6vw 5vw 6vw 6vw; z-index: 2; }
+.hero-eyebrow { font-family: var(--font-hand); font-size: 1.3rem; color: var(--caramel-light); margin-bottom: 1rem; letter-spacing: 0.02em; }
+.hero h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 600; color: var(--sand); line-height: 1.15; margin-bottom: 1.4rem; }
+.hero h1 em { font-style: normal; color: var(--caramel-light); }
+.hero-desc { color: rgba(245,237,224,0.75); font-size: 1.05rem; max-width: 400px; margin-bottom: 2.2rem; font-weight: 300; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--caramel); color: #fff; padding: 0.85rem 1.8rem; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+.btn-primary:hover { background: var(--caramel-light); color: var(--espresso); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--sand); padding: 0.85rem 1.8rem; border-radius: var(--radius); font-weight: 500; font-size: 0.95rem; border: 1.5px solid rgba(245,237,224,0.35); cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+.btn-outline:hover { border-color: var(--caramel-light); color: var(--caramel-light); }
+.hero-photo-col { position: relative; }
+.hero-photo-main { position: absolute; inset: 0; }
+.hero-photo-main img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+.hero-photo-overlay { position: absolute; bottom: 2.5rem; left: -3rem; width: 52%; aspect-ratio: 4/3; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 4px solid var(--espresso); z-index: 3; }
+.hero-photo-overlay img { width: 100%; height: 100%; object-fit: cover; }
+.hero-badge { position: absolute; top: 2rem; right: 2rem; background: var(--caramel); color: #fff; padding: 0.7rem 1rem; border-radius: 50%; width: 80px; height: 80px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 0.62rem; font-weight: 600; line-height: 1.3; z-index: 4; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* TRUST BAR */
+.trust-bar { background: var(--sand); padding: 1.2rem 5vw; display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; border-bottom: 1px solid rgba(44,26,14,0.1); }
+.trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; color: var(--espresso-mid); }
+.trust-icon { font-size: 1.1rem; }
+
+/* SECTIONS */
+section { padding: 5rem 5vw; }
+.section-label { font-family: var(--font-hand); font-size: 1.15rem; color: var(--caramel); margin-bottom: 0.6rem; }
+.section-title { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 600; color: var(--espresso); line-height: 1.2; margin-bottom: 1rem; }
+.section-sub { color: var(--text-muted); max-width: 540px; font-size: 1rem; font-weight: 300; margin-bottom: 3rem; }
+
+/* SERVICES */
+.services-bg { background: var(--sand-light); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card { background: var(--warm-white); border-radius: var(--radius); padding: 1.8rem 1.6rem; border-left: 3px solid var(--caramel); box-shadow: 0 2px 12px rgba(44,26,14,0.07); transition: transform 0.2s, box-shadow 0.2s; }
+.service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.service-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--espresso); margin-bottom: 0.5rem; }
+.service-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 300; }
+.service-price { font-family: var(--font-hand); font-size: 1.25rem; color: var(--caramel); font-weight: 700; }
+
+/* ABOUT SPLIT */
+.about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-img { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/3; }
+.about-img img { width: 100%; height: 100%; object-fit: cover; }
+.about-text .section-sub { margin-bottom: 1.5rem; }
+.stat-row { display: flex; gap: 2.5rem; margin-top: 2rem; flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat-num { font-family: var(--font-hand); font-size: 2.2rem; color: var(--caramel); font-weight: 700; line-height: 1; }
+.stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
+
+/* PRICING PLAN */
+.plan-bg { background: var(--espresso); }
+.plan-bg .section-label, .plan-bg .section-title { color: var(--sand); }
+.plan-bg .section-sub { color: rgba(245,237,224,0.65); }
+.plan-card { background: var(--sand); border-radius: var(--radius); padding: 2.5rem; max-width: 520px; box-shadow: var(--shadow); }
+.plan-card h3 { font-size: 1.3rem; font-weight: 600; color: var(--espresso); margin-bottom: 0.4rem; }
+.plan-price { font-family: var(--font-hand); font-size: 3rem; color: var(--caramel); font-weight: 700; line-height: 1; margin: 0.8rem 0 0.3rem; }
+.plan-price span { font-size: 1rem; font-family: var(--font-body); color: var(--text-muted); font-weight: 400; }
+.plan-features { list-style: none; margin: 1.2rem 0 1.8rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.plan-features li { font-size: 0.92rem; color: var(--espresso-mid); display: flex; align-items: center; gap: 0.6rem; }
+.plan-features li::before { content: '✓'; color: var(--caramel); font-weight: 700; }
+
+/* ENQUIRY */
+.enquiry-bg { background: var(--sand); }
+.enquiry-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.form-group { margin-bottom: 1.1rem; }
+.form-group label { display: block; font-size: 0.83rem; font-weight: 600; color: var(--espresso-mid); margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid rgba(44,26,14,0.18); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--warm-white); color: var(--text); transition: border-color 0.2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--caramel); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-success { display: none; background: #e8f5e9; border: 1.5px solid #81c784; border-radius: var(--radius); padding: 1.2rem; color: #2e7d32; font-weight: 500; margin-top: 1rem; }
+.contact-info { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.contact-item { display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--espresso-mid); }
+.contact-icon { width: 36px; height: 36px; background: var(--espresso); color: var(--caramel-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+
+/* FOOTER */
+footer { background: var(--espresso); color: rgba(245,237,224,0.65); padding: 2.5rem 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 1rem; font-size: 0.85rem; }
+footer .footer-brand { font-family: var(--font-hand); font-size: 1.3rem; color: var(--sand); }
+footer a { color: var(--caramel-light); }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(44,26,14,0.6); z-index: 200; align-items: center; justify-content: center; }
+.modal-overlay.open { display: flex; }
+.modal-box { background: var(--warm-white); border-radius: var(--radius); padding: 2.5rem; max-width: 480px; width: 90%; position: relative; box-shadow: var(--shadow); }
+.modal-close { position: absolute; top: 1rem; right: 1.2rem; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text-muted); }
+
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-text-col { padding: 3rem 5vw 2rem; }
+  .hero-photo-col { height: 55vw; }
+  .hero-photo-overlay { left: 1rem; bottom: 1rem; width: 45%; }
+  .services-grid { grid-template-columns: 1fr; }
+  .about-split, .enquiry-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .nav-links { display: none; }
+  footer { flex-direction: column; text-align: center; }
+  .trust-bar { gap: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Stratford Builder <span>Co #9</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#pricing">Web Plan</a></li>
+    <li><a href="#enquiry">Enquire</a></li>
+  </ul>
+  <a href="#enquiry" class="nav-cta">Free Quote</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-text-col">
+    <p class="hero-eyebrow">Independent builder, Stratford town centre</p>
+    <h1>Built properly.<br><em>Every time.</em></h1>
+    <p class="hero-desc">From kitchen extensions to full house renovations, we're a hands-on local building firm that takes real pride in the work we leave behind. No subcontractors, no shortcuts.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">Get a Free Quote</button>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-photo-col">
+    <div class="hero-photo-main">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80" alt="Builder at work on site in Stratford">
+    </div>
+    <div class="hero-photo-overlay">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80" alt="Finished building work, Stratford Essex">
+    </div>
+    <div class="hero-badge">Est.<br>Stratford<br>E15</div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🏗️</span> Fully insured &amp; CSCS registered</div>
+  <div class="trust-item"><span class="trust-icon">📍</span> Based in Stratford, E15</div>
+  <div class="trust-item"><span class="trust-icon">⭐</span> 4.9 stars across 60+ local jobs</div>
+  <div class="trust-item"><span class="trust-icon">🔑</span> Free site visits &amp; written quotes</div>
+  <div class="trust-item"><span class="trust-icon">📅</span> Mon–Fri 7:30am–5:30pm</div>
+</div>
+
+<section id="services" class="services-bg">
+  <div class="section-label">What we do</div>
+  <h2 class="section-title">Honest building work,<br>fair prices.</h2>
+  <p class="section-sub">We cover the full range of residential building work across Stratford and the surrounding E-postcodes. All priced clearly, no nasty additions at the end.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Kitchen Extensions</h3>
+      <p>Single-storey rear extensions to open up your ground floor. We handle groundworks, blockwork, roof, and finish.</p>
+      <div class="service-price">From £18,500</div>
+    </div>
+    <div class="service-card">
+      <h3>Loft Conversions</h3>
+      <p>Velux, dormer, or hip-to-gable. Full structural work, staircase fit, and plasterboard finish included.</p>
+      <div class="service-price">From £22,000</div>
+    </div>
+    <div class="service-card">
+      <h3>Full House Renovations</h3>
+      <p>Gut-and-redo refurbishments for period terraces and flats. We strip, replaster, rewire-ready, and rebuild properly.</p>
+      <div class="service-price">POA – free visit</div>
+    </div>
+    <div class="service-card">
+      <h3>Brickwork &amp; Pointing</h3>
+      <p>Repointing, garden walls, chimney repairs, and new-build blockwork. Traditional lime mortar available for period homes.</p>
+      <div class="service-price">From £650</div>
+    </div>
+    <div class="service-card">
+      <h3>Bathroom Refits</h3>
+      <p>Full strip-out and refit with tiling, plastering, and fitting. We work with your chosen suite or source one for you.</p>
+      <div class="service-price">From £3,200</div>
+    </div>
+    <div class="service-card">
+      <h3>Plastering &amp; Drylining</h3>
+      <p>Skim coats, dot-and-dab, stud walls, and ceiling repairs. Ideal after any building work or damp remediation.</p>
+      <div class="service-price">From £280/room</div>
+    </div>
+    <div class="service-card">
+      <h3>Groundworks &amp; Patios</h3>
+      <p>Concrete bases, block paving, Indian sandstone patios, and drainage. We prep everything properly before we lay.</p>
+      <div class="service-price">From £1,400</div>
+    </div>
+    <div class="service-card">
+      <h3>Structural Alterations</h3>
+      <p>RSJ beam installations, load-bearing wall removals, and chimney breast removals. All with full structural engineer sign-off.</p>
+      <div class="service-price">From £2,800</div>
+    </div>
+    <div class="service-card">
+      <h3>Garden Rooms &amp; Outbuildings</h3>
+      <p>Timber-frame garden offices, storage buildings, and annexes. Fully insulated and electrics-ready.</p>
+      <div class="service-price">From £8,500</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-split">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80" alt="Builder reviewing plans on site">
+    </div>
+    <div class="about-text">
+      <div class="section-label">A bit about us</div>
+      <h2 class="section-title">Stratford-based, family run, properly qualified.</h2>
+      <p class="section-sub">Stratford Builder Co #9 has been operating out of Stratford town centre for years, taking on residential work across E15, E20, E7, and beyond. We're not a faceless firm, we're a small tight-knit team who show up on time, keep the site tidy, and give you a straight answer when you ask a question.</p>
+      <p style="color:var(--text-muted);font-size:0.95rem;font-weight:300;margin-bottom:1rem;">Every job gets a named site manager, a written schedule, and a fixed quote that doesn't move unless you ask us to change the scope. We're fully insured, CSCS-carded, and happy to share references from jobs just up the road.</p>
+      <p style="color:var(--text-muted);font-size:0.95rem;font-weight:300;">Walk-ins welcome at our Stratford town centre office, or drop us an email and we'll arrange a free no-obligation site visit.</p>
+      <div class="stat-row">
+        <div class="stat"><div class="stat-num">60+</div><div class="stat-label">Local jobs done</div></div>
+        <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Average rating</div></div>
+        <div class="stat"><div class="stat-num">E15</div><div class="stat-label">Home postcode</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Fixed-price quotes</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer>
+  <div class="footer-brand">Stratford Builder Co #9</div>
+  <div style="text-align:center;font-size:0.82rem">Stratford Town Centre, E15, Essex &nbsp;|&nbsp; <a href="mailto:hello@stratford-builder-co-9.co.uk">hello@stratford-builder-co-9.co.uk</a></div>
+  <div style="font-size:0.8rem">&copy; 2025 Stratford Builder Co #9. All rights reserved.</div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    
+    <h3 style="font-size:1.3rem;font-weight:600;color:var(--espresso);margin-bottom:0.5rem">Get your website sorted</h3>
+    <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.5rem;font-weight:300">Drop your details below and our web studio partner will be in touch within 24 hours for a no-obligation chat.</p>
+    <form id="modalForm" onsubmit="handleModalSubmit(event)">
+      <div class="form-group">
+        <label>Your name</label>
+        <input type="text" name="modal_name" placeholder="Your full name" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="modal_email" placeholder="your@email.co.uk" required>
+      </div>
+      <div class="form-group">
+        <label>Business type</label>
+        <input type="text" name="modal_biz" placeholder="e.g. Plumber, Café, Landscaper">
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%">Send my details</button>
+      <div class="form-success" id="modalSuccess">
+        <strong>Brilliant!</strong> We'll be in touch shortly to get you set up.
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('enquiryForm');
+  const success = document.getElementById('formSuccess');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(function() {
+    success.style.display = 'block';
+    btn.textContent = 'Sent!';
+    form.querySelectorAll('input, select, textarea').forEach(function(el) { el.value = ''; });
+    setTimeout(function() {
+      btn.textContent = 'Send Enquiry';
+      btn.disabled = false;
+    }, 4000);
+  }, 900);
+}
+function handleModalSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('modalForm');
+  const success = document.getElementById('modalSuccess');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(function() {
+    success.style.display = 'block';
+    btn.textContent = 'Sent!';
+    form.querySelectorAll('input').forEach(function(el) { el.value = ''; });
+  }, 800);
+}
+function openModal() {
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Stratford Builder Co #9</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Stratford Builder Co #9 has been received.</div></div></div>
+<script>(function(){
+const modal=document.getElementById("wc-universal-modal");
+const closeBtn=document.getElementById("wc-modal-close");
+const form=document.getElementById("wc-modal-form");
+const okBox=document.getElementById("wc-modal-ok");
+function openModal(){if(!modal)return;if(form){form.style.display="grid";form.reset();}if(okBox)okBox.style.display="none";modal.style.display="flex";}
+function closeModal(){if(modal)modal.style.display="none";}
+if(closeBtn)closeBtn.addEventListener("click",closeModal);
+if(modal)modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});
+if(form)form.addEventListener("submit",function(e){e.preventDefault();form.style.display="none";if(okBox)okBox.style.display="block";});
+const burger=document.getElementById("hamburger-btn")||document.querySelector(".nav-hamburger");
+const mMenu=document.getElementById("mobile-menu")||document.querySelector(".mobile-menu");
+const mClose=document.getElementById("mobile-close")||document.querySelector(".mobile-menu-close");
+const mOverlay=document.getElementById("mobile-overlay");
+if(burger&&mMenu)burger.addEventListener("click",function(){mMenu.classList.add("open");mMenu.style.transform="translateX(0)";if(mOverlay)mOverlay.classList.add("active");});
+if(mClose&&mMenu)mClose.addEventListener("click",function(){mMenu.classList.remove("open");mMenu.style.transform="";if(mOverlay)mOverlay.classList.remove("active");});
+document.querySelectorAll("a[href^=document.querySelectorAll("button").forEach(function(btn){if(btn.id==="wc-modal-close"||btn.type==="submit"||btn.id==="hamburger-btn"||btn.id==="mobile-close")return;if(/enquir|book|contact|quote|order|reserve|touch|call/.test((btn.textContent||"").toLowerCase())){btn.addEventListener("click",function(e){e.preventDefault();openModal();});}});
+})();</script>
+</body>
+</html>

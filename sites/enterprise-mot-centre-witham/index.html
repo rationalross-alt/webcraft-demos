@@ -356,129 +356,9 @@ footer{flex-direction:column;gap:1.5rem;text-align:center}
   </div>
 </section>
 
-<section class="dark" id="pricing">
-  <div class="section-inner">
-    <div class="section-label">Transparent Pricing</div>
-    <h2 class="section-title" style="font-size:clamp(2.8rem,5vw,5rem)">No Surprises.<br>Just Prices.</h2>
-    <div class="divider" style="margin:0 auto 1rem"></div>
-    <p style="opacity:.65;max-width:520px;margin:0 auto;font-size:1rem;line-height:1.7">Common jobs, fixed prices. We quote in writing before any work starts.</p>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <div class="tag">Most Popular</div>
-        <h3>MOT Only</h3>
-        <div class="amount"><sup>&pound;</sup>54.85</div>
-        <div class="sub">Class 4 car &mdash; DVSA maximum fee</div>
-        <ul>
-          <li>DVSA-authorised test</li>
-          <li>Same-day result</li>
-          <li>Free re-test (if we repair)</li>
-          <li>Digital certificate</li>
-        </ul>
-        <button class="btn btn-red" onclick="openModal()">Book MOT</button>
-      </div>
-      <div class="price-card featured">
-        <div class="tag">Best Value</div>
-        <h3>MOT + Full Service</h3>
-        <div class="amount"><sup>&pound;</sup>179</div>
-        <div class="sub">Combined saving of &pound;24.85</div>
-        <ul>
-          <li>Class 4 MOT included</li>
-          <li>Oil, filter &amp; spark plugs</li>
-          <li>Pollen &amp; fuel filter</li>
-          <li>Full brake &amp; tyre check</li>
-          <li>Multi-point inspection</li>
-          <li>Free re-test if needed</li>
-        </ul>
-        <button class="btn btn-red" onclick="openModal()">Book Combo</button>
-      </div>
-      <div class="price-card">
-        <div class="tag">Website Plan</div>
-        <h3>Digital Package</h3>
-        <div class="amount"><sup>&pound;</sup>99<span style="font-size:1.2rem;font-weight:400">/mo</span></div>
-        <div class="sub">Everything included, no surprises</div>
-        <ul>
-          <li>Custom website build</li>
-          <li>Hosting &amp; SSL security</li>
-          <li>Local SEO setup</li>
-          <li>Google Business optimisation</li>
-          <li>Ongoing updates included</li>
-          <li>No long-term contract</li>
-        </ul>
-        <button class="btn btn-outline" onclick="openModal('website')">Enquire</button>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="black" id="contact">
-  <div class="section-inner">
-    <div class="contact-info">
-      <div class="section-label">Get In Touch</div>
-      <h2>Come &amp; see<br>us in Witham.</h2>
-      <div class="divider"></div>
-      <p>We're on Eastways Industrial Estate, off Rickstones Road. Plenty of parking on site. Drop in or give us a ring Monday to Friday 8am&ndash;5:30pm, Saturday 8am&ndash;1pm.</p>
-      <div class="contact-details">
-        <div class="c-item">
-          <div class="icon">&#128205;</div>
-          <div class="text">
-            <strong>Address</strong>
-            Enterprise Court, Eastways Industrial Estate<br>Witham, Essex CM8 2TJ
-          </div>
-        </div>
-        <div class="c-item">
-          <div class="icon">&#128222;</div>
-          <div class="text">
-            <strong>Phone</strong>
-            <a href="tel:01376510644" style="color:var(--accent);font-weight:600">01376 510644</a>
-          </div>
-        </div>
-        <div class="c-item">
-          <div class="icon">&#9993;</div>
-          <div class="text">
-            <strong>Email</strong>
-            <a href="mailto:hello@enterprise-mot-centre.co.uk" style="color:var(--accent)">hello@enterprise-mot-centre.co.uk</a>
-          </div>
-        </div>
-        <div class="c-item">
-          <div class="icon">&#128336;</div>
-          <div class="text">
-            <strong>Opening Hours</strong>
-            Mon&ndash;Fri: 8:00am &ndash; 5:30pm<br>Saturday: 8:00am &ndash; 1:00pm<br>Sunday: Closed
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div>
-      <div class="section-label">Quick Enquiry</div>
-      <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;text-transform:uppercase;margin-bottom:1.5rem">Book or ask a question</h3>
-      <form class="enquiry" id="contact-form" onsubmit="submitForm(event)">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Your Phone Number">
-        </div>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <select name="service" required>
-          <option value="" disabled selected>Select a Service</option>
-          <option>MOT Test &mdash; &pound;54.85</option>
-          <option>MOT + Full Service Combo &mdash; &pound;179</option>
-          <option>Interim Service &mdash; from &pound;89</option>
-          <option>Full Service &mdash; from &pound;149</option>
-          <option>Tyres &amp; Wheel Alignment</option>
-          <option>Brake Inspection &amp; Repair</option>
-          <option>Engine Diagnostics &mdash; &pound;45</option>
-          <option>Exhaust &amp; Cat Work</option>
-          <option>Website Digital Package &mdash; &pound;99/month</option>
-          <option>General Enquiry</option>
-        </select>
-        <input type="text" name="reg" placeholder="Vehicle Registration (optional)">
-        <textarea name="message" placeholder="Anything else we should know? Preferred date, make/model, etc."></textarea>
-        <button type="submit" class="btn btn-red" style="align-self:flex-start">Send Enquiry</button>
-        <div id="form-msg">&#10003; Thanks! We'll be in touch within the hour during business hours. If it's urgent, ring us on 01376 510644.</div>
-      </form>
-    </div>
-  </div>
-</section>
+
 
 <footer>
   <div>
@@ -517,7 +397,7 @@ footer{flex-direction:column;gap:1.5rem;text-align:center}
         <option>Brake Inspection &amp; Repair</option>
         <option>Engine Diagnostics &mdash; &pound;45</option>
         <option>Exhaust &amp; Cat Work</option>
-        <option value="website">Website Digital Package &mdash; &pound;99/month</option>
+        
         <option>General Enquiry</option>
       </select>
       <div class="form-row">
@@ -582,7 +462,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
 });
 </script>
-<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Enterprise MOT Centre</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="£99/month Everything Included (Build, Hosting & Updates)" selected>£99/month — Everything Included (Build, Hosting &amp; Updates)</option><option value="One-Off Custom Build Enquiry">One-Off Custom Build Enquiry</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Enterprise MOT Centre has been received.</div></div></div>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Enterprise MOT Centre</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Enterprise MOT Centre has been received.</div></div></div>
 <script>(function(){
 const modal=document.getElementById("wc-universal-modal");
 const closeBtn=document.getElementById("wc-modal-close");

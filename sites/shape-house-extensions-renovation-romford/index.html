@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHAPE House Extensions & Renovation | Romford, Essex</title>
+<meta name="description" content="SHAPE House Extensions & Renovation – expert builders in Romford, Essex. Extensions, loft conversions, full renovations. Call 07418 357936.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"SHAPE House Extensions & Renovation","address":{"@type":"PostalAddress","streetAddress":"27-43 Eastern Rd","addressLocality":"Romford","addressRegion":"Essex","postalCode":"RM1 3NH","addressCountry":"GB"},"telephone":"07418357936","email":"hello@shape-house-extensions-renovation.co.uk","url":"https://shapehouserenovation.co.uk/","description":"Expert house extensions, loft conversions and full renovations in Romford, Essex.","priceRange":"££"}
+</script>
+<style>
+:root{--ink:#0a0a0a;--white:#f9f9f7;--red:#c0392b;--orange:#d35400;--accent:#e74c3c;--mid:#1a1a1a;--grey:#6b6b6b;--font-head:'Barlow Condensed',sans-serif;--font-body:'Inter',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--white);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;object-fit:cover}
+.btn{display:inline-block;padding:.75rem 2rem;font-family:var(--font-head);font-size:1.1rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border:none;transition:all .2s}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--orange)}
+.btn-outline{background:transparent;color:#fff;border:2px solid #fff}.btn-outline:hover{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--mid)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 4vw;background:rgba(10,10,10,.92);backdrop-filter:blur(6px)}
+.nav-logo{font-family:var(--font-head);font-size:1.6rem;font-weight:900;color:#fff;letter-spacing:.08em}.nav-logo span{color:var(--red)}
+.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{font-size:.85rem;font-weight:600;color:rgba(255,255,255,.75);letter-spacing:.06em;text-transform:uppercase;transition:color .2s}.nav-links a:hover{color:var(--red)}
+.nav-cta{font-family:var(--font-head);font-size:.95rem;font-weight:700;padding:.5rem 1.4rem;background:var(--red);color:#fff;letter-spacing:.05em;text-transform:uppercase;transition:background .2s}.nav-cta:hover{background:var(--orange)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}.hamburger span{width:26px;height:2px;background:#fff;display:block}
+/* HERO */
+.hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;padding:0 4vw 6vh}
+.hero-img{position:absolute;inset:0;z-index:0}.hero-img img{height:100%;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.88) 40%,rgba(10,10,10,.3) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:780px}
+.hero-tag{font-family:var(--font-head);font-size:.9rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1rem}
+.hero-title{font-family:var(--font-head);font-size:clamp(3.2rem,8vw,7.5rem);font-weight:900;line-height:.95;color:#fff;text-transform:uppercase;margin-bottom:1.4rem}
+.hero-title span{color:var(--red)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:480px;line-height:1.6;margin-bottom:2rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+/* TICKER */
+.ticker{background:var(--red);padding:.6rem 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;gap:3rem;animation:tick 22s linear infinite;font-family:var(--font-head);font-size:1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* SERVICES */
+.services{background:var(--ink);padding:6rem 4vw}
+.section-label{font-family:var(--font-head);font-size:.85rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:.8rem}
+.section-title{font-family:var(--font-head);font-size:clamp(2.2rem,5vw,4rem);font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:2.5rem}
+.section-title.light{color:#fff}.section-title.dark{color:var(--ink)}
+.service-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.tab-btn{font-family:var(--font-head);font-size:.95rem;font-weight:700;padding:.55rem 1.3rem;border:2px solid rgba(255,255,255,.2);background:transparent;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.tab-btn.active,.tab-btn:hover{border-color:var(--red);color:#fff;background:var(--red)}
+.service-panel{display:none;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}.service-panel.active{display:grid}
+.service-panel-img{aspect-ratio:4/3;overflow:hidden}.service-panel-img img{height:100%;transition:transform .4s}.service-panel-img:hover img{transform:scale(1.04)}
+.service-info h3{font-family:var(--font-head);font-size:2rem;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:.8rem}
+.service-info p{color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:1.2rem}
+.price-tag{display:inline-block;font-family:var(--font-head);font-size:1.4rem;font-weight:900;color:var(--red);letter-spacing:.05em;margin-bottom:1.4rem}
+.feature-list{list-style:none;margin-bottom:1.6rem}
+.feature-list li{color:rgba(255,255,255,.65);font-size:.9rem;padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:.6rem}
+.feature-list li::before{content:'';width:6px;height:6px;background:var(--red);flex-shrink:0}
+/* ABOUT STRIP */
+.about-strip{display:grid;grid-template-columns:1fr 1fr}
+.about-img{aspect-ratio:1/1;overflow:hidden}.about-img img{height:100%}
+.about-text{background:var(--white);padding:5rem 6vw;display:flex;flex-direction:column;justify-content:center}
+.about-text p{color:#444;line-height:1.75;margin-bottom:1rem;font-size:.98rem}
+.stats-row{display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap}
+.stat{border-left:3px solid var(--red);padding-left:1rem}
+.stat strong{font-family:var(--font-head);font-size:2.4rem;font-weight:900;color:var(--ink);display:block;line-height:1}
+.stat span{font-size:.8rem;color:var(--grey);text-transform:uppercase;letter-spacing:.08em}
+/* PROCESS */
+.process{background:var(--ink);padding:6rem 4vw}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.step{border-top:2px solid var(--red);padding-top:1.2rem}
+.step-num{font-family:var(--font-head);font-size:3rem;font-weight:900;color:rgba(255,255,255,.08);line-height:1}
+.step h4{font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:#fff;text-transform:uppercase;margin:.3rem 0 .6rem}
+.step p{font-size:.87rem;color:rgba(255,255,255,.55);line-height:1.65}
+/* PRICING */
+.pricing{background:var(--white);padding:6rem 4vw}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.price-card{border:2px solid rgba(10,10,10,.1);padding:2.2rem 1.8rem;position:relative;transition:border-color .2s}
+.price-card:hover,.price-card.featured{border-color:var(--red)}
+.price-card.featured::before{content:'POPULAR';position:absolute;top:-1px;right:1.5rem;background:var(--red);color:#fff;font-family:var(--font-head);font-size:.75rem;font-weight:700;letter-spacing:.1em;padding:.25rem .8rem}
+.price-card h3{font-family:var(--font-head);font-size:1.3rem;font-weight:900;text-transform:uppercase;margin-bottom:.5rem}
+.price-card .amount{font-family:var(--font-head);font-size:2.8rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:.3rem}
+.price-card .from{font-size:.8rem;color:var(--grey);margin-bottom:1.2rem}
+.price-card ul{list-style:none;margin-bottom:1.8rem}
+.price-card ul li{font-size:.88rem;padding:.35rem 0;border-bottom:1px solid rgba(10,10,10,.07);color:#444;display:flex;gap:.6rem;align-items:center}
+.price-card ul li::before{content:'';width:5px;height:5px;background:var(--red);flex-shrink:0}
+/* REVIEWS */
+.reviews{background:var(--ink);padding:6rem 4vw}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:2rem}
+.stars{color:var(--red);font-size:1rem;margin-bottom:.8rem;letter-spacing:.1em}
+.review-card p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:1rem}
+.reviewer{font-family:var(--font-head);font-size:.95rem;font-weight:700;color:#fff;text-transform:uppercase}
+.reviewer span{font-weight:400;color:var(--grey);text-transform:none;font-family:var(--font-body);font-size:.8rem;margin-left:.4rem}
+/* CONTACT */
+.contact{background:var(--white);padding:6rem 4vw;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info h2{font-family:var(--font-head);font-size:clamp(2rem,4vw,3.5rem);font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:1.5rem}
+.contact-info p{color:#555;line-height:1.7;margin-bottom:1.5rem}
+.contact-detail{display:flex;gap:.8rem;align-items:center;margin-bottom:.8rem;font-size:.95rem}
+.contact-detail strong{font-family:var(--font-head);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);min-width:60px}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:.85rem 1rem;border:2px solid rgba(10,10,10,.12);background:transparent;font-family:var(--font-body);font-size:.9rem;color:var(--ink);margin-bottom:1rem;outline:none;transition:border-color .2s}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--red)}
+.contact-form textarea{height:120px;resize:vertical}
+.form-success{display:none;background:var(--red);color:#fff;padding:1rem 1.4rem;font-weight:600;font-size:.95rem;margin-top:1rem}
+/* FOOTER */
+footer{background:var(--mid);padding:3rem 4vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-logo{font-family:var(--font-head);font-size:1.4rem;font-weight:900;color:#fff;letter-spacing:.08em}.footer-logo span{color:var(--red)}
+footer p{font-size:.8rem;color:rgba(255,255,255,.4)}
+/* MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal{background:#fff;width:min(560px,95vw);max-height:90vh;overflow-y:auto;padding:2.5rem}
+.modal h2{font-family:var(--font-head);font-size:2rem;font-weight:900;text-transform:uppercase;margin-bottom.5rem}
+.modal-close{float:right;font-size:1.6rem;cursor:pointer;color:var(--grey);line-height:1}
+/* RESPONSIVE */
+@media(max-width:820px){
+.nav-links,.nav-cta{display:none}.hamburger{display:flex}
+.hero-title{font-size:clamp(2.8rem,12vw,5rem)}
+.service-panel.active{grid-template-columns:1fr}
+.about-strip{grid-template-columns:1fr}
+.process-steps{grid-template-columns:1fr 1fr}
+.price-grid,.review-grid{grid-template-columns:1fr}
+.contact{grid-template-columns:1fr;gap:2.5rem}
+.stats-row{gap:1.5rem}
+footer{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){.process-steps{grid-template-columns:1fr}.hero-actions{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#"><span>SHAPE</span> BUILD</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Get a Quote</a>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="House extension construction project"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-tag">Romford, Essex &mdash; Est. SHAPE Build</p>
+    <h1 class="hero-title">Build<br>Bold.<br><span>Build</span><br>Right.</h1>
+    <p class="hero-sub">House extensions, loft conversions and full renovations across Romford and Essex. Honest pricing, clean work, no shortcuts.</p>
+    <div class="hero-actions">
+      <button class="btn btn-red" onclick="openModal()">Get a Free Quote</button>
+      <a class="btn btn-outline" href="tel:07418357936">Call 07418 357936</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>House Extensions</span><span>&bull;</span><span>Loft Conversions</span><span>&bull;</span><span>Full Renovations</span><span>&bull;</span><span>Kitchen Fitting</span><span>&bull;</span><span>Structural Work</span><span>&bull;</span><span>Planning Support</span><span>&bull;</span><span>Romford &amp; Essex</span><span>&bull;</span>
+    <span>House Extensions</span><span>&bull;</span><span>Loft Conversions</span><span>&bull;</span><span>Full Renovations</span><span>&bull;</span><span>Kitchen Fitting</span><span>&bull;</span><span>Structural Work</span><span>&bull;</span><span>Planning Support</span><span>&bull;</span><span>Romford &amp; Essex</span><span>&bull;</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div>
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title light">Our Services</h2>
+    <div class="service-tabs">
+      <button class="tab-btn active" data-tab="ext">Extensions</button>
+      <button class="tab-btn" data-tab="loft">Loft Conversions</button>
+      <button class="tab-btn" data-tab="reno">Renovations</button>
+      <button class="tab-btn" data-tab="kit">Kitchen &amp; Bath</button>
+      <button class="tab-btn" data-tab="struct">Structural</button>
+    </div>
+
+    <div class="service-panel active" id="tab-ext">
+      <div class="service-panel-img">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80" alt="House extension Romford">
+      </div>
+      <div class="service-info">
+        <h3>House Extensions</h3>
+        <p>Single and double-storey rear extensions, side returns and wrap-arounds. We handle the full project from groundwork to plastering, with full planning and building regulations support.</p>
+        <div class="price-tag">From &pound;28,000</div>
+        <ul class="feature-list">
+          <li>Single-storey rear extension from &pound;28,000</li>
+          <li>Double-storey rear from &pound;45,000</li>
+          <li>Side return infill from &pound;22,000</li>
+          <li>Glazed kitchen-diner extension from &pound;35,000</li>
+          <li>Planning application support included</li>
+          <li>10-year structural warranty</li>
+        </ul>
+        <button class="btn btn-red" onclick="openModal()">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="service-panel" id="tab-loft">
+      <div class="service-panel-img">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80" alt="Loft conversion Romford Essex">
+      </div>
+      <div class="service-info">
+        <h3>Loft Conversions</h3>
+        <p>Velux, dormer and hip-to-gable conversions that add genuine living space and serious value to your home. Most Romford terraces and semis are perfect candidates.</p>
+        <div class="price-tag">From &pound;32,000</div>
+        <ul class="feature-list">
+          <li>Velux / roof-light conversion from &pound;32,000</li>
+          <li>Dormer conversion from &pound;38,000</li>
+          <li>Hip-to-gable + dormer from &pound;52,000</li>
+          <li>Full staircase design and fit</li>
+          <li>Partition walling, insulation &amp; boarding</li>
+          <li>Electrics, plumbing &amp; plastering</li>
+        </ul>
+        <button class="btn btn-red" onclick="openModal()">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="service-panel" id="tab-reno">
+      <div class="service-panel-img">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Full house renovation Essex">
+      </div>
+      <div class="service-info">
+        <h3>Full Renovations</h3>
+        <p>Complete property overhauls from bare-brick strip-outs to finished, ready-to-live-in homes. Ideal for buyers who've picked up a tired property in RM1, RM2 or nearby postcodes.</p>
+        <div class="price-tag">From &pound;15,000</div>
+        <ul class="feature-list">
+          <li>Full internal strip-out and replastering</li>
+          <li>Rewire and new consumer unit</li>
+          <li>Full heating system replacement</li>
+          <li>New windows and external doors</li>
+          <li>Flooring throughout</li>
+          <li>Decoration and finishing</li>
+        </ul>
+        <button class="btn btn-red" onclick="openModal()">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="service-panel" id="tab-kit">
+      <div class="service-panel-img">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80" alt="Kitchen fitting Romford">
+      </div>
+      <div class="service-info">
+        <h3>Kitchen &amp; Bathroom Fitting</h3>
+        <p>Full supply-and-fit or fit-only kitchen and bathroom installations. We work with your chosen supplier or recommend trusted trade accounts to keep costs sharp.</p>
+        <div class="price-tag">From &pound;4,500</div>
+        <ul class="feature-list">
+          <li>Kitchen installation from &pound;4,500 (fit only)</li>
+          <li>Full kitchen supply &amp; fit from &pound;9,500</li>
+          <li>Bathroom suite installation from &pound;2,800</li>
+          <li>En-suite conversion from &pound;5,200</li>
+          <li>Tiling, plumbing &amp; electrical included</li>
+          <li>Underfloor heating option available</li>
+        </ul>
+        <button class="btn btn-red" onclick="openModal()">Enquire Now</button>
+      </div>
+    </div>
+
+    <div class="service-panel" id="tab-struct">
+      <div class="service-panel-img">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80" alt="Structural building work Essex">
+      </div>
+      <div class="service-info">
+        <h3>Structural Work</h3>
+        <p>RSJ steel beam installations, load-bearing wall removals, underpinning and damp-proof coursing. All structural work is signed off by a registered structural engineer.</p>
+        <div class="price-tag">From &pound;1,800</div>
+        <ul class="feature-list">
+          <li>Load-bearing wall removal from &pound;1,800</li>
+          <li>RSJ beam installation (supply &amp; fit) from &pound;2,400</li>
+          <li>Underpinning from &pound;3,500 per metre</li>
+          <li>Damp-proof course injection from &pound;950</li>
+          <li>Structural engineer sign-off included</li>
+          <li>Building control liaison handled</li>
+        </ul>
+        <button class="btn btn-red" onclick="openModal()">Enquire Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80" alt="SHAPE builders at work in Essex">
+  </div>
+  <div class="about-text">
+    <p class="section-label">About SHAPE</p>
+    <h2 class="section-title dark">Built on<br>straight<br>talking.</h2>
+    <p>SHAPE House Extensions &amp; Renovation is based at 27-43 Eastern Road, Romford RM1 3NH. We are a proper building firm, not a one-man band with a van and a phone. Every project is managed by an experienced site foreman, with trades we've worked alongside for years.</p>
+    <p>We cover Romford, Hornchurch, Upminster, Gidea Park, Harold Wood and across Essex. Our quotes are itemised and fixed-price where possible. No mystery invoices, no sudden extras.</p>
+    <p>All work is fully insured. We are registered with the Federation of Master Builders and carry full public liability cover to &pound;5 million.</p>
+    <div class="stats-row">
+      <div class="stat"><strong>200+</strong><span>Projects completed</span></div>
+      <div class="stat"><strong>12+</strong><span>Years trading</span></div>
+      <div class="stat"><strong>£5M</strong><span>Public liability</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <p class="section-label">How It Works</p>
+  <h2 class="section-title light">From first call<br>to finished build.</h2>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h4>Free Site Visit</h4>
+      <p>We visit your property, discuss what you want to achieve and take measurements. No call centres, no pressure. Usually within 5 days of your enquiry.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h4>Detailed Quote</h4>
+      <p>You receive a fully itemised, fixed-price quotation within 5 working days. We explain every line so you know exactly what you're paying for.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h4>Planning &amp; Prep</h4>
+      <p>Where required, we handle planning applications, building control notifications and structural engineering surveys before a single spade goes in the ground.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h4>Build &amp; Sign-off</h4>
+      <p>Our team gets on with the job to agreed timescales. You get regular progress updates. Final sign-off by building control before we hand back the keys.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <p class="section-label">Client Reviews</p>
+  <h2 class="section-title light">What Romford<br>homeowners say.</h2>
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"SHAPE extended our kitchen into the garden last summer. The team were punctual, kept the mess to a minimum and finished two days ahead of schedule. The price didn't move from the quote. Couldn't ask for more."</p>
+      <div class="reviewer">D. Okafor <span>Gidea Park, RM2</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"We had a dormer loft conversion done to add a master bedroom. SHAPE handled everything including the planning application. The foreman was always reachable and honest about timelines. Brilliant job overall."</p>
+      <div class="reviewer">S. Patel <span>Hornchurch, RM11</span></div>
+    </div>
+    <div class="review-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Bought a tired 1930s semi and SHAPE renovated it top to bottom. New wiring, heating, bathrooms, kitchen and full redecoration. The project manager was straight-talking and the quality is genuinely impressive."</p>
+      <div class="reviewer">T. Williams <span>Harold Wood, RM3</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>SHAPE</span> House Extensions &amp; Renovation</div>
+  <p>27-43 Eastern Rd, Romford RM1 3NH &mdash; &copy; 2025 SHAPE Build Ltd. All rights reserved.</p>
+  <p style="color:rgba(255,255,255,.3);font-size:.75rem">Registered in England &amp; Wales &bull; Fully Insured &bull; FMB Member</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg" onclick="closeModalBg(event)">
+  <div class="modal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <p class="section-label" style="margin-bottom:.3rem">Quick Enquiry</p>
+    <h2 style="font-family:var(--font-head);font-size:2rem;font-weight:900;text-transform:uppercase;margin-bottom:1.2rem">Get Your Free Quote</h2>
+    <form id="modalForm" onsubmit="submitModalForm(event)">
+      <div class="contact-form">
+        <input type="text" placeholder="Your full name" required style="width:100%;padding:.85rem 1rem;border:2px solid rgba(10,10,10,.12);background:transparent;font-family:var(--font-body);font-size:.9rem;color:var(--ink);margin-bottom:1rem;outline:none">
+        <input type="tel" placeholder="Phone number" style="width:100%;padding:.85rem 1rem;border:2px solid rgba(10,10,10,.12);background:transparent;font-family:var(--font-body);font-size:.9rem;color:var(--ink);margin-bottom:1rem;outline:none">
+        <input type="email" placeholder="Email address" required style="width:100%;padding:.85rem 1rem;border:2px solid rgba(10,10,10,.12);background:transparent;font-family:var(--font-body);font-size:.9rem;color:var(--ink);margin-bottom:1rem;outline:none">
+        <select id="modalService" style="width:100%;padding:.85rem 1rem;border:2px solid rgba(10,10,10,.12);background:transparent;font-family:var(--font-body);font-size:.9rem;color:var(--ink);margin-bottom:1rem;outline:none">
+          <option value="" disabled selected>Select a service</option>
+          <option>House Extension</option>
+          <option>Loft Conversion</option>
+          <option>Full Renovation</option>
+          <option>Kitchen or Bathroom</option>
+          <option>Structural Work</option>
+          
+          <option>Other / Not Sure</option>
+        </select>
+        <textarea placeholder="Brief project description..." style="width:100%;padding:.85rem 1rem;border:2px solid rgba(10,10,10,.12);background:transparent;font-family:var(--font-body);font-size:.9rem;color:var(--ink);margin-bottom:1rem;outline:none;height:100px;resize:vertical"></textarea>
+        <button type="submit" class="btn btn-red" style="width:100%">Send Enquiry</button>
+        <div id="modalSuccess" style="display:none;background:var(--red);color:#fff;padding:1rem 1.4rem;font-weight:600;font-size:.95rem;margin-top:1rem">Thanks, we'll be in touch within one working day.</div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal(type){
+  var bg=document.getElementById('modalBg');
+  bg.classList.add('open');
+  if(type==='digital'){
+    var sel=document.getElementById('modalService');
+    if(sel) for(var i=0;i<sel.options.length;i++){if(sel.options[i].text.indexOf('Digital')>-1){sel.selectedIndex=i;break;}}
+  }
+}
+function closeModal(){document.getElementById('modalBg').classList.remove('open');}
+function closeModalBg(e){if(e.target===document.getElementById('modalBg'))closeModal();}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+
+function submitForm(e){
+  e.preventDefault();
+  var s=document.getElementById('formSuccess');
+  s.style.display='block';
+  document.getElementById('mainForm').reset();
+  setTimeout(function(){s.style.display='none';},6000);
+}
+function submitModalForm(e){
+  e.preventDefault();
+  var s=document.getElementById('modalSuccess');
+  s.style.display='block';
+  document.getElementById('modalForm').reset();
+  setTimeout(function(){closeModal();s.style.display='none';},4000);
+}
+
+var tabs=document.querySelectorAll('.tab-btn');
+tabs.forEach(function(btn){
+  btn.addEventListener('click',function(){
+    tabs.forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    var target=btn.getAttribute('data-tab');
+    document.querySelectorAll('.service-panel').forEach(function(p){p.classList.remove('active');});
+    var panel=document.getElementById('tab-'+target);
+    if(panel)panel.classList.add('active');
+  });
+});
+
+function toggleMenu(){
+  var links=document.querySelector('.nav-links');
+  var cta=document.querySelector('.nav-cta');
+  if(!links)return;
+  if(links.style.display==='flex'){
+    links.style.display='none';
+    if(cta)cta.style.display='none';
+  } else {
+    links.style.cssText='display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:rgba(10,10,10,.97);padding:1.5rem 4vw;gap:1.2rem';
+    if(cta){cta.style.display='block';cta.style.marginTop='0.5rem';}
+  }
+}
+</script>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">SHAPE House Extensions & Renovation</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for SHAPE House Extensions & Renovation has been received.</div></div></div>
+<script>(function(){
+const modal=document.getElementById("wc-universal-modal");
+const closeBtn=document.getElementById("wc-modal-close");
+const form=document.getElementById("wc-modal-form");
+const okBox=document.getElementById("wc-modal-ok");
+function openModal(){if(!modal)return;if(form){form.style.display="grid";form.reset();}if(okBox)okBox.style.display="none";modal.style.display="flex";}
+function closeModal(){if(modal)modal.style.display="none";}
+if(closeBtn)closeBtn.addEventListener("click",closeModal);
+if(modal)modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});
+if(form)form.addEventListener("submit",function(e){e.preventDefault();form.style.display="none";if(okBox)okBox.style.display="block";});
+const burger=document.getElementById("hamburger-btn")||document.querySelector(".nav-hamburger");
+const mMenu=document.getElementById("mobile-menu")||document.querySelector(".mobile-menu");
+const mClose=document.getElementById("mobile-close")||document.querySelector(".mobile-menu-close");
+const mOverlay=document.getElementById("mobile-overlay");
+if(burger&&mMenu)burger.addEventListener("click",function(){mMenu.classList.add("open");mMenu.style.transform="translateX(0)";if(mOverlay)mOverlay.classList.add("active");});
+if(mClose&&mMenu)mClose.addEventListener("click",function(){mMenu.classList.remove("open");mMenu.style.transform="";if(mOverlay)mOverlay.classList.remove("active");});
+document.querySelectorAll("a[href^=document.querySelectorAll("button").forEach(function(btn){if(btn.id==="wc-modal-close"||btn.type==="submit"||btn.id==="hamburger-btn"||btn.id==="mobile-close")return;if(/enquir|book|contact|quote|order|reserve|touch|call/.test((btn.textContent||"").toLowerCase())){btn.addEventListener("click",function(e){e.preventDefault();openModal();});}});
+})();</script>
+</body>
+</html>

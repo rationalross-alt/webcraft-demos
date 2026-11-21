@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boudoir Beauty | Independent Beauty Salon in Witham, Essex</title>
+<meta name="description" content="Boudoir Beauty – Witham's independent beauty salon. Facials, lashes, brows, waxing, nails & more. Walk-ins welcome. Book online today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Boudoir Beauty",
+  "description": "Independent beauty salon in Central Witham, Essex offering facials, lashes, brows, waxing, nails and more.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Witham",
+    "addressRegion": "Essex",
+    "addressCountry": "GB"
+  },
+  "email": "hello@boudoir-beauty.co.uk",
+  "url": "https://boudoir-beauty.co.uk",
+  "openingHours": ["Tu-Sa 09:00-18:00"],
+  "priceRange": "££",
+  "servesCuisine": "Beauty & Wellbeing"
+}
+</script>
+<style>
+:root {
+  --stone: #f5f2ee;
+  --stone-mid: #ede8e1;
+  --sage: #7a9e7e;
+  --sage-light: #a8c5ac;
+  --sage-dark: #5c7d60;
+  --ink: #2a2a2a;
+  --ink-soft: #5a5550;
+  --white: #ffffff;
+  --serif: 'Cormorant Garamond', serif;
+  --sans: 'DM Sans', sans-serif;
+  --radius: 2px;
+  --shadow: 0 8px 40px rgba(42,42,42,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--stone); color: var(--ink); font-size: 15px; line-height: 1.65; }
+
+/* LAYOUT */
+.site-wrap { display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; }
+.sidebar { position: sticky; top: 0; height: 100vh; background: var(--white); display: flex; flex-direction: column; justify-content: space-between; padding: 48px 36px; border-right: 1px solid var(--stone-mid); overflow-y: auto; }
+.main { padding: 0; }
+
+/* SIDEBAR */
+.brand-mark { font-family: var(--serif); font-size: 11px; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage); margin-bottom: 6px; }
+.brand-name { font-family: var(--serif); font-size: 28px; font-weight: 300; line-height: 1.15; color: var(--ink); margin-bottom: 4px; }
+.brand-name em { font-style: italic; color: var(--sage); }
+.brand-tag { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.05em; margin-bottom: 40px; }
+.sidebar-nav a { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--ink-soft); padding: 9px 0; border-bottom: 1px solid var(--stone-mid); transition: color 0.2s; }
+.sidebar-nav a:hover { color: var(--sage); }
+.sidebar-contact { margin-top: 40px; }
+.sidebar-contact p { font-size: 12px; color: var(--ink-soft); margin-bottom: 8px; }
+.sidebar-contact a { color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 500; display: block; margin-bottom: 6px; }
+.sidebar-contact a:hover { color: var(--sage); }
+.btn-book { display: inline-block; background: var(--sage); color: var(--white); font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 13px 24px; border: none; cursor: pointer; margin-top: 20px; width: 100%; text-align: center; transition: background 0.2s; }
+.btn-book:hover { background: var(--sage-dark); }
+.sidebar-foot { font-size: 11px; color: var(--ink-soft); opacity: 0.6; }
+
+/* HERO */
+.hero { position: relative; height: 92vh; overflow: hidden; }
+.hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(42,42,42,0.35) 0%, rgba(42,42,42,0.1) 60%); }
+.hero-text { position: absolute; bottom: 72px; left: 64px; right: 64px; }
+.hero-text h1 { font-family: var(--serif); font-size: clamp(42px, 5.5vw, 72px); font-weight: 300; color: var(--white); line-height: 1.05; max-width: 640px; }
+.hero-text h1 em { font-style: italic; }
+.hero-text p { color: rgba(255,255,255,0.82); font-size: 14px; letter-spacing: 0.08em; margin-top: 18px; }
+.hero-pill { display: inline-block; background: var(--sage); color: var(--white); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 16px; margin-bottom: 20px; }
+
+/* SECTIONS */
+.section { padding: 96px 64px; }
+.section-label { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+.section-title { font-family: var(--serif); font-size: clamp(32px, 3.5vw, 48px); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 32px; }
+.section-title em { font-style: italic; color: var(--sage); }
+.section-body { font-size: 14px; color: var(--ink-soft); max-width: 560px; line-height: 1.8; }
+
+/* SERVICE CARDS */
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 56px; }
+.service-card { background: var(--white); padding: 36px 32px; position: relative; transition: transform 0.25s; }
+.service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); z-index: 2; }
+.service-card .s-icon { font-size: 22px; margin-bottom: 16px; }
+.service-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 400; margin-bottom: 8px; }
+.service-card p { font-size: 13px; color: var(--ink-soft); margin-bottom: 18px; line-height: 1.7; }
+.price-list { list-style: none; }
+.price-list li { display: flex; justify-content: space-between; font-size: 12px; padding: 6px 0; border-bottom: 1px solid var(--stone-mid); color: var(--ink-soft); }
+.price-list li:last-child { border-bottom: none; }
+.price-list span { font-weight: 500; color: var(--ink); }
+.service-card.featured { background: var(--sage); color: var(--white); }
+.service-card.featured h3, .service-card.featured .price-list li { color: var(--white); }
+.service-card.featured p, .service-card.featured .price-list li { color: rgba(255,255,255,0.82); }
+.service-card.featured .price-list li { border-color: rgba(255,255,255,0.2); }
+.service-card.featured span { color: var(--white); }
+
+/* PHOTO BREAK */
+.photo-break { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2px; height: 520px; }
+.photo-break img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-break-text { background: var(--ink); padding: 56px 48px; display: flex; flex-direction: column; justify-content: flex-end; }
+.photo-break-text h2 { font-family: var(--serif); font-size: 34px; font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 16px; }
+.photo-break-text p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.8; }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-img { position: relative; }
+.about-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; box-shadow: var(--shadow); }
+.about-img-badge { position: absolute; bottom: -20px; right: -20px; background: var(--sage); color: var(--white); padding: 24px 28px; font-family: var(--serif); font-size: 15px; font-style: italic; }
+
+/* PLAN STRIP */
+.plan-strip { background: var(--stone-mid); padding: 64px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.plan-strip h2 { font-family: var(--serif); font-size: 28px; font-weight: 300; }
+.plan-strip p { font-size: 13px; color: var(--ink-soft); margin-top: 8px; max-width: 560px; }
+.plan-price { font-family: var(--serif); font-size: 52px; font-weight: 300; color: var(--sage); white-space: nowrap; }
+.plan-price small { font-size: 14px; font-family: var(--sans); color: var(--ink-soft); display: block; }
+
+/* MODAL */
+.modal-bg { display: none; position: fixed; inset: 0; background: rgba(42,42,42,0.55); z-index: 100; align-items: center; justify-content: center; }
+.modal-bg.open { display: flex; }
+.modal { background: var(--white); width: 92%; max-width: 520px; max-height: 90vh; overflow-y: auto; padding: 52px 48px; position: relative; }
+.modal h2 { font-family: var(--serif); font-size: 32px; font-weight: 300; margin-bottom: 6px; }
+.modal p.sub { font-size: 13px; color: var(--ink-soft); margin-bottom: 32px; }
+.modal-close { position: absolute; top: 20px; right: 24px; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--ink-soft); }
+.form-row { margin-bottom: 18px; }
+.form-row label { display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; color: var(--ink-soft); }
+.form-row input, .form-row select, .form-row textarea { width: 100%; border: 1px solid var(--stone-mid); background: var(--stone); padding: 12px 14px; font-family: var(--sans); font-size: 14px; color: var(--ink); outline: none; transition: border 0.2s; }
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--sage); }
+.form-row textarea { height: 90px; resize: vertical; }
+.form-confirm { display: none; text-align: center; padding: 32px 0; }
+.form-confirm h3 { font-family: var(--serif); font-size: 26px; font-weight: 300; color: var(--sage); margin-bottom: 10px; }
+.form-confirm p { font-size: 13px; color: var(--ink-soft); }
+
+/* FOOTER */
+footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 48px 64px; display: flex; justify-content: space-between; align-items: flex-end; font-size: 12px; }
+footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+footer a:hover { color: var(--sage-light); }
+.footer-brand { font-family: var(--serif); font-size: 22px; color: var(--white); font-weight: 300; }
+
+/* RESPONSIVE */
+@media (max-width: 820px) {
+  .site-wrap { grid-template-columns: 1fr; }
+  .sidebar { position: relative; height: auto; padding: 36px 28px 28px; flex-direction: row; flex-wrap: wrap; gap: 20px; border-right: none; border-bottom: 1px solid var(--stone-mid); }
+  .brand-tag { margin-bottom: 0; }
+  .sidebar-nav { display: none; }
+  .sidebar-contact { margin-top: 0; }
+  .btn-book { width: auto; }
+  .hero { height: 70vh; }
+  .hero-text { left: 28px; right: 28px; bottom: 48px; }
+  .section { padding: 64px 28px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .photo-break { grid-template-columns: 1fr; height: auto; }
+  .photo-break img { height: 280px; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .about-img-badge { right: 12px; bottom: 12px; }
+  .plan-strip { grid-template-columns: 1fr; padding: 48px 28px; }
+  footer { flex-direction: column; gap: 20px; padding: 40px 28px; }
+  .modal { padding: 40px 28px; }
+}
+</style>
+</head>
+<body>
+
+<div class="site-wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand-mark">Est. Witham, Essex</div>
+      <div class="brand-name">Boudoir<br><em>Beauty</em></div>
+      <div class="brand-tag">Independent Beauty Salon</div>
+      <nav class="sidebar-nav">
+        <a href="#services">Services &amp; Prices</a>
+        <a href="#about">About the Salon</a>
+        <a href="#plan">Website Plans</a>
+        <a href="#contact">Get in Touch</a>
+      </nav>
+      <div class="sidebar-contact">
+        <p>Central Witham, Essex</p>
+        <a href="mailto:hello@boudoir-beauty.co.uk">hello@boudoir-beauty.co.uk</a>
+        <p style="margin-top:10px; font-size:11px; color:var(--ink-soft);">Walk-ins welcome<br>Tue &ndash; Sat &nbsp;9am &ndash; 6pm</p>
+      </div>
+      <button class="btn-book" onclick="openModal()">Book an Appointment</button>
+    </div>
+    <div class="sidebar-foot">
+      <p>&copy; 2025 Boudoir Beauty</p>
+      <p style="margin-top:4px;">Witham &middot; Essex &middot; UK</p>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Beauty treatment at Boudoir Beauty Witham">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <div class="hero-pill">Witham's Independent Beauty Studio</div>
+        <h1>Where you come<br>to feel like <em>yourself</em><br>again.</h1>
+        <p>Facials &middot; Lashes &middot; Brows &middot; Waxing &middot; Nails &middot; Tinting &middot; Walk-ins Welcome</p>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div>
+          <div class="section-label">About Boudoir Beauty</div>
+          <h2 class="section-title">A proper local salon.<br><em>No fuss. Just results.</em></h2>
+          <p class="section-body">Boudoir Beauty sits right in the heart of Witham &ndash; a warm, welcoming space where you can drop in for a quick tidy-up or treat yourself to a full afternoon of proper pampering. We're independent, which means every appointment gets our full attention. No rushing. No conveyor belt. Just good treatments, honest prices, and a genuinely lovely hour or two away from it all.</p>
+          <p class="section-body" style="margin-top:20px;">Whether you're a regular popping in for your lash fills, or trying a treatment for the first time, we'll make you feel right at home from the moment you walk through the door.</p>
+          <button class="btn-book" style="margin-top:36px; width:auto; padding:13px 36px;" onclick="openModal()">Check Availability</button>
+        </div>
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80" alt="Relaxing facial treatment">
+          <div class="about-img-badge">Est. in Witham<br>with love</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" style="background:var(--stone-mid); padding-top:80px; padding-bottom:80px;">
+      <div class="section-label">Treatments &amp; Pricing</div>
+      <h2 class="section-title">Everything we offer,<br><em>honestly priced.</em></h2>
+      <p class="section-body">All treatments are carried out by trained therapists. Prices listed are our standard rates &ndash; no hidden extras, no upselling.</p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="s-icon">✦</div>
+          <h3>Facials &amp; Skin</h3>
+          <p>Proper skin treatments using quality products. From a quick express refresh to a full hour of deep cleansing and massage.</p>
+          <ul class="price-list">
+            <li>Express Facial (30 min)<span>£32</span></li>
+            <li>Classic Cleansing Facial<span>£48</span></li>
+            <li>Anti-Ageing Treatment (60 min)<span>£62</span></li>
+            <li>Back Facial &amp; Exfoliation<span>£45</span></li>
+          </ul>
+        </div>
+
+        <div class="service-card featured">
+          <div class="s-icon">◈</div>
+          <h3>Lashes &amp; Brows</h3>
+          <p>Our most-booked treatments. Lash lifts that last, defined brows, and tinting that saves you time every morning.</p>
+          <ul class="price-list">
+            <li>Lash Lift &amp; Tint<span>£52</span></li>
+            <li>Classic Lash Extensions<span>£65</span></li>
+            <li>Lash Infill (2&ndash;3 weeks)<span>£38</span></li>
+            <li>Brow Lamination<span>£42</span></li>
+            <li>Brow Shape &amp; Tint<span>£22</span></li>
+            <li>HD Brows<span>£38</span></li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="s-icon">◇</div>
+          <h3>Waxing</h3>
+          <p>Hot wax and strip wax available. All waxing treatments are carried out with care and good quality wax that's kind to skin.</p>
+          <ul class="price-list">
+            <li>Lip or Chin<span>£8</span></li>
+            <li>Underarm<span>£12</span></li>
+            <li>Half Leg<span>£18</span></li>
+            <li>Full Leg<span>£32</span></li>
+            <li>Bikini Line<span>£16</span></li>
+            <li>Hollywood / Brazilian<span>£38</span></li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="s-icon">◉</div>
+          <h3>Nails</h3>
+          <p>Gel, shellac, and classic manicures. Tidy, well-finished nails that last &ndash; hands and feet both welcome.</p>
+          <ul class="price-list">
+            <li>Classic Manicure<span>£22</span></li>
+            <li>Gel Manicure<span>£32</span></li>
+            <li>Classic Pedicure<span>£28</span></li>
+            <li>Gel Pedicure<span>£38</span></li>
+            <li>Gel Removal<span>£10</span></li>
+            <li>Nail Art (per nail)<span>from £2</span></li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="s-icon">◌</div>
+          <h3>Tanning</h3>
+          <p>Spray tans and self-tan applications. Natural-looking colour that won't streak or turn orange on you.</p>
+          <ul class="price-list">
+            <li>Full Body Spray Tan<span>£28</span></li>
+            <li>Half Body Spray Tan<span>£18</span></li>
+            <li>Tan Top-Up<span>£20</span></li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="s-icon">◎</div>
+          <h3>Packages</h3>
+          <p>Good-value combinations for a proper treat. Perfect for a birthday, a special occasion, or just because.</p>
+          <ul class="price-list">
+            <li>Brow &amp; Lash Duo<span>£58</span></li>
+            <li>Mini Pamper (facial + mani)<span>£65</span></li>
+            <li>Full Pamper Day<span>£110</span></li>
+            <li>Bridal Morning Package<span>£POA</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTO BREAK -->
+    <div class="photo-break">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Nail treatment close up">
+      <div class="photo-break-text">
+        <h2>Walk-ins are always welcome at Boudoir.</h2>
+        <p>Can't plan ahead? Neither can we sometimes. Pop in and we'll do our best to fit you in. If we're fully booked, drop us an email and we'll get you sorted for later in the week.</p>
+        <button class="btn-book" style="margin-top:28px; width:auto;" onclick="openModal()">Send an Enquiry</button>
+      </div>
+    </div>
+
+    <!-- WEBSITE PLAN -->
+    
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div>
+        <div class="footer-brand">Boudoir <em style="font-style:italic;">Beauty</em></div>
+        <p style="margin-top:8px;">Central Witham, Essex &middot; <a href="mailto:hello@boudoir-beauty.co.uk">hello@boudoir-beauty.co.uk</a></p>
+        <p style="margin-top:4px;">Tue &ndash; Sat &nbsp;9am &ndash; 6pm &middot; Walk-ins welcome</p>
+      </div>
+      <div style="text-align:right;">
+        <p>&copy; 2025 Boudoir Beauty. All rights reserved.</p>
+        <p style="margin-top:4px;"><a href="mailto:hello@boudoir-beauty.co.uk">hello@boudoir-beauty.co.uk</a></p>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-bg" id="modalBg" onclick="handleBgClick(event)">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div id="formWrap">
+      <h2 id="modalTitle">Book or Enquire</h2>
+      <p class="sub">Fill in the form and we'll get back to you within a few hours. Walk-ins also welcome during opening hours.</p>
+      <form id="bookingForm" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" placeholder="e.g. Sarah Hughes" required>
+        </div>
+        <div class="form-row">
+          <label for="femail">Email Address</label>
+          <input type="email" id="femail" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="fphone">Phone Number (optional)</label>
+          <input type="tel" id="fphone" placeholder="07700 000000">
+        </div>
+        <div class="form-row">
+          <label for="fservice">Treatment / Interest</label>
+          <select id="fservice">
+            <option value="">Select a treatment...</option>
+            <option>Lash Lift &amp; Tint</option>
+            <option>Classic Lash Extensions</option>
+            <option>Brow Lamination</option>
+            <option>HD Brows</option>
+            <option>Facial Treatment</option>
+            <option>Gel Manicure / Pedicure</option>
+            <option>Waxing</option>
+            <option>Spray Tan</option>
+            <option>Full Pamper Package</option>
+            <option>Bridal Package Enquiry</option>
+            
+            <option>Something Else</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="fdate">Preferred Date or Week</label>
+          <input type="text" id="fdate" placeholder="e.g. Any Thursday in March">
+        </div>
+        <div class="form-row">
+          <label for="fmsg">Anything else?</label>
+          <textarea id="fmsg" placeholder="Let us know anything useful &ndash; allergies, first-time questions, etc."></textarea>
+        </div>
+        
+        <button type="submit" class="btn-book" style="width:100%; font-size:12px;">Send Enquiry</button>
+      </form>
+    </div>
+    <div class="form-confirm" id="formConfirm">
+      <div style="font-size:36px; margin-bottom:16px;">✦</div>
+      <h3>Thank you!</h3>
+      <p>We've received your enquiry and will be in touch shortly.<br>In the meantime, feel free to pop in &ndash; walk-ins are always welcome.</p>
+      <p style="margin-top:16px;"><a href="mailto:hello@boudoir-beauty.co.uk" style="color:var(--sage); text-decoration:none;">hello@boudoir-beauty.co.uk</a></p>
+      <button class="btn-book" style="margin-top:28px;" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(type) {
+    document.getElementById('modalBg').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (type === 'plan') {
+      document.getElementById('fservice').value = 'plan';
+      document.getElementById('planNote').style.display = 'block';
+    }
+  }
+  function closeModal() {
+    document.getElementById('modalBg').classList.remove('open');
+    document.body.style.overflow = '';
+    document.getElementById('formWrap').style.display = 'block';
+    document.getElementById('formConfirm').style.display = 'none';
+    document.getElementById('bookingForm').reset();
+    document.getElementById('planNote').style.display = 'none';
+  }
+  function handleBgClick(e) {
+    if (e.target === document.getElementById('modalBg')) closeModal();
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('formConfirm').style.display = 'block';
+  }
+  document.getElementById('fservice').addEventListener('change', function() {
+    document.getElementById('planNote').style.display = this.value === 'plan' ? 'block' : 'none';
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Boudoir Beauty</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Boudoir Beauty has been received.</div></div></div>
+<script>(function(){
+const modal=document.getElementById("wc-universal-modal");
+const closeBtn=document.getElementById("wc-modal-close");
+const form=document.getElementById("wc-modal-form");
+const okBox=document.getElementById("wc-modal-ok");
+function openModal(){if(!modal)return;if(form){form.style.display="grid";form.reset();}if(okBox)okBox.style.display="none";modal.style.display="flex";}
+function closeModal(){if(modal)modal.style.display="none";}
+if(closeBtn)closeBtn.addEventListener("click",closeModal);
+if(modal)modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});
+if(form)form.addEventListener("submit",function(e){e.preventDefault();form.style.display="none";if(okBox)okBox.style.display="block";});
+const burger=document.getElementById("hamburger-btn")||document.querySelector(".nav-hamburger");
+const mMenu=document.getElementById("mobile-menu")||document.querySelector(".mobile-menu");
+const mClose=document.getElementById("mobile-close")||document.querySelector(".mobile-menu-close");
+const mOverlay=document.getElementById("mobile-overlay");
+if(burger&&mMenu)burger.addEventListener("click",function(){mMenu.classList.add("open");mMenu.style.transform="translateX(0)";if(mOverlay)mOverlay.classList.add("active");});
+if(mClose&&mMenu)mClose.addEventListener("click",function(){mMenu.classList.remove("open");mMenu.style.transform="";if(mOverlay)mOverlay.classList.remove("active");});
+document.querySelectorAll("a[href^=document.querySelectorAll("button").forEach(function(btn){if(btn.id==="wc-modal-close"||btn.type==="submit"||btn.id==="hamburger-btn"||btn.id==="mobile-close")return;if(/enquir|book|contact|quote|order|reserve|touch|call/.test((btn.textContent||"").toLowerCase())){btn.addEventListener("click",function(e){e.preventDefault();openModal();});}});
+})();</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Braintree Beauty Salon Co #5 | Independent Beauty, Braintree Town Centre</title>
+<meta name="description" content="Independent beauty salon in Braintree town centre. Facials, waxing, nails, lashes & more. Walk-ins welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Braintree Beauty Salon Co #5",
+  "description": "Independent beauty salon in Braintree town centre offering facials, waxing, nails, lashes and more.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Braintree Town Centre",
+    "addressLocality": "Braintree",
+    "addressRegion": "Essex",
+    "addressCountry": "GB"
+  },
+  "email": "hello@braintree-beauty-salon-co-5.co.uk",
+  "url": "https://www.braintree-beauty-salon-co-5.co.uk",
+  "openingHours": ["Mo-Sa 09:00-18:00"],
+  "priceRange": "££"
+}
+</script>
+<style>
+:root {
+  --cream: #f7f2eb;
+  --warm-white: #fdfaf5;
+  --terracotta: #c4622d;
+  --terracotta-light: #e8845a;
+  --sand: #d9c9b0;
+  --bark: #7a5c44;
+  --deep: #2b1f16;
+  --mid: #5c4033;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+  --radius: 999px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--warm-white); color: var(--deep); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+
+/* NAV */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(247,242,235,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--sand); }
+.nav-logo { font-family: var(--serif); font-size: 1.25rem; color: var(--terracotta); letter-spacing: 0.02em; }
+.nav-links { display: flex; gap: 2rem; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+.nav-links a:hover { color: var(--terracotta); }
+.nav-cta { background: var(--terracotta); color: #fff; padding: 0.5rem 1.25rem; border-radius: var(--radius); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: background 0.2s; }
+.nav-cta:hover { background: var(--bark); }
+
+/* HERO */
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 60px; }
+.hero-text { display: flex; flex-direction: column; justify-content: center; padding: 5rem 3.5rem 5rem 4rem; background: var(--cream); }
+.hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1.25rem; font-weight: 500; }
+.hero-title { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 1.1; color: var(--deep); margin-bottom: 1.5rem; }
+.hero-title em { color: var(--terracotta); font-style: italic; }
+.hero-sub { font-size: 1rem; color: var(--mid); max-width: 38ch; margin-bottom: 2.5rem; line-height: 1.75; font-weight: 300; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--terracotta); color: #fff; padding: 0.85rem 2rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; border: none; cursor: pointer; transition: background 0.2s; }
+.btn-primary:hover { background: var(--bark); }
+.btn-ghost { border: 1.5px solid var(--terracotta); color: var(--terracotta); padding: 0.85rem 2rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; background: transparent; cursor: pointer; transition: all 0.2s; }
+.btn-ghost:hover { background: var(--terracotta); color: #fff; }
+.hero-img { position: relative; overflow: hidden; }
+.hero-img img { width: 100%; height: 100%; object-fit: cover; }
+.hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(196,98,45,0.12), transparent); }
+
+/* ARCH FRAME */
+.arch { border-radius: 50% 50% 0 0 / 40% 40% 0 0; overflow: hidden; }
+
+/* PULL QUOTE */
+.pullquote-section { background: var(--terracotta); padding: 4rem 2rem; text-align: center; }
+.pullquote { font-family: var(--serif); font-size: clamp(1.6rem, 3.5vw, 2.6rem); color: #fff; font-style: italic; max-width: 720px; margin: 0 auto; line-height: 1.4; }
+.pullquote-attr { margin-top: 1.25rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+
+/* ABOUT */
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 520px; }
+.about-img { position: relative; }
+.about-img img { width: 100%; height: 100%; object-fit: cover; }
+.about-text { background: var(--cream); padding: 4rem 3.5rem; display: flex; flex-direction: column; justify-content: center; }
+.section-label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem; font-weight: 500; }
+.section-title { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin-bottom: 1.25rem; }
+.about-body { font-size: 0.95rem; color: var(--mid); line-height: 1.85; font-weight: 300; }
+.about-body p + p { margin-top: 1rem; }
+
+/* SERVICES */
+.services { padding: 5rem 4rem; background: var(--warm-white); }
+.services-header { text-align: center; margin-bottom: 3.5rem; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card { background: var(--cream); border-radius: 1.5rem; padding: 2rem 1.75rem; border: 1px solid var(--sand); transition: transform 0.2s, box-shadow 0.2s; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(124,92,68,0.12); }
+.service-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+.service-name { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 0.5rem; }
+.service-desc { font-size: 0.875rem; color: var(--mid); line-height: 1.7; font-weight: 300; }
+
+/* PRICE LEDGER */
+.prices { padding: 5rem 4rem; background: var(--cream); }
+.prices-header { text-align: center; margin-bottom: 3rem; }
+.price-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; max-width: 860px; margin: 0 auto; }
+.price-group h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--terracotta); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--sand); }
+.price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.5rem 0; border-bottom: 1px dotted var(--sand); font-size: 0.9rem; }
+.price-row:last-child { border-bottom: none; }
+.price-row span:last-child { font-weight: 500; color: var(--terracotta); white-space: nowrap; }
+
+/* VISIT STRIP */
+.visit { background: var(--deep); color: var(--cream); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.visit-item { display: flex; flex-direction: column; gap: 0.25rem; }
+.visit-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sand); }
+.visit-val { font-family: var(--serif); font-size: 1.2rem; }
+.visit-val a { color: var(--terracotta-light); }
+.visit-val a:hover { text-decoration: underline; }
+
+/* FOOTER */
+footer { background: var(--bark); color: rgba(253,250,245,0.8); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; flex-wrap: wrap; gap: 1rem; }
+footer a { color: var(--sand); }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(43,31,22,0.7); z-index: 200; align-items: center; justify-content: center; padding: 1rem; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--warm-white); border-radius: 1.5rem; padding: 2.5rem; width: 100%; max-width: 520px; position: relative; max-height: 90vh; overflow-y: auto; }
+.modal-close { position: absolute; top: 1rem; right: 1.25rem; font-size: 1.5rem; cursor: pointer; color: var(--mid); background: none; border: none; line-height: 1; }
+.modal h2 { font-family: var(--serif); font-size: 1.9rem; margin-bottom: 0.25rem; }
+.modal p.sub { font-size: 0.875rem; color: var(--mid); margin-bottom: 1.5rem; }
+.form-row { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.form-row label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--mid); }
+.form-row input, .form-row select, .form-row textarea { border: 1.5px solid var(--sand); border-radius: 0.75rem; padding: 0.7rem 1rem; font-family: var(--sans); font-size: 0.9rem; background: var(--cream); color: var(--deep); outline: none; transition: border-color 0.2s; }
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--terracotta); }
+.form-row textarea { resize: vertical; min-height: 80px; }
+.plan-box { background: var(--cream); border: 1.5px solid var(--sand); border-radius: 1rem; padding: 1rem 1.25rem; margin-bottom: 1.25rem; }
+.plan-box h4 { font-family: var(--serif); font-size: 1.1rem; color: var(--terracotta); margin-bottom: 0.25rem; }
+.plan-box p { font-size: 0.82rem; color: var(--mid); line-height: 1.6; }
+.plan-box label { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; font-size: 0.85rem; font-weight: 500; cursor: pointer; }
+#form-confirm { display: none; text-align: center; padding: 2rem 0; }
+#form-confirm .tick { font-size: 3rem; margin-bottom: 1rem; }
+#form-confirm h3 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 0.5rem; }
+#form-confirm p { font-size: 0.9rem; color: var(--mid); }
+
+@media (max-width: 820px) {
+  .hero, .about { grid-template-columns: 1fr; }
+  .hero-img { height: 55vw; }
+  .hero-text { padding: 3rem 1.5rem; }
+  .about-text { padding: 2.5rem 1.5rem; }
+  .services { padding: 3rem 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .prices { padding: 3rem 1.5rem; }
+  .price-cols { grid-template-columns: 1fr; gap: 1.5rem; }
+  .visit { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+  nav { padding: 0.9rem 1.25rem; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Braintree Beauty Co&nbsp;#5</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Treatments</a>
+    <a href="#prices">Prices</a>
+    <a href="#visit">Find Us</a>
+  </div>
+  <button class="nav-cta" onclick="openModal()">Book Now</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Independent Beauty &mdash; Braintree Town Centre</p>
+    <h1 class="hero-title">A little place<br>to feel <em>properly</em><br>looked after.</h1>
+    <p class="hero-sub">Honest beauty treatments, a genuinely warm welcome, and no rush. Right here in Braintree, the way it should be.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal()">Book a Treatment</button>
+      <a href="#services" class="btn-ghost">See What We Do</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Braintree Beauty Salon Co #5 interior" loading="eager">
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pullquote-section">
+  <p class="pullquote">"We started this salon because Braintree deserves a beauty spot that actually knows your name and remembers how you like your brows."</p>
+  <p class="pullquote-attr">The team at Braintree Beauty Co #5</p>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80" alt="Beauty treatment in progress" loading="lazy" style="height:100%;min-height:420px;">
+  </div>
+  <div class="about-text">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">Small salon,<br>big heart.</h2>
+    <div class="about-body">
+      <p>Braintree Beauty Salon Co #5 is an independent salon sitting right in the heart of Braintree town centre. We are not a chain, not a franchise, and not a conveyor belt. Every appointment gets our full attention.</p>
+      <p>Our therapists are fully qualified and genuinely love what they do. Whether you are popping in for a quick tidy-up or settling in for a full afternoon of treatments, you will always leave feeling like yourself &mdash; only better.</p>
+      <p>Walk-ins are always welcome when we have space, or drop us a message to book ahead. We are proud to be part of this town.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title" style="font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);">Treatments for every mood</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">✨</div>
+      <h3 class="service-name">Facials &amp; Skin</h3>
+      <p class="service-desc">Classic, deep cleanse, and brightening facials suited to your skin type. We use professional-grade products and take the time to talk through what your skin actually needs.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💅</div>
+      <h3 class="service-name">Nails &amp; Gel</h3>
+      <p class="service-desc">Manicures, pedicures, gel overlays, and nail art. From a clean natural finish to something a bit more playful &mdash; we have got you covered.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👁️</div>
+      <h3 class="service-name">Lashes &amp; Brows</h3>
+      <p class="service-desc">Lash lifts, tints, classic extensions, brow shaping, threading, and HD brows. The kind of results that make you look wide awake even on a Monday.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🕯️</div>
+      <h3 class="service-name">Waxing</h3>
+      <p class="service-desc">Hot wax, strip wax, and intimate waxing carried out with care, speed, and zero judgement. We use high-quality wax that is kind to sensitive skin.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌿</div>
+      <h3 class="service-name">Body Treatments</h3>
+      <p class="service-desc">Exfoliating body wraps, back massages, and relaxation treatments. Give your body the attention it has been waiting for.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💆</div>
+      <h3 class="service-name">Spray Tan</h3>
+      <p class="service-desc">Natural-looking, streak-free spray tans using Sienna X. Perfect for a holiday, a big occasion, or just because you fancy a glow on a grey Essex afternoon.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="prices" id="prices">
+  <div class="prices-header">
+    <p class="section-label">Price List</p>
+    <h2 style="font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);">Clear, fair pricing</h2>
+    <p style="font-size:0.9rem;color:var(--mid);margin-top:0.5rem;">All prices include consultation time. No hidden extras.</p>
+  </div>
+  <div class="price-cols">
+    <div class="price-group">
+      <h3>Facials &amp; Skin</h3>
+      <div class="price-row"><span>Express Glow Facial (30 min)</span><span>&pound;32</span></div>
+      <div class="price-row"><span>Classic Cleanse &amp; Treat (60 min)</span><span>&pound;52</span></div>
+      <div class="price-row"><span>Deep Pore Purifying Facial</span><span>&pound;58</span></div>
+      <div class="price-row"><span>Anti-Ageing Treatment Facial</span><span>&pound;65</span></div>
+      <div class="price-row"><span>Back Facial</span><span>&pound;45</span></div>
+    </div>
+    <div class="price-group">
+      <h3>Nails</h3>
+      <div class="price-row"><span>Classic Manicure</span><span>&pound;22</span></div>
+      <div class="price-row"><span>Gel Manicure</span><span>&pound;32</span></div>
+      <div class="price-row"><span>Classic Pedicure</span><span>&pound;28</span></div>
+      <div class="price-row"><span>Gel Pedicure</span><span>&pound;38</span></div>
+      <div class="price-row"><span>Nail Art (per nail)</span><span>from &pound;2</span></div>
+    </div>
+    <div class="price-group">
+      <h3>Lashes &amp; Brows</h3>
+      <div class="price-row"><span>Lash Lift &amp; Tint</span><span>&pound;48</span></div>
+      <div class="price-row"><span>Classic Lash Extensions</span><span>&pound;55</span></div>
+      <div class="price-row"><span>Lash Infills (2-3 weeks)</span><span>&pound;35</span></div>
+      <div class="price-row"><span>HD Brows</span><span>&pound;36</span></div>
+      <div class="price-row"><span>Brow Thread &amp; Tint</span><span>&pound;22</span></div>
+    </div>
+    <div class="price-group">
+      <h3>Waxing &amp; Tanning</h3>
+      <div class="price-row"><span>Full Leg Wax</span><span>&pound;28</span></div>
+      <div class="price-row"><span>Half Leg Wax</span><span>&pound;18</span></div>
+      <div class="price-row"><span>Underarm Wax</span><span>&pound;12</span></div>
+      <div class="price-row"><span>Hollywood / Brazilian</span><span>from &pound;38</span></div>
+      <div class="price-row"><span>Full Body Spray Tan</span><span>&pound;30</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCENT IMAGE STRIP -->
+<div style="height:340px;overflow:hidden;position:relative;">
+  <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=80" alt="Beauty salon atmosphere" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(196,98,45,0.45),rgba(43,31,22,0.3));display:flex;align-items:center;justify-content:center;">
+    <div style="text-align:center;color:#fff;">
+      <p style="font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.75rem;opacity:0.85;">Walk-ins always welcome</p>
+      <p style="font-family:var(--serif);font-size:clamp(1.8rem,4vw,3.2rem);font-style:italic;line-height:1.2;">Come in. Sit down.<br>Let us take care of it.</p>
+      <button class="btn-primary" style="margin-top:1.5rem;" onclick="openModal()">Make an Enquiry</button>
+    </div>
+  </div>
+</div>
+
+<!-- VISIT STRIP -->
+<section class="visit" id="visit">
+  <div class="visit-item">
+    <span class="visit-label">Find Us</span>
+    <span class="visit-val">Braintree Town Centre, Essex</span>
+  </div>
+  <div class="visit-item">
+    <span class="visit-label">Hours</span>
+    <span class="visit-val">Mon&ndash;Sat: 9:00am &ndash; 6:00pm</span>
+  </div>
+  <div class="visit-item">
+    <span class="visit-label">Appointments</span>
+    <span class="visit-val">Walk-ins welcome &bull; Online enquiries</span>
+  </div>
+  <div class="visit-item">
+    <span class="visit-label">Email</span>
+    <span class="visit-val"><a href="mailto:hello@braintree-beauty-salon-co-5.co.uk">hello@braintree-beauty-salon-co-5.co.uk</a></span>
+  </div>
+  <div>
+    <button class="btn-primary" onclick="openModal()">Book a Treatment</button>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2025 Braintree Beauty Salon Co #5. Independent salon, Braintree, Essex.</span>
+  <span>
+    <a href="mailto:hello@braintree-beauty-salon-co-5.co.uk">hello@braintree-beauty-salon-co-5.co.uk</a>
+  </span>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+
+    <div id="form-body">
+      <h2>Book or Enquire</h2>
+      <p class="sub">Fill in the form below and we will get back to you within a few hours. Walk-ins also very welcome.</p>
+
+      
+
+      <form id="booking-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <label for="f-name">Your Name</label>
+          <input type="text" id="f-name" placeholder="e.g. Sarah Thompson" required>
+        </div>
+        <div class="form-row">
+          <label for="f-email">Email Address</label>
+          <input type="email" id="f-email" placeholder="your@email.co.uk" required>
+        </div>
+        <div class="form-row">
+          <label for="f-service">Treatment Interested In</label>
+          <select id="f-service">
+            <option value="">Please select...</option>
+            <option>Facial / Skin Treatment</option>
+            <option>Manicure / Pedicure / Gel Nails</option>
+            <option>Lash Lift or Extensions</option>
+            <option>HD Brows / Threading</option>
+            <option>Waxing</option>
+            <option>Spray Tan</option>
+            <option>Body Treatment / Massage</option>
+            <option>Multiple treatments / not sure yet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="f-date">Preferred Date (if any)</label>
+          <input type="date" id="f-date">
+        </div>
+        <div class="form-row">
+          <label for="f-msg">Anything else to tell us?</label>
+          <textarea id="f-msg" placeholder="e.g. skin sensitivities, timing preferences, questions..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Enquiry</button>
+      </form>
+    </div>
+
+    <div id="form-confirm">
+      <div class="tick">🌸</div>
+      <h3>We have got your message!</h3>
+      <p>Thanks for getting in touch with Braintree Beauty Co #5. We will reply to your email within a few hours to confirm your booking or answer any questions.</p>
+      <p style="margin-top:1rem;font-size:0.85rem;color:var(--mid);">Remember, walk-ins are always welcome too &mdash; just pop in and say hello.</p>
+      <button class="btn-ghost" style="margin-top:1.5rem;" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      document.getElementById('form-body').style.display = 'block';
+      document.getElementById('form-confirm').style.display = 'none';
+      document.getElementById('booking-form').reset();
+      document.getElementById('plan-interest').checked = false;
+    }, 300);
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    if (!name || !email) return;
+    document.getElementById('form-body').style.display = 'none';
+    document.getElementById('form-confirm').style.display = 'block';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Braintree Beauty Salon Co #5</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Braintree Beauty Salon Co #5 has been received.</div></div></div>
+<script>(function(){
+const modal=document.getElementById("wc-universal-modal");
+const closeBtn=document.getElementById("wc-modal-close");
+const form=document.getElementById("wc-modal-form");
+const okBox=document.getElementById("wc-modal-ok");
+function openModal(){if(!modal)return;if(form){form.style.display="grid";form.reset();}if(okBox)okBox.style.display="none";modal.style.display="flex";}
+function closeModal(){if(modal)modal.style.display="none";}
+if(closeBtn)closeBtn.addEventListener("click",closeModal);
+if(modal)modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});
+if(form)form.addEventListener("submit",function(e){e.preventDefault();form.style.display="none";if(okBox)okBox.style.display="block";});
+const burger=document.getElementById("hamburger-btn")||document.querySelector(".nav-hamburger");
+const mMenu=document.getElementById("mobile-menu")||document.querySelector(".mobile-menu");
+const mClose=document.getElementById("mobile-close")||document.querySelector(".mobile-menu-close");
+const mOverlay=document.getElementById("mobile-overlay");
+if(burger&&mMenu)burger.addEventListener("click",function(){mMenu.classList.add("open");mMenu.style.transform="translateX(0)";if(mOverlay)mOverlay.classList.add("active");});
+if(mClose&&mMenu)mClose.addEventListener("click",function(){mMenu.classList.remove("open");mMenu.style.transform="";if(mOverlay)mOverlay.classList.remove("active");});
+document.querySelectorAll("a[href^=document.querySelectorAll("button").forEach(function(btn){if(btn.id==="wc-modal-close"||btn.type==="submit"||btn.id==="hamburger-btn"||btn.id==="mobile-close")return;if(/enquir|book|contact|quote|order|reserve|touch|call/.test((btn.textContent||"").toLowerCase())){btn.addEventListener("click",function(e){e.preventDefault();openModal();});}});
+})();</script>
+</body>
+</html>

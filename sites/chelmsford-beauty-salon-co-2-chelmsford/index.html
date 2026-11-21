@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chelmsford Beauty Salon Co #2 – Chelmsford's Premier Beauty Destination</title>
+<meta name="description" content="Chelmsford Beauty Salon Co #2 – professional beauty treatments in Central Chelmsford, Essex. Facials, waxing, lashes, nails & more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Chelmsford Beauty Salon Co #2",
+  "description": "Chelmsford's Premier Beauty Destination offering facials, waxing, lashes, nails and more in Central Chelmsford, Essex.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Central Chelmsford",
+    "addressLocality": "Chelmsford",
+    "addressRegion": "Essex",
+    "addressCountry": "GB"
+  },
+  "email": "hello@chelmsford-beauty-salon-co-2.co.uk",
+  "url": "https://chelmsford-beauty-salon-co-2.co.uk",
+  "priceRange": "££",
+  "openingHours": ["Mo-Sa 09:00-19:00", "Su 10:00-17:00"],
+  "hasMap": "https://maps.google.com/?q=Chelmsford+Essex"
+}
+</script>
+<style>
+:root {
+  --stone: #f5f2ee;
+  --stone-mid: #ede9e3;
+  --sage: #7a9b76;
+  --sage-light: #a8c4a4;
+  --sage-dark: #5a7a56;
+  --ink: #2a2622;
+  --ink-soft: #5c564f;
+  --white: #ffffff;
+  --radius: 4px;
+  --col-left: 300px;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --shadow: 0 8px 32px rgba(42,38,34,0.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--stone); color: var(--ink); font-family: var(--font-sans); font-weight: 300; line-height: 1.65; min-height: 100vh; }
+
+/* LAYOUT */
+.site-wrap { display: flex; min-height: 100vh; }
+.col-left { position: sticky; top: 0; height: 100vh; width: var(--col-left); min-width: var(--col-left); background: var(--ink); color: var(--white); display: flex; flex-direction: column; padding: 2.5rem 2rem; z-index: 10; overflow: hidden; }
+.col-right { flex: 1; overflow-x: hidden; }
+
+/* LEFT COLUMN */
+.brand-mark { font-family: var(--font-serif); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 2rem; }
+.brand-name { font-family: var(--font-serif); font-size: 1.55rem; font-weight: 300; line-height: 1.3; color: var(--white); margin-bottom: 0.4rem; }
+.brand-tag { font-size: 0.78rem; color: var(--sage-light); letter-spacing: 0.06em; margin-bottom: 2.5rem; }
+.left-nav { list-style: none; flex: 1; }
+.left-nav li { margin-bottom: 0.25rem; }
+.left-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; display: block; padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.left-nav a:hover { color: var(--sage-light); }
+.left-contact { margin-top: auto; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.left-contact p { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; line-height: 1.5; }
+.left-contact a { color: var(--sage-light); text-decoration: none; font-size: 0.82rem; }
+.left-contact a:hover { color: var(--white); }
+.btn-book { display: block; background: var(--sage); color: var(--white); text-align: center; padding: 0.75rem 1rem; border-radius: var(--radius); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; margin-top: 1.25rem; border: none; cursor: pointer; transition: background 0.2s; font-family: var(--font-sans); }
+.btn-book:hover { background: var(--sage-dark); }
+.left-accent { width: 40px; height: 2px; background: var(--sage); margin-bottom: 1.5rem; }
+
+/* HERO */
+.hero { position: relative; height: 92vh; min-height: 540px; overflow: hidden; }
+.hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(42,38,34,0.38) 0%, rgba(42,38,34,0.12) 60%, transparent 100%); }
+.hero-text { position: absolute; bottom: 3.5rem; left: 3.5rem; right: 3.5rem; }
+.hero-label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 0.9rem; }
+.hero-title { font-family: var(--font-serif); font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 300; color: var(--white); line-height: 1.12; max-width: 600px; }
+.hero-title em { font-style: italic; color: var(--sage-light); }
+
+/* SECTIONS */
+section { padding: 5rem 3.5rem; }
+.section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.section-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; color: var(--ink); line-height: 1.2; margin-bottom: 1.5rem; }
+.section-intro { max-width: 560px; color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 3rem; }
+.rule { width: 48px; height: 2px; background: var(--sage); margin-bottom: 2rem; }
+
+/* SERVICE CARDS */
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.card { background: var(--white); border-radius: 6px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.25s; }
+.card:hover { transform: translateY(-4px); }
+.card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.card-body { padding: 1.5rem; }
+.card-title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; }
+.card-desc { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 1rem; line-height: 1.6; }
+.price-list { list-style: none; border-top: 1px solid var(--stone-mid); padding-top: 0.9rem; }
+.price-list li { display: flex; justify-content: space-between; font-size: 0.83rem; padding: 0.3rem 0; color: var(--ink-soft); border-bottom: 1px solid var(--stone-mid); }
+.price-list li:last-child { border-bottom: none; }
+.price-list strong { color: var(--ink); font-weight: 500; }
+.card-wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; }
+.card-wide .card-img { height: 100%; min-height: 240px; }
+
+/* ABOUT STRIP */
+.about-strip { background: var(--stone-mid); display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.about-photo { position: relative; overflow: hidden; min-height: 480px; }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+.about-content p { color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 1.2rem; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.tag { background: var(--sage); color: var(--white); font-size: 0.72rem; padding: 0.3rem 0.8rem; border-radius: 20px; letter-spacing: 0.06em; }
+
+/* PLAN BANNER */
+.plan-banner { background: var(--ink); color: var(--white); padding: 4rem 3.5rem; display: flex; align-items: center; gap: 4rem; }
+.plan-price { font-family: var(--font-serif); font-size: 4rem; font-weight: 300; color: var(--sage-light); white-space: nowrap; }
+.plan-price span { font-size: 1.2rem; vertical-align: top; margin-top: 0.8rem; display: inline-block; }
+.plan-details h3 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 300; margin-bottom: 0.8rem; }
+.plan-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
+.plan-list li { font-size: 0.82rem; color: rgba(255,255,255,0.65); padding-left: 1rem; position: relative; }
+.plan-list li::before { content: '–'; position: absolute; left: 0; color: var(--sage-light); }
+.plan-cta { margin-top: 1.5rem; }
+
+/* FOOTER */
+footer { background: var(--ink); color: rgba(255,255,255,0.4); padding: 2.5rem 3.5rem; font-size: 0.78rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+footer a { color: var(--sage-light); text-decoration: none; }
+
+/* MODAL */
+.modal-overlay { position: fixed; inset: 0; background: rgba(42,38,34,0.75); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 1rem; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--white); border-radius: 8px; padding: 2.5rem; max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 24px 64px rgba(0,0,0,0.25); }
+.modal h2 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; margin-bottom: 0.3rem; }
+.modal p.sub { font-size: 0.82rem; color: var(--ink-soft); margin-bottom: 1.8rem; }
+.modal-close { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink-soft); line-height: 1; }
+.form-group { margin-bottom: 1.1rem; }
+label { display: block; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.4rem; }
+input, select, textarea { width: 100%; padding: 0.7rem 0.9rem; border: 1px solid var(--stone-mid); border-radius: var(--radius); font-family: var(--font-sans); font-size: 0.88rem; background: var(--stone); color: var(--ink); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--sage); }
+textarea { resize: vertical; min-height: 90px; }
+.form-success { display: none; text-align: center; padding: 2rem 0; }
+.form-success .tick { font-size: 2.5rem; color: var(--sage); margin-bottom: 0.8rem; }
+.form-success h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; }
+.form-success p { color: var(--ink-soft); font-size: 0.88rem; }
+
+/* MOBILE */
+@media (max-width: 820px) {
+  .site-wrap { flex-direction: column; }
+  .col-left { position: relative; height: auto; width: 100%; flex-direction: row; flex-wrap: wrap; padding: 1.5rem; gap: 0.5rem; align-items: center; }
+  .col-left .brand-name { font-size: 1.2rem; }
+  .left-nav, .left-accent { display: none; }
+  .left-contact { margin-top: 0; padding-top: 0; border-top: none; margin-left: auto; }
+  .hero { height: 70vw; min-height: 280px; }
+  .hero-text { left: 1.5rem; bottom: 1.5rem; right: 1.5rem; }
+  section { padding: 3rem 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .card-wide { grid-template-columns: 1fr; }
+  .card-wide .card-img { height: 220px; }
+  .about-strip { grid-template-columns: 1fr; }
+  .about-photo { min-height: 260px; }
+  .about-content { padding: 2.5rem 1.5rem; }
+  .plan-banner { flex-direction: column; gap: 1.5rem; padding: 3rem 1.5rem; }
+  footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="site-wrap">
+
+  <!-- LEFT STICKY COLUMN -->
+  <aside class="col-left">
+    <div>
+      <p class="brand-mark">Chelmsford, Essex</p>
+      <div class="left-accent"></div>
+      <h1 class="brand-name">Chelmsford Beauty Salon Co #2</h1>
+      <p class="brand-tag">Chelmsford's Premier Beauty Destination</p>
+    </div>
+    <nav>
+      <ul class="left-nav">
+        <li><a href="#services">Treatments</a></li>
+        <li><a href="#about">About the Salon</a></li>
+        <li><a href="#plan">Website Plan</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+    </nav>
+    <div class="left-contact">
+      <p>Central Chelmsford, Essex<br>Walk-ins always welcome</p>
+      <a href="mailto:hello@chelmsford-beauty-salon-co-2.co.uk">hello@chelmsford-beauty-salon-co-2.co.uk</a>
+      <button class="btn-book" onclick="openModal()">Book an Appointment</button>
+    </div>
+  </aside>
+
+  <!-- MAIN RIGHT COLUMN -->
+  <main class="col-right">
+
+    <!-- HERO -->
+    <section class="hero" style="padding:0;">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=80" alt="Chelmsford Beauty Salon Co #2 interior">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <p class="hero-label">Central Chelmsford &nbsp;/&nbsp; Est. in Essex</p>
+        <h2 class="hero-title">Where good skin<br>starts with <em>proper</em> care</h2>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <p class="section-label">Our Treatments</p>
+      <h2 class="section-title">Professional beauty,<br>honestly priced</h2>
+      <p class="section-intro">From a quick tidy-up to a full day of pampering, every treatment at Chelmsford Beauty Salon Co #2 is carried out by trained professionals who actually care about results.</p>
+      <div class="services-grid">
+
+        <!-- CARD 1: Facials -->
+        <div class="card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Facial treatments">
+          <div class="card-body">
+            <h3 class="card-title">Facials & Skin</h3>
+            <p class="card-desc">Targeted skin treatments using professional-grade products, tailored to your skin type. We do the analysis so you don't have to guess.</p>
+            <ul class="price-list">
+              <li><span>Express Glow Facial (30 min)</span><strong>£32</strong></li>
+              <li><span>Signature Deep Cleanse (60 min)</span><strong>£55</strong></li>
+              <li><span>Anti-Ageing Collagen Facial</span><strong>£68</strong></li>
+              <li><span>Sensitive Skin Calming Treatment</span><strong>£48</strong></li>
+              <li><span>Back Facial</span><strong>£42</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 2: Waxing -->
+        <div class="card">
+          <div class="card-body" style="padding-top:1.8rem;">
+            <h3 class="card-title">Waxing</h3>
+            <p class="card-desc">Hot wax and strip wax available. We use low-temperature hot wax for sensitive areas so it's actually comfortable.</p>
+            <ul class="price-list">
+              <li><span>Full Leg</span><strong>£30</strong></li>
+              <li><span>Half Leg</span><strong>£18</strong></li>
+              <li><span>Bikini Line</span><strong>£16</strong></li>
+              <li><span>Hollywood / Brazilian</span><strong>£38</strong></li>
+              <li><span>Underarm</span><strong>£12</strong></li>
+              <li><span>Lip or Chin</span><strong>£8</strong></li>
+              <li><span>Full Arm</span><strong>£22</strong></li>
+              <li><span>Eyebrow Wax & Shape</span><strong>£14</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD WIDE: Lashes & Brows -->
+        <div class="card card-wide">
+          <img class="card-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Lash and brow treatments">
+          <div class="card-body">
+            <h3 class="card-title">Lashes & Brows</h3>
+            <p class="card-desc">Precision brow shaping, tinting, and lash lifts that last. We don't over-do it. Natural, defined results that suit your face, not a trend.</p>
+            <ul class="price-list">
+              <li><span>Lash Lift & Tint</span><strong>£52</strong></li>
+              <li><span>Classic Lash Extensions (full set)</span><strong>£65</strong></li>
+              <li><span>Lash Extension Infill (2–3 weeks)</span><strong>£35</strong></li>
+              <li><span>HD Brow Sculpt</span><strong>£38</strong></li>
+              <li><span>Brow Lamination</span><strong>£42</strong></li>
+              <li><span>Brow Tint</span><strong>£12</strong></li>
+              <li><span>Lash & Brow Combo</span><strong>£22</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 3: Nails -->
+        <div class="card">
+          <div class="card-body" style="padding-top:1.8rem;">
+            <h3 class="card-title">Nails</h3>
+            <p class="card-desc">Manicures, pedicures, and gel finishes. Classic or soak-off gel, no nail damage, no fuss.</p>
+            <ul class="price-list">
+              <li><span>Classic Manicure</span><strong>£22</strong></li>
+              <li><span>Gel Manicure (soak-off)</span><strong>£32</strong></li>
+              <li><span>Classic Pedicure</span><strong>£28</strong></li>
+              <li><span>Gel Pedicure</span><strong>£38</strong></li>
+              <li><span>Gel Removal & Tidy</span><strong>£14</strong></li>
+              <li><span>Mani + Pedi Combo</span><strong>£52</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 4: Body -->
+        <div class="card">
+          <div class="card-body" style="padding-top:1.8rem;">
+            <h3 class="card-title">Body & Tanning</h3>
+            <p class="card-desc">Spray tans, body wraps, and massage treatments. Perfect before a big occasion or just because you deserve a proper hour off.</p>
+            <ul class="price-list">
+              <li><span>Full Body Spray Tan</span><strong>£28</strong></li>
+              <li><span>Half Body Tan</span><strong>£18</strong></li>
+              <li><span>Swedish Back Massage (30 min)</span><strong>£35</strong></li>
+              <li><span>Full Body Massage (60 min)</span><strong>£55</strong></li>
+              <li><span>Detox Body Wrap</span><strong>£48</strong></li>
+              <li><span>Exfoliation Treatment</span><strong>£30</strong></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT STRIP -->
+    <section id="about" class="about-strip" style="padding:0;">
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Inside the salon">
+      </div>
+      <div class="about-content">
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">A proper beauty salon,<br>right in the heart of Chelmsford</h2>
+        <p>We're not trying to be the fanciest salon in Essex. We just want to be the one you actually come back to. Treatments done properly, by people who know what they're doing, at prices that don't require a second mortgage.</p>
+        <p>Central Chelmsford is on our doorstep, and the local community is who we work for. Whether you're popping in on your lunch break or treating yourself to a full afternoon, you're in the right place.</p>
+        <p>Walk-ins are always welcome. Booking ahead means you won't have to wait, but we'll always try to fit you in.</p>
+        <div class="tag-row">
+          <span class="tag">Fully Trained</span>
+          <span class="tag">Walk-ins Welcome</span>
+          <span class="tag">Central Chelmsford</span>
+          <span class="tag">Friendly Team</span>
+          <span class="tag">Essex Local</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAN BANNER -->
+    
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Ready to book?</h2>
+      <div class="rule"></div>
+      <p class="section-intro">Drop us a message, email us directly, or simply walk in. We're in Central Chelmsford and always happy to chat about what treatment is right for you.</p>
+      <div style="display:flex;gap:3rem;flex-wrap:wrap;">
+        <div>
+          <p style="font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.5rem;">Email</p>
+          <a href="mailto:hello@chelmsford-beauty-salon-co-2.co.uk" style="color:var(--ink);font-size:0.95rem;">hello@chelmsford-beauty-salon-co-2.co.uk</a>
+        </div>
+        <div>
+          <p style="font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.5rem;">Location</p>
+          <p style="font-size:0.95rem;color:var(--ink-soft);">Central Chelmsford, Essex</p>
+        </div>
+        <div>
+          <p style="font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.5rem;">Hours</p>
+          <p style="font-size:0.88rem;color:var(--ink-soft);">Mon–Sat: 9am – 7pm<br>Sun: 10am – 5pm</p>
+        </div>
+      </div>
+      <button class="btn-book" onclick="openModal()" style="display:inline-block;width:auto;margin-top:2.5rem;padding:0.85rem 2.5rem;">Book or Enquire Online</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Chelmsford Beauty Salon Co #2. Central Chelmsford, Essex.</p>
+      <p>Made with care in Essex &nbsp;|&nbsp; <a href="mailto:hello@chelmsford-beauty-salon-co-2.co.uk">hello@chelmsford-beauty-salon-co-2.co.uk</a></p>
+    </footer>
+
+  </main>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+
+    <div id="form-wrap">
+      <h2>Book an Appointment</h2>
+      <p class="sub">Fill in the form and we'll confirm your slot by email. Walk-ins also welcome.</p>
+      <form id="booking-form" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-group">
+          <label for="f-name">Your Name</label>
+          <input type="text" id="f-name" placeholder="e.g. Sarah Johnson" required>
+        </div>
+        <div class="form-group">
+          <label for="f-email">Email Address</label>
+          <input type="email" id="f-email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="f-phone">Phone Number (optional)</label>
+          <input type="tel" id="f-phone" placeholder="07700 900 000">
+        </div>
+        <div class="form-group">
+          <label for="f-service">Treatment</label>
+          <select id="f-service">
+            <option value="">Select a treatment...</option>
+            <optgroup label="Facials & Skin">
+              <option>Express Glow Facial – £32</option>
+              <option>Signature Deep Cleanse – £55</option>
+              <option>Anti-Ageing Collagen Facial – £68</option>
+              <option>Sensitive Skin Calming Treatment – £48</option>
+            </optgroup>
+            <optgroup label="Waxing">
+              <option>Full Leg Wax – £30</option>
+              <option>Hollywood / Brazilian – £38</option>
+              <option>Eyebrow Wax & Shape – £14</option>
+            </optgroup>
+            <optgroup label="Lashes & Brows">
+              <option>Lash Lift & Tint – £52</option>
+              <option>Classic Lash Extensions – £65</option>
+              <option>HD Brow Sculpt – £38</option>
+              <option>Brow Lamination – £42</option>
+            </optgroup>
+            <optgroup label="Nails">
+              <option>Gel Manicure – £32</option>
+              <option>Gel Pedicure – £38</option>
+              <option>Mani + Pedi Combo – £52</option>
+            </optgroup>
+            <optgroup label="Body & Tanning">
+              <option>Full Body Spray Tan – £28</option>
+              <option>Full Body Massage (60 min) – £55</option>
+            </optgroup>
+            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-date">Preferred Date</label>
+          <input type="date" id="f-date">
+        </div>
+        <div class="form-group">
+          <label for="f-msg">Anything else we should know?</label>
+          <textarea id="f-msg" placeholder="Allergies, preferences, questions..."></textarea>
+        </div>
+        <button type="submit" class="btn-book" style="width:100%;padding:0.9rem;">Send Enquiry</button>
+      </form>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <div class="tick">&#10003;</div>
+      <h3>Enquiry Received</h3>
+      <p>Thanks for getting in touch. We'll confirm your booking by email shortly.<br><br>
+      If you'd rather chat, email us at<br>
+      <a href="mailto:hello@chelmsford-beauty-salon-co-2.co.uk" style="color:var(--sage);">hello@chelmsford-beauty-salon-co-2.co.uk</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(type) {
+    var modal = document.getElementById('modal');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (type === 'plan') {
+      var sel = document.getElementById('f-service');
+      sel.value = 'General Booking Enquiry';
+    }
+  }
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    if (!name || !email) {
+      alert('Please fill in your name and email address.');
+      return;
+    }
+    document.getElementById('form-wrap').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+  // Set min date on date picker
+  var dateInput = document.getElementById('f-date');
+  if (dateInput) {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2,'0');
+    var mm = String(today.getMonth()+1).padStart(2,'0');
+    var yyyy = today.getFullYear();
+    dateInput.min = yyyy+'-'+mm+'-'+dd;
+  }
+</script>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Chelmsford Beauty Salon Co #2 – Chelmsford's Premier Beauty Destination</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Chelmsford Beauty Salon Co #2 – Chelmsford's Premier Beauty Destination has been received.</div></div></div>
+<script>(function(){
+const modal=document.getElementById("wc-universal-modal");
+const closeBtn=document.getElementById("wc-modal-close");
+const form=document.getElementById("wc-modal-form");
+const okBox=document.getElementById("wc-modal-ok");
+function openModal(){if(!modal)return;if(form){form.style.display="grid";form.reset();}if(okBox)okBox.style.display="none";modal.style.display="flex";}
+function closeModal(){if(modal)modal.style.display="none";}
+if(closeBtn)closeBtn.addEventListener("click",closeModal);
+if(modal)modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});
+if(form)form.addEventListener("submit",function(e){e.preventDefault();form.style.display="none";if(okBox)okBox.style.display="block";});
+const burger=document.getElementById("hamburger-btn")||document.querySelector(".nav-hamburger");
+const mMenu=document.getElementById("mobile-menu")||document.querySelector(".mobile-menu");
+const mClose=document.getElementById("mobile-close")||document.querySelector(".mobile-menu-close");
+const mOverlay=document.getElementById("mobile-overlay");
+if(burger&&mMenu)burger.addEventListener("click",function(){mMenu.classList.add("open");mMenu.style.transform="translateX(0)";if(mOverlay)mOverlay.classList.add("active");});
+if(mClose&&mMenu)mClose.addEventListener("click",function(){mMenu.classList.remove("open");mMenu.style.transform="";if(mOverlay)mOverlay.classList.remove("active");});
+document.querySelectorAll("a[href^=document.querySelectorAll("button").forEach(function(btn){if(btn.id==="wc-modal-close"||btn.type==="submit"||btn.id==="hamburger-btn"||btn.id==="mobile-close")return;if(/enquir|book|contact|quote|order|reserve|touch|call/.test((btn.textContent||"").toLowerCase())){btn.addEventListener("click",function(e){e.preventDefault();openModal();});}});
+})();</script>
+</body>
+</html>

@@ -332,96 +332,7 @@ footer ul li { margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-ligh
 </div>
 
 <!-- BOOKING / CONTACT -->
-<section class="booking-section" id="booking">
-  <div class="booking-inner">
-    <div>
-      <div class="section-label">Get in Touch</div>
-      <h2 class="section-title">Book Your Car In</h2>
-      <div class="brass-rule"></div>
-      <div class="contact-info">
-        <p>Fill in the form and we'll confirm your booking by phone or email, usually within a few hours during working hours. Prefer to talk? Give us a ring.</p>
-        <div class="contact-block">
-          <div class="c-label">Phone</div>
-          <a href="tel:07849556675">07849 556675</a>
-        </div>
-        <div class="contact-block">
-          <div class="c-label">Email</div>
-          <a href="mailto:hello@s-a-s-vehicle-servicing-repair.co.uk">hello@s-a-s-vehicle-servicing-repair.co.uk</a>
-        </div>
-        <div class="contact-block">
-          <div class="c-label">Address</div>
-          <span>Olivers Nursery, Maldon Road<br>Witham, Essex CM8 3HY</span>
-        </div>
-        <div class="contact-block">
-          <div class="c-label">Opening Hours</div>
-          <span>Mon&ndash;Fri: 8:00am &ndash; 5:30pm<br>Saturday: 8:00am &ndash; 1:00pm</span>
-        </div>
-        <div class="plan-box">
-          <h4>Website Plan &mdash; &pound;99/month</h4>
-          <div class="plan-price">&pound;99 <span style="font-size:0.75rem;font-weight:400;color:var(--text-light);">/ month</span></div>
-          <p>Everything included: custom website build, hosting, SSL security, local SEO setup for Witham searches, and ongoing updates whenever you need them. No upfront cost, no contract lock-in after 3 months. Tick the box in the form if you'd like to know more.</p>
-        </div>
-      </div>
-    </div>
-    <div class="booking-form">
-      <form id="bookingForm" onsubmit="handleSubmit(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="e.g. James" required>
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="e.g. Clarke" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="07xxx xxxxxx" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="vrm">Vehicle Reg (VRM)</label>
-          <input type="text" id="vrm" name="vrm" placeholder="e.g. AB21 XYZ" style="text-transform:uppercase;">
-        </div>
-        <div class="form-group">
-          <label for="service">Service Required</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service...</option>
-            <option>Full Service</option>
-            <option>Interim Service</option>
-            <option>MOT Test</option>
-            <option>MOT + Interim Service</option>
-            <option>Diagnostic Check</option>
-            <option>Brake Service</option>
-            <option>Tyres &mdash; Supply &amp; Fit</option>
-            <option>Clutch or Cambelt</option>
-            <option>General Repair / Other</option>
-            <option>Website Plan Enquiry (&pound;99/month)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="preferred">Preferred Date</label>
-          <input type="date" id="preferred" name="preferred">
-        </div>
-        <div class="form-group">
-          <label for="notes">Anything Else We Should Know?</label>
-          <textarea id="notes" name="notes" placeholder="Describe any symptoms, warning lights, or questions..."></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Booking Request</button>
-        <div id="form-confirm">
-          <strong style="display:block;margin-bottom:0.3rem;">Request Received &mdash; Thank You!</strong>
-          We'll be in touch shortly to confirm your booking. If it's urgent, call us on <a href="tel:07849556675" style="color:var(--brass-light);">07849 556675</a>.
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
+
 
 <!-- FOOTER -->
 <footer>
@@ -499,7 +410,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link) {
   });
 });
 </script>
-<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">S A S Vehicle Servicing & Repair</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="£99/month Everything Included (Build, Hosting & Updates)" selected>£99/month — Everything Included (Build, Hosting &amp; Updates)</option><option value="One-Off Custom Build Enquiry">One-Off Custom Build Enquiry</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for S A S Vehicle Servicing & Repair has been received.</div></div></div>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">S A S Vehicle Servicing & Repair</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for S A S Vehicle Servicing & Repair has been received.</div></div></div>
 <script>(function(){
 const modal=document.getElementById("wc-universal-modal");
 const closeBtn=document.getElementById("wc-modal-close");

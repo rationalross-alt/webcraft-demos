@@ -289,109 +289,9 @@ footer .fl{font-family:var(--serif);font-size:1rem;font-weight:700} footer .fl s
   </div>
 </section>
 
-<section class="pricing" id="pricing">
-  <p class="section-label">Transparent Pricing</p>
-  <h2 class="section-title" style="color:var(--cream)">No hidden costs.<br>No surprises.</h2>
-  <div class="price-grid">
-    <div class="price-card">
-      <div class="pc-label">Popular</div>
-      <div class="pc-name">MOT + Interim Service</div>
-      <div class="pc-price">&pound;119<sub></sub></div>
-      <div class="pc-note">Combined booking, one visit</div>
-      <ul class="pc-list">
-        <li>DVSA MOT test</li>
-        <li>Oil &amp; filter change</li>
-        <li>35-point vehicle check</li>
-        <li>Fluid top-ups included</li>
-        <li>Free retest if needed</li>
-      </ul>
-      <button class="pc-cta" onclick="openModal()">Book This</button>
-    </div>
-    <div class="price-card featured">
-      <div class="pc-label">Best Value</div>
-      <div class="pc-name">MOT + Full Service</div>
-      <div class="pc-price">&pound;169<sub></sub></div>
-      <div class="pc-note">Our most popular annual combo</div>
-      <ul class="pc-list">
-        <li>DVSA MOT test</li>
-        <li>60-point full service</li>
-        <li>Spark plugs &amp; air filter</li>
-        <li>Brake fluid test</li>
-        <li>Free retest if needed</li>
-      </ul>
-      <button class="pc-cta" onclick="openModal()">Book This</button>
-    </div>
-    <div class="price-card">
-      <div class="pc-label">Tyres</div>
-      <div class="pc-name">Two Tyres Fitted</div>
-      <div class="pc-price">&pound;99<sub>+</sub></div>
-      <div class="pc-note">Mid-range, most popular sizes</div>
-      <ul class="pc-list">
-        <li>Two quality mid-range tyres</li>
-        <li>Fitting &amp; balancing</li>
-        <li>Valve replacement</li>
-        <li>Tyre pressure check</li>
-        <li>Old tyre disposal</li>
-      </ul>
-      <button class="pc-cta" onclick="openModal()">Get a Quote</button>
-    </div>
-  </div>
 
-  <div class="web-plan">
-    <div class="wp-copy">
-      <h3>&#128205; Website for Your Business &mdash; &pound;99/month</h3>
-      <p>We work with a local web studio to offer Essex businesses a complete online presence: custom website build, hosting, security, local SEO setup for Chelmsford searches, and ongoing updates. No upfront fees. Cancel any time.</p>
-    </div>
-    <div class="wp-price">
-      <strong>&pound;99<small style="font-size:1.2rem">/mo</small></strong>
-      <span>Everything Included</span>
-      <button class="btn-primary" style="margin-top:.8rem;font-size:.8rem;padding:.6rem 1.4rem" onclick="openModal('web')">Find Out More</button>
-    </div>
-  </div>
-</section>
 
-<section class="contact" id="contact">
-  <div>
-    <p class="section-label">Get in Touch</p>
-    <h2>Drop us a message or just turn up.</h2>
-    <p>We're happy to give you a rough quote over email before you commit to anything. For urgent jobs, walk-ins are welcome during opening hours. We'll always try to fit you in the same day for simple work.</p>
-    <div class="contact-detail">
-      <div><strong>Email</strong><br><a href="mailto:hello@chelmsford-car-services.co.uk">hello@chelmsford-car-services.co.uk</a></div>
-      <div><strong>Location</strong><br>Central Chelmsford, Essex</div>
-      <div><strong>Opening Hours</strong><br>Monday &ndash; Friday: 8:00am &ndash; 6:00pm<br>Saturday: 8:00am &ndash; 1:00pm<br>Sunday: Closed</div>
-      <div style="margin-top:.5rem"><a href="tel:+441245000000" class="btn-primary" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem">&#128222; Call Us</a></div>
-    </div>
-  </div>
-  <div>
-    <form id="contact-form" onsubmit="submitForm(event)">
-      <div class="form-row">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="tel" name="phone" placeholder="Phone number">
-      </div>
-      <input type="email" name="email" placeholder="Email address" required>
-      <select name="service" required>
-        <option value="" disabled selected>What do you need?</option>
-        <option>MOT Test</option>
-        <option>Interim Service</option>
-        <option>Full Service</option>
-        <option>MOT + Interim Service (£119)</option>
-        <option>MOT + Full Service (£169)</option>
-        <option>Brake Replacement</option>
-        <option>Tyre Fitting</option>
-        <option>Diagnostics / Warning Light</option>
-        <option>Clutch or Gearbox</option>
-        <option>Air Conditioning Re-gas</option>
-        <option>Cambelt / Timing</option>
-        <option>£99/mo Website Plan</option>
-        <option>Something Else</option>
-      </select>
-      <input type="text" name="reg" placeholder="Vehicle reg (optional)">
-      <textarea name="message" placeholder="Any other details? (mileage, make/model, dates that suit you...)"></textarea>
-      <button type="submit" class="btn-primary" style="width:100%;padding:1rem;font-size:.95rem">Send Enquiry</button>
-      <div id="form-confirm">&#10003;&nbsp; Thanks, we've got your message. We'll be back with you within a few hours (usually much sooner). If it's urgent, feel free to walk in.</div>
-    </form>
-  </div>
-</section>
+
 
 <section style="padding:0 6vw 5rem">
   <div style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow);height:320px">
@@ -425,12 +325,12 @@ footer .fl{font-family:var(--serif);font-size:1rem;font-weight:700} footer .fl s
         <option>MOT + Full Service (£169)</option>
         <option>Brake Replacement (from £95/axle)</option>
         <option>Tyre Fitting (from £45)</option>
-        <option>Two Tyres Fitted (from £99)</option>
+        
         <option>Diagnostics / Warning Light (from £49)</option>
         <option>Air Con Re-gas (from £59)</option>
         <option>Clutch or Gearbox (from £295)</option>
         <option>Cambelt / Timing (from £195)</option>
-        <option>£99/mo Website Plan</option>
+        
         <option>Something Else</option>
       </select>
       <input type="text" name="mreg" placeholder="Vehicle reg (e.g. EX21 ABC)">
@@ -447,7 +347,7 @@ function openModal(type) {
   m.classList.add('open');
   if(type === 'web') {
     const sel = document.querySelector('#modal-form select[name="mservice"]');
-    if(sel) sel.value = '£99/mo Website Plan';
+    if(sel) sel.value = 'General Booking Enquiry';
   }
   document.body.style.overflow = 'hidden';
 }
@@ -476,7 +376,7 @@ function submitForm(e) {
   conf.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 </script>
-<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Chelmsford Car Services</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="£99/month Everything Included (Build, Hosting & Updates)" selected>£99/month — Everything Included (Build, Hosting &amp; Updates)</option><option value="One-Off Custom Build Enquiry">One-Off Custom Build Enquiry</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Chelmsford Car Services has been received.</div></div></div>
+<div id="wc-universal-modal" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.72);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:16px;"><div style="background:#ffffff;color:#0f172a;max-width:440px;width:100%;border-radius:14px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,0.35);font-family:system-ui,-apple-system,sans-serif;position:relative;"><button type="button" id="wc-modal-close" aria-label="Close" style="position:absolute;top:14px;right:14px;border:none;background:#f1f5f9;color:#0f172a;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;">&times;</button><div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin-bottom:4px;">Direct Enquiry</div><h3 style="margin:0 0 8px;font-size:1.35rem;line-height:1.2;">Chelmsford Car Services</h3><p style="margin:0 0 16px;font-size:0.9rem;color:#475569;">Send a quick message or booking request and we will get straight back to you.</p><form id="wc-modal-form" style="display:grid;gap:10px;"><select id="wc-modal-plan" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;background:#f8fafc;color:#0f172a;"><option value="Booking / Appointment Enquiry" selected>Booking / Appointment Enquiry</option><option value="Quote / Service Request">Quote / Service Request</option><option value="General Question / Callback">General Question / Callback</option></select><input type="text" required placeholder="Your name" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><input type="text" required placeholder="Phone or email" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;" /><textarea rows="3" placeholder="How can we help?" style="padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:0.92rem;font-family:inherit;"></textarea><button type="submit" style="background:#0f172a;color:#ffffff;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:0.95rem;cursor:pointer;">Send Request</button></form><div id="wc-modal-ok" style="display:none;padding:14px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;border-radius:8px;font-weight:600;font-size:0.92rem;margin-top:8px;">Thanks! Your request for Chelmsford Car Services has been received.</div></div></div>
 <script>(function(){
 const modal=document.getElementById("wc-universal-modal");
 const closeBtn=document.getElementById("wc-modal-close");
